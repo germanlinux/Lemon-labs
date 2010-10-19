@@ -41,8 +41,14 @@ module CouchDB
     private
 
     def handle_error(req, res)
+      if  res.code =="404" then
+        puts "not found!" 
+       else 
+ 
       e = RuntimeError.new("#{res.code}:#{res.message}\nMETHOD:#{req.method}\nURI:#{req.path}\n#{res.body}")
       raise e
+      end 
+     end
+
     end
-  end
-end
+end 
