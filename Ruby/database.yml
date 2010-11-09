@@ -1,0 +1,20 @@
+Datasource:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  poll: 5
+  timeout : 5000
+Tables:
+  table_fact: projets
+  primarykey: id
+  table_dimension:
+    filieres:
+      primarykey: id
+      foreignkey: filiere_id
+    technos:
+      primarykey: id
+      foreignkey: techno_id
+filters:
+   attributes: id
+   regexp: /^create/,/_id/
+
+         
