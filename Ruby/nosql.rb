@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'json'
+require 'couchdb'
+require 'uri'
 require 'active_record'
 class Nosql
 attr_accessor :links
@@ -21,7 +25,7 @@ attr_accessor :links
 #
 #
  def  _create_class(tclass)
-    uftclass = "Tempo" + tclass
+    uftclass = "Tempo_" + tclass
      eval "
         class #{uftclass} < ActiveRecord::Base
           set_table_name  \"#{tclass}\"
@@ -37,7 +41,7 @@ attr_accessor :links
   table= arg[0][:table]
   cle = arg[0][:key]||'id'
   t= _create_class(table)
-  request= "Tempo" + table
+  request= "Tempo_" + table
    array_cle= eval "#{request}.find_by_sql \"SELECT #{cle} FROM #{table} \""
    puts array_cle.count
   array_cle
@@ -45,7 +49,7 @@ attr_accessor :links
 #
 #
  def _traitemnt_fact(id_array,table)
-   request= "Tempo" + table
+   request= "Tempo_" + table
    my_field = get_field(table)
    if @config['Tables']['table_fact'] == table then 
       is_fact =1  
@@ -61,15 +65,121 @@ attr_accessor :links
      un_article= eval "#{request}.find_by_sql  \"SELECT * FROM #{table} WHERE #{cle_used} = #{my_id} \""
      art= formate_hash(un_article,my_field)  
      art= complete_dim(art) if is_fact==1  
-     puts art.inspect 
-   end 
+ # apply filters
+     art= filter(art)
+     art= append(art)
+#  apply options
+     art=options(art)
+# create json entry 
+     art= json_formate(art)  
+# all right , post it to couchdb, output , csv etc.
+     send_to_target(art)  
+   end
+
+end
+## send_to_target
+#
+ def send_to_target(art)
+  if @config['target']['output'] then
+    puts art
+  elsif  @config['target']['couchdb'] then 
+     res=@config['target']['couchdb'] 
+     uri= URI.parse(res)
+     host= uri.host
+     port= uri.port
+     path = uri.path
+     cible= CouchDB::Server.new(host,port) 
+     my_post  =   cible.post(path,art)
+  end
+ end 
+
+
+## delete nil values
+#
+ def options(art)
+   if @config['options'] then 
+     if @config['options']['NoNil'] then 
+         art= delete_nil(art)
+     end
+   end
+   art
  end
+ def delete_nil(art)
+   art.each_key do  |cle|
+       if !art[cle] then 
+             art.delete(cle)
+       end
+   end 
+  art
+ end
+
+## formate json
+#
+ def json_formate(art)
+ # puts   art.inspect
+    aux=  JSON(art).to_str
+ #  puts  aux
+  aux
+ end
+
+## filter on attribute and regexp
+#
+ def filter(art)
+    if  @config['filters']  then 
+        if @config['filters']['attributes'] then 
+           art= filter_by_attribute(art)
+       end           
+       if @config['filters']['regexp'] then 
+           art= filter_by_regexp(art)
+  
+       end           
+    end  
+    art  
+        
+ end
+  def filter_by_attribute(art)
+       tabattr= @config['filters']['attributes'].split(',')
+             tabattr.each do |att|
+                 art.delete(att) 
+               end
+    art 
+ end  
+##
+##
+  def filter_by_regexp(art)
+    if @config['filters']['regexp'] then 
+             tabattr= @config['filters']['regexp'].split(',')
+              regexp =Array.new             
+              tabattr.each do |att|
+                regexp << Regexp.new(att)
+              end
+              art.each_key do |cle|
+                  regexp.each do |motif|
+                    art.delete(cle) if motif.match(cle)
+                  end
+               end  
+        end           
+   art
+ end       
+##
+##
+  def  append(art)
+    if @config['append'] then 
+        tabappend= @config['append']['attribute'].split(',')
+        has = Hash[*tabappend.flatten]
+        has.each_pair do |cle,valeur|  
+           art[cle]= valeur 
+           end
+     end
+    art
+
+  end
 # collecte (:table => table, :key => key_of_table) 
 ## retrive all id , then for each id retrive row and search on other dimensions
  def collecte(*arg) 
    table= arg[0][:table]
    cle = arg[0][:key]||'id'
-   puts arg.inspect
+ #  puts arg.inspect
    my_array=  collect_key(arg[0])
    parse
    complete_field_dim 
@@ -79,7 +189,7 @@ attr_accessor :links
 #
  def formate_hash(art,champs)
    ah = Hash.new
-    puts  art.inspect
+  #  puts  art.inspect
   champs.each do |cle|
      ah[cle] = art[0].send(cle)
    end
@@ -137,7 +247,7 @@ attr_accessor :links
   valeur_cle= art[cle_a_utilisee]
    if valeur_cle then 
    cle_dim= un_lien.local
-   request= "Tempo" + un_lien.table 
+   request= "Tempo_" + un_lien.table 
    un_article=  eval "#{request}.find_by_sql  \"SELECT * FROM #{un_lien.table} WHERE #{cle_dim} = #{valeur_cle} \""
    end 
    un_article[0]

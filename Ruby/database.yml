@@ -15,6 +15,13 @@ Tables:
       foreignkey: techno_id
 filters:
    attributes: id
-   regexp: /^create/,/_id/
+   regexp: create,_id,update
+append:
+   attribute: type,ROW
+options: 
+   NoNil: 1
+target:
+   output: 1
+
 
          
