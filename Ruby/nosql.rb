@@ -107,7 +107,9 @@ end
  def delete_nil(art)
    art.each_key do  |cle|
        if !art[cle] then 
-             art.delete(cle)
+             art.delete(cle) 
+          elsif (art[cle].respond_to?(:empty?) and art[cle].empty?)  then
+             art.delete(cle) 
        end
    end 
   art
@@ -197,6 +199,10 @@ end
   end     
 #
 #
+ def config
+   cb= JSON(@config)
+ end
+
  def parse 
    my_extract= @config['Tables']['table_dimension']
    my_acces = my_extract.keys 
@@ -262,6 +268,31 @@ end
     my_array_of_id=  collect_key(:table => table, :key => cle_used)
     _traitemnt_fact(my_array_of_id,table)
   end 
+ def delete_row
+   if  @config['target']['couchdb'] then 
+     res=@config['target']['couchdb'] 
+     uri= URI.parse(res)
+     host= uri.host
+     port= uri.port
+     path = uri.path
+     cible= CouchDB::Server.new(host,port) 
+    load  =   cible.get("/#{path}/_all_docs")
+	  document= JSON.parse(load.body)
+     array_of_ligne= document['rows']
+        regexp = Regexp.new("/") 
+     array_of_ligne.each do |une_ligne| 
+       id= une_ligne['id']
+       rev= une_ligne['value']['rev']  
+       #suppression
+       # simple data or document
+       puts "path => #{path}"
+       my_uri= "#{path}/#{id}?rev=#{rev}"
+       cible.delete(my_uri) unless regexp.match(id)
+     end
+   end
+ end
+
+
 end
 #
 #

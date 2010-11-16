@@ -21,7 +21,8 @@ append:
 options: 
    NoNil: 1
 target:
-   output: 1
+#   output: 1
+    couchdb: http://localhost:5984/projets
 
 
          
