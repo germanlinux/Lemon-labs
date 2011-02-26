@@ -1,14 +1,17 @@
 #!/usr/bin/ruby
+$: <<"./"
+
 require 'rubygems'
 require 'inode'
 require 'json'
 require 'fusefs'
 require 'yaml'
+
 ##  create arbo ###
 class Flickruby
    attr_accessor :media, :JSONset
    def initialize(tmpdir,mountpoint)
-      @media=Table_inodes.new(mountpoint)
+       @media=Table_inodes.new(mountpoint,tmpdir)
       @media.add_directory "/"
       my_sets= YAML::load File.open("#{tmpdir}/sets.yaml")
       @media.parse(my_sets)
@@ -22,7 +25,7 @@ class Flickruby
    #################  fuse api
    def contents(path)
       list= @media.directory_content(path)
-      #puts "contentss :#{path} -> #{list.inspect}"
+  #    puts "contentss :#{path} -> #{list.inspect}"
       list
    end
 
@@ -37,8 +40,16 @@ class Flickruby
    end
 
    def read_file(path)
-      #     puts "read_file: => #{path}"
-      "hello?"
+   #    puts " read #{@media.ldir}/#{@media.inode_of[path].id}" 
+    #puts "read_file: => #{path} #{fn}"
+      #"hello?"
+    fn = "#{@media.ldir}/#{@media.inode_of[path].id}" 
+     if File.file?(fn)
+      IO.read(fn)
+    else
+        'Non such file'
+    end
+    #puts "read #{fn}"     
    end
 
    def size(path)
