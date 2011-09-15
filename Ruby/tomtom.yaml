@@ -1,0 +1,2349 @@
+--- 
+directory_save: /sauvetomtom/
+content: 
+  /sauvetomtom/: 
+    size: 4096
+    mdate: 2011-08-07 18:00:16.649738 +02:00
+  /sauvetomtom/ASR: 
+    size: 4096
+    mdate: 2011-03-04 12:39:48 +01:00
+  /sauvetomtom/ASR/6FRF.ctx: 
+    size: 732
+    mdate: 2010-09-15 16:31:34 +02:00
+  /sauvetomtom/ASR/acmod3200_car_frf_f16_compact_lew4.dat: 
+    size: 782056
+    mdate: 2010-09-15 16:31:34 +02:00
+  /sauvetomtom/ASR/commandsFRF.ctx: 
+    size: 20872
+    mdate: 2010-09-15 16:31:34 +02:00
+  /sauvetomtom/ASR/ddg2p_frf_vadvde_large_lew4.dat: 
+    size: 293192
+    mdate: 2010-09-15 16:31:36 +02:00
+  /sauvetomtom/ASR/digitsFRF.ctx: 
+    size: 12740
+    mdate: 2010-09-15 16:31:34 +02:00
+  /sauvetomtom/ASR/support_asr.dat: 
+    size: 3
+    mdate: 2010-12-13 10:17:00 +01:00
+  /sauvetomtom/ASR/yes_no_FRF.ctx: 
+    size: 400
+    mdate: 2010-09-15 16:31:34 +02:00
+  /sauvetomtom/Europe: 
+    size: 4096
+    mdate: 2011-08-07 15:42:40 +02:00
+  /sauvetomtom/Europe/Blitzer_AT_TomTom.ov2: 
+    size: 13119
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Blitzer_AT_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:32 +01:00
+  /sauvetomtom/Europe/Blitzer_AT_TomTomOv2.ver: 
+    size: 89
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Blitzer_CZ_TomTom.ov2: 
+    size: 4943
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Blitzer_CZ_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Blitzer_CZ_TomTomOv2.ver: 
+    size: 90
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/DeletedPoi.local: 
+    size: 680
+    mdate: 2000-05-16 15:36:32 +02:00
+  /sauvetomtom/Europe/Europe-112.meta: 
+    size: 1054864
+    mdate: 2009-10-12 08:48:36 +02:00
+  /sauvetomtom/Europe/Europe-112.meta.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Europe.pna: 
+    size: 54
+    mdate: 2009-10-12 08:48:36 +02:00
+  /sauvetomtom/Europe/Fartkamera_SE_TomTom.ov2: 
+    size: 15462
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Fartkamera_SE_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Fartkamera_SE_TomTomOv2.ver: 
+    size: 93
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Fartsboks_NO_TomTom.ov2: 
+    size: 6077
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Fartsboks_NO_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Fartsboks_NO_TomTomOv2.ver: 
+    size: 91
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/FuelStationsEU.bmp: 
+    size: 1552
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/Europe/FuelStationsEU.fpf: 
+    size: 40
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/Europe/FuelStationsEU.ov2: 
+    size: 1308338
+    mdate: 2011-03-03 08:35:20 +01:00
+  /sauvetomtom/Europe/FuelStationsEU.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/FuelStationsEUOv2.ver: 
+    size: 95
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/Europe/Kamerat_FI_TomTom.ov2: 
+    size: 13119
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Kamerat_FI_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Kamerat_FI_TomTomOv2.ver: 
+    size: 90
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/MapUserPatch.dat: 
+    size: 48
+    mdate: 2000-05-16 15:36:32 +02:00
+  /sauvetomtom/Europe/Radar_ES_TomTom.ov2: 
+    size: 16298
+    mdate: 2010-09-07 10:29:36 +02:00
+  /sauvetomtom/Europe/Radar_ES_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Radar_ES_TomTomOv2.ver: 
+    size: 88
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_BE_Premium.ov2: 
+    size: 24046
+    mdate: 2010-09-07 10:29:38 +02:00
+  /sauvetomtom/Europe/Safety_Cam_BE_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_BE_PremiumOv2.ver: 
+    size: 92
+    mdate: 2010-09-07 10:29:38 +02:00
+  /sauvetomtom/Europe/Safety_Cam_FR_Premium.ov2: 
+    size: 98551
+    mdate: 2010-09-07 10:29:38 +02:00
+  /sauvetomtom/Europe/Safety_Cam_FR_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_FR_PremiumOv2.ver: 
+    size: 93
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_IE_Premium.ov2: 
+    size: 645372
+    mdate: 2010-09-07 10:29:38 +02:00
+  /sauvetomtom/Europe/Safety_Cam_IE_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_IE_PremiumOv2.ver: 
+    size: 95
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_IT_Premium.ov2: 
+    size: 258526
+    mdate: 2010-06-15 10:04:36 +02:00
+  /sauvetomtom/Europe/Safety_Cam_IT_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_IT_PremiumOv2.ver: 
+    size: 97
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_NL_Premium.ov2: 
+    size: 87881
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/Europe/Safety_Cam_NL_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_NL_PremiumOv2.ver: 
+    size: 92
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_PL_TomTom.ov2: 
+    size: 25729
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/Europe/Safety_Cam_PL_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_PL_TomTomOv2.ver: 
+    size: 93
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_PT_Premium.ov2: 
+    size: 670
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/Europe/Safety_Cam_PT_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_PT_PremiumOv2.ver: 
+    size: 94
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/Europe/Safety_Cam_UK_Premium.ov2: 
+    size: 231496
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/Europe/Safety_Cam_UK_Premium.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/Europe/Safety_Cam_UK_PremiumOv2.ver: 
+    size: 93
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/Europe/borders.dat: 
+    size: 1149246
+    mdate: 2009-10-12 08:47:20 +02:00
+  /sauvetomtom/Europe/citymap.dat: 
+    size: 79915429
+    mdate: 2009-10-12 08:47:26 +02:00
+  /sauvetomtom/Europe/citymap.met: 
+    size: 3230
+    mdate: 2009-10-12 08:47:26 +02:00
+  /sauvetomtom/Europe/cline.dat: 
+    size: 953100856
+    mdate: 2009-10-12 08:47:52 +02:00
+  /sauvetomtom/Europe/cname.dat: 
+    size: 195610529
+    mdate: 2009-10-12 08:47:54 +02:00
+  /sauvetomtom/Europe/cnode.dat: 
+    size: 253493137
+    mdate: 2009-10-12 08:48:00 +02:00
+  /sauvetomtom/Europe/cphoneme.dat: 
+    size: 50311213
+    mdate: 2009-10-12 08:48:02 +02:00
+  /sauvetomtom/Europe/crpoi.dat: 
+    size: 55770147
+    mdate: 2009-10-12 08:48:04 +02:00
+  /sauvetomtom/Europe/cspeech_FRA.dat: 
+    size: 50959976
+    mdate: 2009-10-12 08:48:12 +02:00
+  /sauvetomtom/Europe/cspeech_MCO.dat: 
+    size: 12791
+    mdate: 2009-10-12 08:48:12 +02:00
+  /sauvetomtom/Europe/faces.dat: 
+    size: 178639155
+    mdate: 2009-10-12 08:48:18 +02:00
+  /sauvetomtom/Europe/faces.met: 
+    size: 8623
+    mdate: 2009-10-12 08:48:18 +02:00
+  /sauvetomtom/Europe/housenrs.dat: 
+    size: 57980871
+    mdate: 2009-10-12 08:48:22 +02:00
+  /sauvetomtom/Europe/mapinfo.dat: 
+    size: 62
+    mdate: 2009-10-12 08:48:22 +02:00
+  /sauvetomtom/Europe/mapsettings.cfg: 
+    size: 3841
+    mdate: 2011-08-06 09:41:56 +02:00
+  /sauvetomtom/Europe/mobile safety cameras.bmp: 
+    size: 1478
+    mdate: 2011-08-06 09:41:56 +02:00
+  /sauvetomtom/Europe/mobile safety cameras.ov2: 
+    size: 225
+    mdate: 2011-08-07 15:42:40 +02:00
+  /sauvetomtom/Europe/overview.dat: 
+    size: 6175096
+    mdate: 2009-10-12 08:48:22 +02:00
+  /sauvetomtom/Europe/overview.met: 
+    size: 2985
+    mdate: 2009-10-12 08:48:22 +02:00
+  /sauvetomtom/Europe/poi.dat: 
+    size: 71554455
+    mdate: 2009-10-12 08:48:24 +02:00
+  /sauvetomtom/Europe/profiles.dat: 
+    size: 28526
+    mdate: 2009-10-12 08:48:24 +02:00
+  /sauvetomtom/Europe/tables.dat: 
+    size: 14161849
+    mdate: 2011-03-04 11:39:36 +01:00
+  /sauvetomtom/Europe/tmccodes.dat: 
+    size: 6966640
+    mdate: 2009-10-12 08:48:26 +02:00
+  /sauvetomtom/Europe/traffic.dat: 
+    size: 102
+    mdate: 2009-10-12 08:48:26 +02:00
+  /sauvetomtom/InstallTomTomHOME.exe: 
+    size: 348160
+    mdate: 2010-05-11 12:04:12 +02:00
+  /sauvetomtom/LoquendoTTS: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/LicenseCode7.txt: 
+    size: 43
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7AudioBoard.so: 
+    size: 11224
+    mdate: 2010-09-15 20:38:08 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7AudioTT.so: 
+    size: 6924
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7CodecMsx.so: 
+    size: 105668
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7DB.so: 
+    size: 310572
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7French.so: 
+    size: 261148
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7GPR.so: 
+    size: 7972
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7Juliette.so: 
+    size: 8964
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7JulietteGildedParalinguisticsSde.so: 
+    size: 5276
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7JulietteGildedPhrasesSde.so: 
+    size: 98440
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7JulietteSde.so: 
+    size: 1885104
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7JulietteTTSde.so: 
+    size: 125472
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/LTTS7XML.so: 
+    size: 112432
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/libLTTS7Util.so: 
+    size: 213552
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/bin/libLoqTTS7.so: 
+    size: 746900
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/data/French.lcf: 
+    size: 173
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data/Juliette.vcf: 
+    size: 487
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data/languages: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/data/languages/French: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/data/languages/French/French.dbl: 
+    size: 144384
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data/languages/French/French.lde: 
+    size: 312
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data/languages/French/FrenchTT.rex: 
+    size: 2437
+    mdate: 2010-05-11 12:06:02 +02:00
+  /sauvetomtom/LoquendoTTS/data/voices: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette: 
+    size: 4096
+    mdate: 2011-03-04 12:42:14 +01:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette/Juliette.16000.LTTS7CodecMsx.32800.10.bin: 
+    size: 27636568
+    mdate: 2010-05-11 12:06:04 +02:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette/Juliette.vde: 
+    size: 431
+    mdate: 2010-05-11 12:06:04 +02:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette/JulietteGildedParalinguistics.16000.LTTS7CodecMsx.32800.10.bin: 
+    size: 813583
+    mdate: 2010-05-11 12:06:04 +02:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette/JulietteGildedPhrases.16000.LTTS7CodecMsx.32800.10.bin: 
+    size: 1591294
+    mdate: 2010-05-11 12:06:04 +02:00
+  /sauvetomtom/LoquendoTTS/data/voices/Juliette/JulietteTT.16000.LTTS7CodecMsx.32800.10.bin: 
+    size: 1939972
+    mdate: 2010-05-11 12:06:06 +02:00
+  /sauvetomtom/LoquendoTTS/default7.session: 
+    size: 781
+    mdate: 2010-05-11 12:06:06 +02:00
+  /sauvetomtom/LoquendoTTS/lib: 
+    size: 4096
+    mdate: 2011-03-04 12:42:16 +01:00
+  /sauvetomtom/LoquendoTTS/lib/LoqAudioBoard.so: 
+    size: 11004
+    mdate: 2010-09-15 20:38:08 +02:00
+  /sauvetomtom/North_America_2GB: 
+    size: 4096
+    mdate: 2011-08-06 07:11:56 +02:00
+  /sauvetomtom/North_America_2GB/DeletedPoi.local: 
+    size: 680
+    mdate: 2011-08-06 07:11:56 +02:00
+  /sauvetomtom/North_America_2GB/FuelStations.bmp: 
+    size: 1552
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/North_America_2GB/FuelStations.fpf: 
+    size: 40
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/North_America_2GB/FuelStations.ov2: 
+    size: 6018533
+    mdate: 2011-03-03 08:35:20 +01:00
+  /sauvetomtom/North_America_2GB/FuelStations.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:34 +01:00
+  /sauvetomtom/North_America_2GB/FuelStationsOv2.ver: 
+    size: 94
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/North_America_2GB/MapUserPatch.dat: 
+    size: 48
+    mdate: 2011-08-06 07:11:56 +02:00
+  /sauvetomtom/North_America_2GB/North_America_2GB-106.meta: 
+    size: 318494
+    mdate: 2009-11-20 10:25:48 +01:00
+  /sauvetomtom/North_America_2GB/North_America_2GB-106.meta.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:36 +01:00
+  /sauvetomtom/North_America_2GB/North_America_2GB.pna: 
+    size: 64
+    mdate: 2009-11-20 10:25:48 +01:00
+  /sauvetomtom/North_America_2GB/Safety_Cam_US_Canada_TomTom.ov2: 
+    size: 62037
+    mdate: 2010-09-07 10:29:40 +02:00
+  /sauvetomtom/North_America_2GB/Safety_Cam_US_Canada_TomTom.ov2.dct: 
+    size: 132
+    mdate: 2000-01-01 01:21:36 +01:00
+  /sauvetomtom/North_America_2GB/Safety_Cam_US_Canada_TomTomOv2.ver: 
+    size: 103
+    mdate: 2011-01-04 09:48:08 +01:00
+  /sauvetomtom/North_America_2GB/brand: 
+    size: 4096
+    mdate: 2011-03-04 12:42:16 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_1.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_2.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_3.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_4.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_5.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_6.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7311_7.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_1.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_10.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_11.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_12.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_13.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_14.bmp: 
+    size: 356
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_15.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_16.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_17.bmp: 
+    size: 356
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_18.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_19.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_2.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_20.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_21.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_22.bmp: 
+    size: 660
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_23.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_24.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_25.bmp: 
+    size: 656
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_26.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_27.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_28.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_3.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_4.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_5.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_6.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_7.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_8.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7314_9.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_1.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_10.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_11.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_12.bmp: 
+    size: 656
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_13.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_14.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_15.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_16.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_17.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_18.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_19.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_2.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_20.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_21.bmp: 
+    size: 656
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_22.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_23.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_24.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_25.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_26.bmp: 
+    size: 660
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_27.bmp: 
+    size: 656
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_28.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_29.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_3.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_30.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_31.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_32.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_33.bmp: 
+    size: 660
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_34.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_35.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_36.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_37.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_38.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_39.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_4.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_40.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_41.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_5.bmp: 
+    size: 652
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_6.bmp: 
+    size: 664
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_7.bmp: 
+    size: 676
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_8.bmp: 
+    size: 664
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7315_9.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/7360_1.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/7397_1.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_1.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_2.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_3.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_4.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_5.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_6.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_7.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_8.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/9361_9.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9362_1.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/brand/9362_2.bmp: 
+    size: 644
+    mdate: 2009-11-20 10:25:06 +01:00
+  /sauvetomtom/North_America_2GB/brand/9362_3.bmp: 
+    size: 648
+    mdate: 2009-11-20 10:25:04 +01:00
+  /sauvetomtom/North_America_2GB/cline.dat: 
+    size: 662704532
+    mdate: 2009-11-20 10:25:22 +01:00
+  /sauvetomtom/North_America_2GB/cname.dat: 
+    size: 162785533
+    mdate: 2009-11-20 10:25:26 +01:00
+  /sauvetomtom/North_America_2GB/cnode.dat: 
+    size: 159276781
+    mdate: 2009-11-20 10:25:30 +01:00
+  /sauvetomtom/North_America_2GB/cphoneme.dat: 
+    size: 25301358
+    mdate: 2009-11-20 10:25:32 +01:00
+  /sauvetomtom/North_America_2GB/crpoi.dat: 
+    size: 80462002
+    mdate: 2009-11-20 10:25:34 +01:00
+  /sauvetomtom/North_America_2GB/faces.dat: 
+    size: 163789359
+    mdate: 2009-11-20 10:25:42 +01:00
+  /sauvetomtom/North_America_2GB/faces.met: 
+    size: 4014
+    mdate: 2009-11-20 10:25:42 +01:00
+  /sauvetomtom/North_America_2GB/mapinfo.dat: 
+    size: 62
+    mdate: 2009-11-20 10:25:42 +01:00
+  /sauvetomtom/North_America_2GB/mapsettings.cfg: 
+    size: 1181
+    mdate: 2011-08-06 07:12:38 +02:00
+  /sauvetomtom/North_America_2GB/poi.dat: 
+    size: 103113120
+    mdate: 2009-11-20 10:25:46 +01:00
+  /sauvetomtom/North_America_2GB/profiles.dat: 
+    size: 28526
+    mdate: 2009-11-20 10:25:46 +01:00
+  /sauvetomtom/North_America_2GB/tables.dat: 
+    size: 7097701
+    mdate: 2011-03-04 11:50:28 +01:00
+  /sauvetomtom/North_America_2GB/tmccodes.dat: 
+    size: 5131240
+    mdate: 2009-11-20 10:25:46 +01:00
+  /sauvetomtom/North_America_2GB/traffic.dat: 
+    size: 126
+    mdate: 2009-11-20 10:25:46 +01:00
+  /sauvetomtom/SIMCARD: 
+    size: 4096
+    mdate: 2000-01-01 12:36:38 +01:00
+  /sauvetomtom/SIMCARD/mobility.sim: 
+    size: 104
+    mdate: 2011-08-07 12:57:02 +02:00
+  /sauvetomtom/TomTom HOME Install.app: 
+    size: 4096
+    mdate: 2007-07-20 18:20:04 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents: 
+    size: 4096
+    mdate: 2007-07-20 18:20:04 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/._Info.plist: 
+    size: 82
+    mdate: 2007-03-23 16:32:48 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/._PkgInfo: 
+    size: 82
+    mdate: 2007-03-23 16:32:52 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Info.plist: 
+    size: 873
+    mdate: 2007-03-23 16:32:48 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/InstallerData: 
+    size: 4096
+    mdate: 2007-07-20 18:20:04 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/InstallerData/Installer.data: 
+    size: 17546
+    mdate: 2007-03-23 16:32:50 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/MacOSClassic: 
+    size: 4096
+    mdate: 2007-07-20 18:20:06 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/MacOSClassic/._TomTom HOME 1.1 SD Install: 
+    size: 480
+    mdate: 2007-03-23 16:32:50 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/MacOSClassic/TomTom HOME 1.1 SD Install: 
+    size: 521082
+    mdate: 2007-03-23 16:32:50 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/PkgInfo: 
+    size: 8
+    mdate: 2007-03-23 16:32:52 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Resources: 
+    size: 4096
+    mdate: 2007-07-20 18:20:06 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Resources/English.lproj: 
+    size: 4096
+    mdate: 2007-07-20 18:20:06 +02:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Resources/English.lproj/Localized.rsrc: 
+    size: 65115
+    mdate: 2007-03-23 16:32:52 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Resources/Installer.icns: 
+    size: 22657
+    mdate: 2007-03-23 16:32:52 +01:00
+  /sauvetomtom/TomTom HOME Install.app/Contents/Resources/TomTom HOME 1.1 SD Install.rsrc: 
+    size: 261101
+    mdate: 2007-03-23 16:32:54 +01:00
+  /sauvetomtom/TomTom-Cfg: 
+    size: 4096
+    mdate: 2000-01-08 13:33:14 +01:00
+  /sauvetomtom/TomTom-Cfg/GPRSChecked.v3: 
+    size: 29
+    mdate: 2000-01-08 13:33:14 +01:00
+  /sauvetomtom/TomTom-Cfg/release.nfo: 
+    size: 588
+    mdate: 2011-03-04 12:34:08 +01:00
+  /sauvetomtom/antitheftw.bmp: 
+    size: 391734
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/art: 
+    size: 4096
+    mdate: 2011-03-04 12:39:48 +01:00
+  /sauvetomtom/art/cars: 
+    size: 4096
+    mdate: 2011-03-04 12:39:48 +01:00
+  /sauvetomtom/art/cars/-default.bmp: 
+    size: 19256
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/Arrow Yellow.bmp: 
+    size: 19256
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/BlueCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/ClassCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/FamilyCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/FinnedCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/GreyCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/Oldtimer.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/RaceCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/RedCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/SUV.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/SportsCabrio.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/SportsCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/art/cars/YellowCar.bmp: 
+    size: 16856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/autorun.inf: 
+    size: 186
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/bin: 
+    size: 4096
+    mdate: 2011-03-04 12:39:48 +01:00
+  /sauvetomtom/bin/glgps: 
+    size: 1090108
+    mdate: 2010-09-15 16:32:48 +02:00
+  /sauvetomtom/bin/gltt: 
+    size: 897732
+    mdate: 2010-09-15 16:32:48 +02:00
+  /sauvetomtom/bin/gprscomd: 
+    size: 310912
+    mdate: 2010-09-15 20:38:10 +02:00
+  /sauvetomtom/bin/obexftpd: 
+    size: 56808
+    mdate: 2010-09-15 16:31:52 +02:00
+  /sauvetomtom/bin/syncml: 
+    size: 2129320
+    mdate: 2010-09-15 16:31:54 +02:00
+  /sauvetomtom/bootloaderversion.txt: 
+    size: 51
+    mdate: 2010-08-18 11:53:44 +02:00
+  /sauvetomtom/connect2internet.db: 
+    size: 148870
+    mdate: 2010-05-11 12:04:14 +02:00
+  /sauvetomtom/connect2internet.so: 
+    size: 395312
+    mdate: 2010-05-11 12:04:14 +02:00
+  /sauvetomtom/connect2internetdb.ver: 
+    size: 61
+    mdate: 2010-05-11 12:04:14 +02:00
+  /sauvetomtom/contacts: 
+    size: 4096
+    mdate: 2011-08-06 09:44:32 +02:00
+  /sauvetomtom/contacts/inbox.txt: 
+    size: 161
+    mdate: 2011-08-06 09:44:32 +02:00
+  /sauvetomtom/cp: 
+    size: 4096
+    mdate: 2011-03-04 12:39:48 +01:00
+  /sauvetomtom/cp/cp1251.bin: 
+    size: 237
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/cp/cp1253.bin: 
+    size: 231
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/cp/cp28595.bin: 
+    size: 203
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/cp/cp28597.bin: 
+    size: 201
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/cp/cp936.bin: 
+    size: 106197
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/cp/cp950.bin: 
+    size: 87171
+    mdate: 2010-09-15 16:32:28 +02:00
+  /sauvetomtom/currentmap.dat: 
+    size: 24
+    mdate: 2011-08-06 09:41:38 +02:00
+  /sauvetomtom/data.chk: 
+    size: 5934941
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/data_im2.chk: 
+    size: 1373748
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/data_lim.chk: 
+    size: 5119621
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/data_ra.chk: 
+    size: 67472
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/data_sp.chk: 
+    size: 12251
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/data_ts.chk: 
+    size: 347573
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/ephem: 
+    size: 4096
+    mdate: 2000-05-16 15:36:56 +02:00
+  /sauvetomtom/ephem/ee_meta.txt: 
+    size: 17
+    mdate: 2000-05-16 15:36:56 +02:00
+  /sauvetomtom/ephem/lto.dat: 
+    size: 37422
+    mdate: 2000-05-16 15:36:56 +02:00
+  /sauvetomtom/gns: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/gns/TmcEApi.so: 
+    size: 70184
+    mdate: 2010-09-15 16:32:38 +02:00
+  /sauvetomtom/helpme: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/helpme/flags: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/helpme/flags/Australia.gif: 
+    size: 1580
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Austria.gif: 
+    size: 1002
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Belgium.gif: 
+    size: 1040
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Canada.gif: 
+    size: 1430
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/China.gif: 
+    size: 943
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Croatia.gif: 
+    size: 1400
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Demark.gif: 
+    size: 1025
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Finland.gif: 
+    size: 1042
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/France.gif: 
+    size: 1040
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Germany.gif: 
+    size: 1017
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Great Brittan.gif: 
+    size: 1394
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Hungary.gif: 
+    size: 1017
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Ireland.gif: 
+    size: 1040
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Italy.gif: 
+    size: 1038
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Luxemburg.gif: 
+    size: 1017
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Netherlands.gif: 
+    size: 1017
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Norway.gif: 
+    size: 1078
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Poland.gif: 
+    size: 1002
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Portugal.gif: 
+    size: 1263
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Slovakia.gif: 
+    size: 1161
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Spain.gif: 
+    size: 1114
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Sweden.gif: 
+    size: 1026
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Switzerland.gif: 
+    size: 1024
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Taiwan.gif: 
+    size: 943
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/Turkey.gif: 
+    size: 1157
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/flags/USA.gif: 
+    size: 1359
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/helpme.ver: 
+    size: 91
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/helpme/medical/clear.gif: 
+    size: 88
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/helpme/medical/images/image001.gif: 
+    size: 131
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image002.jpg: 
+    size: 5309
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image003.jpg: 
+    size: 4747
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image004.jpg: 
+    size: 5814
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image005.jpg: 
+    size: 5019
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image006.jpg: 
+    size: 6041
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image007.jpg: 
+    size: 3347
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image008.jpg: 
+    size: 4526
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image009.jpg: 
+    size: 6517
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image010.jpg: 
+    size: 6524
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image011.jpg: 
+    size: 4063
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image012.jpg: 
+    size: 3711
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image013.jpg: 
+    size: 3166
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image014.jpg: 
+    size: 3564
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image015.jpg: 
+    size: 2694
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image016.jpg: 
+    size: 4506
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image017.jpg: 
+    size: 4247
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image018.jpg: 
+    size: 4122
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image019.jpg: 
+    size: 2887
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image020.jpg: 
+    size: 4360
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image021.jpg: 
+    size: 3724
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image022.jpg: 
+    size: 3810
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image023.jpg: 
+    size: 4378
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image024.jpg: 
+    size: 5084
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image025.jpg: 
+    size: 5310
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image026.jpg: 
+    size: 3810
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image027.jpg: 
+    size: 3995
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image028.jpg: 
+    size: 4026
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image029.jpg: 
+    size: 5369
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/images/image030.jpg: 
+    size: 4880
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index.html: 
+    size: 593
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_ca.html: 
+    size: 594
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_cn.html: 
+    size: 12368
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_cs.html: 
+    size: 583
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_da.html: 
+    size: 11825
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_de.html: 
+    size: 14688
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_en-us.html: 
+    size: 11797
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_en.html: 
+    size: 12073
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_es.html: 
+    size: 12793
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_et.html: 
+    size: 578
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_fi.html: 
+    size: 11860
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_fr.html: 
+    size: 13085
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_hu.html: 
+    size: 606
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_it.html: 
+    size: 14121
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_lt.html: 
+    size: 574
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_lv.html: 
+    size: 609
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_nl.html: 
+    size: 12773
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_no.html: 
+    size: 11812
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_pl.html: 
+    size: 588
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_pt.html: 
+    size: 13803
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_sk.html: 
+    size: 580
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_sv.html: 
+    size: 11767
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_tr.html: 
+    size: 578
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/medical/index_zh-tw.html: 
+    size: 11810
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other: 
+    size: 4096
+    mdate: 2011-03-04 12:42:10 +01:00
+  /sauvetomtom/helpme/other/IMAGES: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/helpme/other/IMAGES/000_ANWB_Logo.gif: 
+    size: 542
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_001.jpg: 
+    size: 2851
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_003.jpg: 
+    size: 2882
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_005.jpg: 
+    size: 2666
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_006.jpg: 
+    size: 4066
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_007.jpg: 
+    size: 2862
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_008.jpg: 
+    size: 3025
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_009.jpg: 
+    size: 3567
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_010.jpg: 
+    size: 3386
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_011.jpg: 
+    size: 2265
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_012.jpg: 
+    size: 2273
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_013.jpg: 
+    size: 2359
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_014.jpg: 
+    size: 3849
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_015.jpg: 
+    size: 3078
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_016.jpg: 
+    size: 3053
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_017.jpg: 
+    size: 2870
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_018.jpg: 
+    size: 4552
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_019.jpg: 
+    size: 1280
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_020.jpg: 
+    size: 2023
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_021.jpg: 
+    size: 2887
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_022.jpg: 
+    size: 5129
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_023.jpg: 
+    size: 2644
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_024.jpg: 
+    size: 3546
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_025.jpg: 
+    size: 2021
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_026.jpg: 
+    size: 3389
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_027.jpg: 
+    size: 2586
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_028.jpg: 
+    size: 3523
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwb_029.jpg: 
+    size: 3267
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/anwblogo.gif: 
+    size: 575
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/clear.gif: 
+    size: 88
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/down.jpg: 
+    size: 19208
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/entry.gif: 
+    size: 87
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/entry_2.gif: 
+    size: 85
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/IMAGES/up.jpg: 
+    size: 19126
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/helpme/other/car/index_cn.html: 
+    size: 18953
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_da.html: 
+    size: 18435
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_de.html: 
+    size: 20639
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_en-us.html: 
+    size: 18598
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_en.html: 
+    size: 18556
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_es.html: 
+    size: 22155
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_fi.html: 
+    size: 18725
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_fr.html: 
+    size: 21158
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_it.html: 
+    size: 20721
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_nl.html: 
+    size: 19796
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_no.html: 
+    size: 18472
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_pt.html: 
+    size: 20997
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_sv.html: 
+    size: 19228
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/car/index_zh-tw.html: 
+    size: 19823
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/clear.gif: 
+    size: 88
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index.html: 
+    size: 584
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_ca.html: 
+    size: 593
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_cn.html: 
+    size: 431
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_cs.html: 
+    size: 585
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_da.html: 
+    size: 430
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_de.html: 
+    size: 435
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_en-us.html: 
+    size: 428
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_en.html: 
+    size: 425
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_es.html: 
+    size: 582
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_et.html: 
+    size: 571
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_fi.html: 
+    size: 434
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_fr.html: 
+    size: 453
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_hu.html: 
+    size: 594
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_it.html: 
+    size: 453
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_lt.html: 
+    size: 578
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_lv.html: 
+    size: 580
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_nl.html: 
+    size: 438
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_no.html: 
+    size: 433
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_pl.html: 
+    size: 593
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_pt.html: 
+    size: 466
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_sk.html: 
+    size: 589
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_sv.html: 
+    size: 539
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_tr.html: 
+    size: 576
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/index_zh-tw.html: 
+    size: 431
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/helpme/other/trafficrules/index_cn.html: 
+    size: 66585
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_da.html: 
+    size: 67788
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_de.html: 
+    size: 72458
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_en-us.html: 
+    size: 66293
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_en.html: 
+    size: 66154
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_es.html: 
+    size: 75974
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_fi.html: 
+    size: 69049
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_fr.html: 
+    size: 72344
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_it.html: 
+    size: 72730
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_nl.html: 
+    size: 69374
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_no.html: 
+    size: 66467
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_pt.html: 
+    size: 78168
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_sv.html: 
+    size: 69757
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/trafficrules/index_zh-tw.html: 
+    size: 65784
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/helpme/other/travelinfo/images: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/helpme/other/travelinfo/images/Canada_intro.jpg: 
+    size: 16940
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/VS_intro.jpg: 
+    size: 8659
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/australia_intro.jpg: 
+    size: 20805
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/austria_intro1.jpg: 
+    size: 26433
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/austria_intro2.jpg: 
+    size: 23587
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/belgium_intro.jpg: 
+    size: 10097
+    mdate: 2010-05-11 12:04:00 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/croatia_intro1.jpg: 
+    size: 12678
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/croatia_intro2.jpg: 
+    size: 27234
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/finland_intro1.jpg: 
+    size: 26652
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/finland_intro2.jpg: 
+    size: 28278
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/france_intro.gif: 
+    size: 24627
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/germany_intro.jpg: 
+    size: 10467
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/greatbrittan_intro.jpg: 
+    size: 28629
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/hungary_intro1.jpg: 
+    size: 25325
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/hungary_intro2.jpg: 
+    size: 26404
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/ireland_intro1.jpg: 
+    size: 30685
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/ireland_intro2.jpg: 
+    size: 27801
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/italy_intro.jpg: 
+    size: 15329
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/luxemburg_intro1.jpg: 
+    size: 22080
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/luxemburg_intro2.jpg: 
+    size: 24850
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/nederland_intro.jpg: 
+    size: 27799
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/norway_intro1.jpg: 
+    size: 26783
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/norway_intro2.jpg: 
+    size: 23904
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/poland_intro1.jpg: 
+    size: 12686
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/poland_intro2.jpg: 
+    size: 24706
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/portugal_intro1.jpg: 
+    size: 18310
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/portugal_intro2.jpg: 
+    size: 17569
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/slovakia_intro1.jpg: 
+    size: 23628
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/slovakia_intro2.jpg: 
+    size: 13719
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/spain_intro.jpg: 
+    size: 22698
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/sweden_intro1.jpg: 
+    size: 28019
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/sweden_intro2.jpg: 
+    size: 21170
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/switzerland_intro.jpg: 
+    size: 26031
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/images/turkey_intro.jpg: 
+    size: 23400
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_cn.html: 
+    size: 59248
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_da.html: 
+    size: 58100
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_de.html: 
+    size: 63444
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_en-us.html: 
+    size: 58207
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_en.html: 
+    size: 57913
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_es.html: 
+    size: 62154
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_fi.html: 
+    size: 60226
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_fr.html: 
+    size: 64075
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_it.html: 
+    size: 60504
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_nl.html: 
+    size: 60334
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_no.html: 
+    size: 58929
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_pt.html: 
+    size: 66650
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_sv.html: 
+    size: 59987
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/helpme/other/travelinfo/index_zh-tw.html: 
+    size: 61642
+    mdate: 2010-05-11 12:04:02 +02:00
+  /sauvetomtom/home images: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/home images/W.ddf: 
+    size: 583
+    mdate: 2010-05-11 12:04:04 +02:00
+  /sauvetomtom/home images/W.jar: 
+    size: 25595
+    mdate: 2010-05-11 12:04:04 +02:00
+  /sauvetomtom/internal.dat: 
+    size: 13
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/itn: 
+    size: 4096
+    mdate: 2011-08-07 15:42:44 +02:00
+  /sauvetomtom/itn/temporary.iti: 
+    size: 72
+    mdate: 2011-08-07 15:42:44 +02:00
+  /sauvetomtom/libaec_55.so: 
+    size: 95385
+    mdate: 2010-09-15 16:31:54 +02:00
+  /sauvetomtom/libaec_60.so: 
+    size: 102749
+    mdate: 2010-09-15 16:31:54 +02:00
+  /sauvetomtom/libaec_60_2.so: 
+    size: 101659
+    mdate: 2010-09-15 16:31:54 +02:00
+  /sauvetomtom/licences: 
+    size: 4096
+    mdate: 2011-03-04 12:42:12 +01:00
+  /sauvetomtom/licences/EULA-Czech-NO_US CAN.txt: 
+    size: 12316
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Danish-NO_US CAN.txt: 
+    size: 11103
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Dutch-NO_US CAN.txt: 
+    size: 11535
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-English-NO_US CAN.txt: 
+    size: 10231
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-English-US CAN.txt: 
+    size: 10557
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Finnish-NO_US CAN.txt: 
+    size: 10340
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-French-NO_US CAN.txt: 
+    size: 11118
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-French-US CAN.txt: 
+    size: 11498
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-German-NO_US CAN.txt: 
+    size: 11790
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Greek-NO_US CAN.txt: 
+    size: 22367
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Hungarian-NO_US CAN.txt: 
+    size: 11744
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Italian-NO_US CAN.txt: 
+    size: 11882
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Norwegian-NO_US CAN.txt: 
+    size: 10822
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Polish-NO_US CAN.txt: 
+    size: 12436
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Portuguese-NO_US CAN.txt: 
+    size: 11601
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Russian-NO_US CAN.txt: 
+    size: 24141
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Slovak-NO_US CAN.txt: 
+    size: 11402
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Spanish-NO_US CAN.txt: 
+    size: 11557
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Spanish-US CAN.txt: 
+    size: 13533
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/EULA-Swedish-NO_US CAN.txt: 
+    size: 10405
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/GNU General Public License.txt: 
+    size: 15397
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/GPL-offer.txt: 
+    size: 200
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Chinese.doc: 
+    size: 37888
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Czech 2007_NO US CAN.DOC: 
+    size: 38912
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Danish 2007_NO US CAN.DOC: 
+    size: 32768
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Dutch 2007_NO US CAN.DOC: 
+    size: 36352
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-English 2007_NO US CAN.DOC: 
+    size: 35328
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-English 2007_US CAN.DOC: 
+    size: 36864
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Finnish 2007_NO US CAN.DOC: 
+    size: 31744
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-French 2007_NO US CAN.DOC: 
+    size: 44544
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-French 2007_US CAN.DOC: 
+    size: 43008
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-German 2007_NO US CAN.DOC: 
+    size: 36864
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Greek 2007_NO US CAN.DOC: 
+    size: 43520
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Hungarian 2007_NO US CAN.DOC: 
+    size: 38400
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Italian 2007_NO US CAN.DOC: 
+    size: 38912
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Norwegian 2007_NO US CAN.DOC: 
+    size: 32768
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Polish 2007_NO US CAN.DOC: 
+    size: 40448
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Portuguese 2007_NO US CAN.DOC: 
+    size: 36864
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Russian 2007_NO US CAN.DOC: 
+    size: 49664
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Slovak 2007_NO US CAN.DOC: 
+    size: 38912
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Spanish 2007_NO US CAN.DOC: 
+    size: 31744
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Spanish 2007_US CAN.DOC: 
+    size: 32768
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/LW-1y-Swedish 2007_NO US CAN.DOC: 
+    size: 44544
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/MD5_license.txt: 
+    size: 783
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/licences/Read Me First.txt: 
+    size: 1634
+    mdate: 2010-05-11 12:03:52 +02:00
+  /sauvetomtom/logging: 
+    size: 4096
+    mdate: 2000-01-01 12:35:16 +01:00
+  /sauvetomtom/lowbatteryw.bmp: 
+    size: 391736
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/mctx.dat: 
+    size: 212
+    mdate: 2011-02-24 08:45:58 +01:00
+  /sauvetomtom/microbrowser: 
+    size: 4096
+    mdate: 2000-05-16 15:36:56 +02:00
+  /sauvetomtom/microbrowser/download: 
+    size: 4096
+    mdate: 2000-05-16 15:36:56 +02:00
+  /sauvetomtom/photos: 
+    size: 4096
+    mdate: 2011-03-04 12:43:52 +01:00
+  /sauvetomtom/photos/StartBlack.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/photos/StartClassic.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/photos/StartPaint.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/photos/StartWhite.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/photos/antitheft.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/photos/lowbattery.bmp: 
+    size: 230454
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/pluserror.txt: 
+    size: 552
+    mdate: 2000-05-16 16:14:12 +02:00
+  /sauvetomtom/raster: 
+    size: 12288
+    mdate: 2011-03-04 12:43:54 +01:00
+  /sauvetomtom/raster/eux.ver: 
+    size: 52
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,03458.jpg: 
+    size: 128010
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,03458.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,03986.jpg: 
+    size: 222223
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,03986.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,04516.jpg: 
+    size: 352692
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,04516.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,05046.jpg: 
+    size: 144350
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,05046.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,05576.jpg: 
+    size: 74608
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,05576.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,06106.jpg: 
+    size: 54281
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,06106.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,06636.jpg: 
+    size: 12647
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00000,06636.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,03458.jpg: 
+    size: 121156
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,03458.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,03986.jpg: 
+    size: 186317
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,03986.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,04516.jpg: 
+    size: 393634
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,04516.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,05046.jpg: 
+    size: 323707
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,05046.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,05576.jpg: 
+    size: 238806
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,05576.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,06106.jpg: 
+    size: 261241
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,06106.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,06636.jpg: 
+    size: 23184
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_00686,06636.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,03458.jpg: 
+    size: 66173
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,03458.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,03986.jpg: 
+    size: 233876
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,03986.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,04516.jpg: 
+    size: 338168
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,04516.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,05046.jpg: 
+    size: 276791
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,05046.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,05576.jpg: 
+    size: 181175
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,05576.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,06106.jpg: 
+    size: 259099
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,06106.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,06636.jpg: 
+    size: 236516
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_01373,06636.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,03458.jpg: 
+    size: 182056
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,03458.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,03986.jpg: 
+    size: 297191
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,03986.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,04516.jpg: 
+    size: 292772
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,04516.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,05046.jpg: 
+    size: 306899
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,05046.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,05576.jpg: 
+    size: 229676
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,05576.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,06106.jpg: 
+    size: 229651
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,06106.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:42 +02:00
+  /sauvetomtom/raster/euxe01_02060,06636.jpg: 
+    size: 222557
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02060,06636.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,03458.jpg: 
+    size: 145319
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,03458.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,03986.jpg: 
+    size: 91100
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,03986.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,04516.jpg: 
+    size: 154799
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,04516.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,05046.jpg: 
+    size: 177306
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,05046.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,05576.jpg: 
+    size: 149768
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,05576.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,06106.jpg: 
+    size: 165310
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,06106.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,06636.jpg: 
+    size: 128564
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe01_02746,06636.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,03459.jpg: 
+    size: 197636
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,03459.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,04694.jpg: 
+    size: 258159
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,04694.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,05930.jpg: 
+    size: 164611
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_00000,05930.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,03459.jpg: 
+    size: 234542
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,03459.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,04694.jpg: 
+    size: 280875
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,04694.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,05930.jpg: 
+    size: 224194
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_02067,05930.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,03459.jpg: 
+    size: 219785
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,03459.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,04694.jpg: 
+    size: 254121
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,04694.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,05930.jpg: 
+    size: 187857
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe03_04135,05930.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe09_00000,03461.jpg: 
+    size: 129825
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe09_00000,03461.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe09_03101,03461.jpg: 
+    size: 124376
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe09_03101,03461.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe18_00000,00000.jpg: 
+    size: 186558
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxe18_00000,00000.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,03562.jpg: 
+    size: 147882
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,03562.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,04104.jpg: 
+    size: 142803
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,04104.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,04645.jpg: 
+    size: 136425
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,04645.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,05187.jpg: 
+    size: 163905
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,05187.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,05729.jpg: 
+    size: 39525
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-00411,05729.sat: 
+    size: 65
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,03562.jpg: 
+    size: 217688
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,03562.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,04104.jpg: 
+    size: 133985
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,04104.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,04645.jpg: 
+    size: 40478
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,04645.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,05187.jpg: 
+    size: 198282
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,05187.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,05729.jpg: 
+    size: 58643
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01083,05729.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01833,02750.jpg: 
+    size: 19557
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw01_-01833,02750.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01083,03563.jpg: 
+    size: 105355
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01083,03563.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01083,04915.jpg: 
+    size: 75852
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01083,04915.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01833,02750.jpg: 
+    size: 4174
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw03_-01833,02750.sat: 
+    size: 68
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw09_-01083,03563.jpg: 
+    size: 24945
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw09_-01083,03563.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw09_-01833,02752.jpg: 
+    size: 1284
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw09_-01833,02752.sat: 
+    size: 67
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw18_-03000,00000.jpg: 
+    size: 35019
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/raster/euxw18_-03000,00000.sat: 
+    size: 66
+    mdate: 2010-05-11 12:04:44 +02:00
+  /sauvetomtom/restart.dat: 
+    size: 234
+    mdate: 2011-08-07 15:42:44 +02:00
+  /sauvetomtom/schemes: 
+    size: 4096
+    mdate: 2011-03-04 12:43:56 +01:00
+  /sauvetomtom/script: 
+    size: 4096
+    mdate: 2011-03-04 12:43:56 +01:00
+  /sauvetomtom/script/liblua.so: 
+    size: 182736
+    mdate: 2010-09-15 20:37:58 +02:00
+  /sauvetomtom/settings.dat: 
+    size: 8361
+    mdate: 2011-08-07 15:42:44 +02:00
+  /sauvetomtom/signpost_li.txt: 
+    size: 11559
+    mdate: 2010-09-15 16:32:04 +02:00
+  /sauvetomtom/sounds: 
+    size: 4096
+    mdate: 2011-03-04 12:43:56 +01:00
+  /sauvetomtom/sounds/airplane.wav: 
+    size: 211124
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/beep1.wav: 
+    size: 88586
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/beep2.wav: 
+    size: 63290
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/beep3.wav: 
+    size: 40140
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/beep4.wav: 
+    size: 191958
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/beep5.wav: 
+    size: 94666
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/bell1.wav: 
+    size: 160184
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/bell2.wav: 
+    size: 68572
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/bell3.wav: 
+    size: 148416
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/boing.wav: 
+    size: 111856
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/bugle.wav: 
+    size: 159370
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/camera.wav: 
+    size: 73986
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/cow.wav: 
+    size: 102876
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/cuckoo.wav: 
+    size: 92050
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/flash.wav: 
+    size: 124608
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/horn.wav: 
+    size: 113664
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/notify1.wav: 
+    size: 47852
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/notify2.wav: 
+    size: 158200
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/notify3.wav: 
+    size: 151338
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/polite1.wav: 
+    size: 99882
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/polite2.wav: 
+    size: 97608
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/polite3.wav: 
+    size: 79164
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/restaurant.wav: 
+    size: 230772
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/sounds/ringtone.wav: 
+    size: 171640
+    mdate: 2011-02-18 08:10:40 +01:00
+  /sauvetomtom/splashw.bmp: 
+    size: 391736
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/suspendw.bmp: 
+    size: 391736
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/system: 
+    size: 1030991
+    mdate: 2010-08-18 11:53:44 +02:00
+  /sauvetomtom/text: 
+    size: 4096
+    mdate: 2011-03-04 12:43:58 +01:00
+  /sauvetomtom/tomtom.ico: 
+    size: 70596
+    mdate: 2011-02-18 08:11:06 +01:00
+  /sauvetomtom/ttgo.bif: 
+    size: 2842
+    mdate: 2011-08-07 12:56:32 +02:00
+  /sauvetomtom/ttsystem: 
+    size: 7821573
+    mdate: 2010-09-15 20:39:18 +02:00
+  /sauvetomtom/userpatch.dat: 
+    size: 68
+    mdate: 2011-08-06 09:41:42 +02:00
+  /sauvetomtom/watchdogtrace.dat: 
+    size: 11604
+    mdate: 2011-08-07 15:42:38 +02:00
+  /sauvetomtom/zip: 
+    size: 4096
+    mdate: 2011-03-04 12:43:58 +01:00
+  /sauvetomtom/zip/great_britain.postal: 
+    size: 9185063
+    mdate: 2010-05-11 12:04:18 +02:00
+  /sauvetomtom/zip/great_britainpostal.ver: 
+    size: 64
+    mdate: 2010-05-11 12:04:18 +02:00
+  /sauvetomtom/zip/nederland.postal: 
+    size: 1966677
+    mdate: 2010-05-11 12:04:20 +02:00
+  /sauvetomtom/zip/nederlandpostal.ver: 
+    size: 61
+    mdate: 2010-05-11 12:04:20 +02:00
+cpdirectory: 51
+cpfile: 730
+date: 2011-08-18 07:02:04.321818 +02:00
