@@ -1,0 +1,42 @@
+--- 
+Graphviz: 
+  forme: box
+  style: filled
+  orientation: LR
+  direction: forward
+  colors: 
+    none: bisque2
+    jsfw: crimson
+    jspg: coral
+    jslib: azure3
+  hachure:
+    style: dotted
+    color: red
+FreeMind:
+   version: 0.9.0
+accueil.ex.html: 
+- - jquery-1.5.1.min.js
+  - jsfw
+- - jquery.cookie.js
+  - jspg
+- - json2.min.js
+  - jslib
+- - data_io.js
+  - none
+- - ope.js
+  - none
+Tableau des indicateurs:
+- - jquery-1.5.1.min.js
+  - jsfw
+- - jquery.cookie.js
+  - jspg
+- - pagination.js
+  - none
+- - logo.js
+  - none
+- - dir_synthese.js
+  - none
+ope.js:
+- - Tableau des indicateurs
+  - none
+  - hachure

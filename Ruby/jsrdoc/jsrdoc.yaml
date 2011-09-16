@@ -1,0 +1,11 @@
+--- 
+Graphviz: 
+  forme: box
+  style: filled
+  orientation: LR
+  direction: forward
+  colors: 
+    none: bisque2
+    jsfw: crimson
+    jspg: coral
+    jslib: azure3
