@@ -27,9 +27,9 @@ exports.getCookie = function ( header, name ){
 exports.cloneHeaders = function ( header, myhost ){
   var tmp     = header;  
   var T = String( myhost ).split( ':' );
-  myhost = T[0];
-  if T[1] == 80 
-  tmp['host'] = myhost;
+  if (T[1] == 80) { 
+  tmp['host'] = T[0];
+   }  else { tmp['host'] = myhost; }
   return tmp;      
 };
 
