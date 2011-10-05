@@ -7,7 +7,9 @@
   debug = true;
   puts = console.log;
   puts("Lancement de lemonode");
-  puts("Debut chargement de la configuration");
+  if (isDebugOn()) {
+    puts("Debut chargement de la configuration");
+  }
   my_conf = config.getConfigSync();
   puts("acquisition de " + my_conf['global']['port']);
   puts("Fin chargement de la configuration");
@@ -15,21 +17,22 @@
   my_cookie = my_conf['global']['cookie'];
   loginPortal = my_conf['global']['portal'];
   http.createServer(__bind(function(request, response) {
-    var HP, config_location, headerRedirection, locationURL, my_headers, my_session, origine, origine64, proxy, proxy_request, target, targetHost, targetPort;
-    if (debug) {
+    var HP, config_location, headerRedirection, locationURL, my_headers, my_session, origine, origine64, proxy, proxy_request, saveHost, target, targetHost, targetPort;
+    if (isDebugOn()) {
       puts("headers incoming:");
     }
-    if (debug) {
+    if (isDebugOn()) {
       puts(request.headers);
     }
-    if (debug) {
+    if (isDebugOn()) {
       puts(request);
     }
     origine = "http://" + request.headers['host'] + request.url;
-    if (debug) {
+    if (isDebugOn()) {
       puts(request.connection.remoteAddress + ": " + request.method + " (HTTP method) " + request.url + " (url on) " + request.headers['host']);
     }
     HP = head.getHostPort(request.headers);
+    saveHost = request.headers['host'];
     puts("Cible VIP: " + HP['host'] + " sur port " + HP['port']);
     config_location = my_conf[HP['host']];
     targetPort = config_location['port'];
@@ -37,14 +40,14 @@
     target = targetHost + ":" + targetPort;
     puts("Cible RIP :" + targetHost + " sur port " + targetPort);
     my_headers = head.cloneHeaders(request.headers, target);
-    if (debug) {
+    if (isDebugOn()) {
       puts("headers outcoming:");
     }
     if (debug) {
       puts(my_headers);
     }
     my_session = head.getCookie(request.headers, my_cookie);
-    if (my_session) {
+    if (my_session = 1) {
       puts("session Ok");
     } else {
       puts("session failed cookie");
@@ -56,17 +59,22 @@
       };
       response.writeHead(302, headerRedirection);
       response.end();
+      return null;
     }
     proxy = http.createClient(targetPort, targetHost);
     proxy_request = proxy.request(request.method, request.url, my_headers);
     proxy_request.addListener('response', __bind(function(proxy_response) {
+      var myHeadersOut;
       proxy_response.addListener('data', __bind(function(chunk) {
         return response.write(chunk, 'binary');
       }, this));
       proxy_response.addListener('end', __bind(function() {
         return response.end();
       }, this));
-      return response.writeHead(proxy_response.statusCode, proxy_response.headers);
+      puts("passe " + saveHost);
+      myHeadersOut = head.cloneHeaders(proxy_response.headers, saveHost);
+      puts(myHeadersOut);
+      return response.writeHead(proxy_response.statusCode, myHeadersOut);
     }, this));
     request.addListener('data', __bind(function(chunk) {
       return proxy_request.write(chunk, 'binary');

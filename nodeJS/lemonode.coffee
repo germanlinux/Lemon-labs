@@ -4,39 +4,44 @@ config = require('./config.js')
 head   = require('./header.js')
 
 
-debug= true
 puts = console.log
 #load config is requiered 
 puts "Lancement de lemonode"
-puts "Debut chargement de la configuration"
+puts "Debut chargement de la configuration" if config.isDebugOn()
 my_conf= config.getConfigSync()
-puts "acquisition de " + my_conf['global']['port'] 
-puts "Fin chargement de la configuration"
-puts "Mise en service"
+puts "acquisition de " + my_conf['global']['port']  if config.isDebugOn() 
+puts "Fin chargement de la configuration"  if config.isDebugOn()
+puts "Mise en service"  if config.isDebugOn()
 my_cookie =  my_conf['global']['cookie'] 
 loginPortal = my_conf['global']['portal']
 http.createServer(  (request,response) =>
-    puts  "headers incoming:" if debug
-    puts request.headers if debug
-    puts request if debug
+    puts  "headers incoming:" if config.isDebugOn()
+    puts request.headers if config.isDebugOn()
+    puts request if config.isDebugOn()
     origine = "http://" + request.headers['host'] + request.url 
     puts request.connection.remoteAddress + ": " + request.method +
-    " (HTTP method) " + request.url + " (url on) " + request.headers['host']  if debug
+    " (HTTP method) " + request.url + " (url on) " + request.headers['host']  if config.isDebugOn()
     # recuperation host et port du  header host
     HP = head.getHostPort( request.headers )
+    saveHost = request.headers['host']  
     puts "Cible VIP: #{HP['host']} sur port #{HP['port']}"
     ## aligne des headers
     config_location = my_conf[HP['host']]
-    targetPort= config_location['port']
+    try 
+    	targetPort= config_location['port']
+    catch error 
+        puts "Erreur la location n'existe pas ou est absente de l entete: #{HP['host']}"
+        return null
+    
     targetHost= config_location['hostname']
-    target= targetHost + ":" + targetPort
+    target = targetHost + ":" + targetPort
     puts "Cible RIP :#{targetHost} sur port #{targetPort}" 
     my_headers = head.cloneHeaders(request.headers,target)   
-    puts  "headers outcoming:" if debug
-    puts my_headers if debug 
+    puts  "headers outcoming:" if config.isDebugOn()
+    puts my_headers if config.isDebugOn() 
     ## check session 
     my_session = head.getCookie(request.headers,my_cookie) 
-    if my_session 
+    if my_session = 1
            puts "session Ok" 
     else 
            puts "session failed cookie"
@@ -46,16 +51,20 @@ http.createServer(  (request,response) =>
            headerRedirection= 'location' : locationURL 
            response.writeHead(302,headerRedirection)
            response.end()
- 
+           return null 
+
     proxy = http.createClient(targetPort,targetHost)
     proxy_request = proxy.request(request.method, request.url, my_headers)
     proxy_request.addListener('response',  (proxy_response) =>
           proxy_response.addListener('data',  (chunk) => response.write(chunk, 'binary') )
           proxy_response.addListener('end',        =>  response.end() )
-          response.writeHead proxy_response.statusCode, proxy_response.headers)
+          puts "passe #{saveHost}"
+          myHeadersOut = head.cloneHeaders(proxy_response.headers,saveHost)
+          puts myHeadersOut   
+          response.writeHead proxy_response.statusCode, myHeadersOut)
     request.addListener('data', (chunk)     =>
                           proxy_request.write(chunk, 'binary'))
     request.addListener('end',  =>  proxy_request.end()) 
 ).listen(my_conf['global']['port'] )
-puts "le serveur ecoute sur le port #{my_conf['global']['port']} "
+puts "le serveur lemonodeJS V0.0 ecoute sur le port #{my_conf['global']['port']} "
 

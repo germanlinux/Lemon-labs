@@ -5,7 +5,7 @@
   puts = console.log;
   http.createServer(__bind(function(request, res) {
     var buffer, k, message;
-    message = "<h1>hello lemonode</h1>";
+    message = "<h1>hello lemonodeJS</h1>";
     buffer = request.headers;
     puts(buffer);
     puts(buffer['host']);
