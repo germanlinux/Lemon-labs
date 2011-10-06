@@ -1,0 +1,45 @@
+body {
+    background-color: #DCDBDA;
+    font-family: Georgia,serif;
+    font-size: 12px;
+    line-height: 16px; 
+    padding: 100px 100px;
+    color: #FFFFFF;
+}
+
+#div_ident {
+	background-color: #7C7F79;
+	width: 600px;
+	padding: 10px; 
+}
+
+#info {
+	color: #FFFFFF;
+	background-color: #245554;
+	padding: 15px; 
+}
+
+#forurl {
+  background-color: ACAFA8;
+  padding: 5px;
+}
+
+.lab4 {
+  padding-right: 10px;
+  font-weight: bold;	 
+}	
+
+.div_direct {
+	background: #777;
+	margin-top: 0px;
+	width: 800px;
+	height: 800px;
+}
+
+.div_lemon {
+  background: #fff url(horseman.png) bottom right;
+  margin-top: 0px;
+  width: 800px;
+  height: 800px;
+}
+
