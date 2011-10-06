@@ -17,8 +17,8 @@ loginPortal = my_conf['global']['portal']
 http.createServer(  (request,response) =>
     puts  "headers incoming:" if config.isDebugOn()
     puts request.headers if config.isDebugOn()
-    puts request if config.isDebugOn()
-    origine = "http://" + request.headers['host'] + request.url 
+    puts request if config.isDebugOn() 
+    origine = "http://" + request.headers['host'] + request.url+ "_cookie=" + my_cookie 
     puts request.connection.remoteAddress + ": " + request.method +
     " (HTTP method) " + request.url + " (url on) " + request.headers['host']  if config.isDebugOn()
     # recuperation host et port du  header host
@@ -41,7 +41,7 @@ http.createServer(  (request,response) =>
     puts my_headers if config.isDebugOn() 
     ## check session 
     my_session = head.getCookie(request.headers,my_cookie) 
-    if my_session = 1
+    if my_session 
            puts "session Ok" 
     else 
            puts "session failed cookie"

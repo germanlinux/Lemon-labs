@@ -12,17 +12,16 @@ var dataFILE   = null;
 
 // fonction auto-exec --> determination du type de config / fichier / URL /...
 ( function () {
-  for (i= 0 , l= process.argv.length ; i < l ; i++) { 
+  for ( var i= 0 ,l= process.argv.length ; i < l ; i++) { 
         if (process.argv[i].indexOf('-f') > -1) { 
               namef = process.argv[i+1];
 	      console.log("Utilisation du fichier de configuration:  " +namef);	   
-           //   continue;
+              continue;
            }
         if (process.argv[i].indexOf('-d') > -1) { 
               _debug = true;
 	      console.log("mode debug ON  ");	   
-           //   continue;
-
+              continue;
            }
 
   }
