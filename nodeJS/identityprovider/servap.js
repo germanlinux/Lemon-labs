@@ -1,7 +1,7 @@
 var http = require('http');
 var util = require('util');
 var fs   = require('fs');
-var uuid = require('uuid');
+var uuid = require('node-uuid');
 var querystring = require('querystring');
 
 var len_base = 0;
