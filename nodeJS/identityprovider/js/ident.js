@@ -53,9 +53,11 @@ $( function() {
       dataType: "json",
       success: function( data ) {
         if( data.result == 'ok' && data.habilit == 'ok' ){
-          var options = { 'path': '/' };
+          var options = { 'path': '/', 'domain' : 'demo.appli' };
           $.cookie( cookName, data.luid, options);
-          alert( 'uuid=' + data.luid );
+          //alert( 'uuid=' + data.luid );
+          var cible = $('#forurl').text();
+          $(location).attr('href', cible );
         }
       },
       error: function(jqXHR, textStatus, errorThrown) {
