@@ -1,6 +1,6 @@
 http = require('http')
 puts = console.log
-http.createServer(  (request,res) ->
+http.createServer(  (request,res) =>
             message= "<h1>hello lemonode</h1>"
             buffer= request.headers
             puts buffer

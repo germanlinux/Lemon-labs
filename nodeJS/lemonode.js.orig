@@ -23,7 +23,7 @@
   my_cookie = my_conf['global']['cookie'];
   loginPortal = my_conf['global']['portal'];
   http.createServer(__bind(function(request, response) {
-    var HP, config_location, headerRedirection, locationURL, my_headers, my_session, origine, origine64, r, saveHost, target, targetHost, targetPort;
+    var HP, config_location, headerRedirection, locationURL, my_headers, my_session, origine, origine64, proxy, proxy_request, r, saveHost, target, targetHost, targetPort;
     if (config.isDebugOn()) {
       puts("headers incoming:");
     }
@@ -67,7 +67,7 @@
       }).post('/getValue').on('reply', __bind(function(reply, res) {
         return console.log("eg " + reply);
       }, this));
-      return puts("ok je suis passe");
+      puts("ok je suis passe");
     } else {
       puts("session failed cookie");
       origine64 = new Buffer(origine);
@@ -80,6 +80,27 @@
       response.end();
       return null;
     }
+    proxy = http.createClient(targetPort, targetHost);
+    proxy_request = proxy.request(request.method, request.url, my_headers);
+    proxy_request.addListener('response', __bind(function(proxy_response) {
+      var myHeadersOut;
+      proxy_response.addListener('data', __bind(function(chunk) {
+        return response.write(chunk, 'binary');
+      }, this));
+      proxy_response.addListener('end', __bind(function() {
+        return response.end();
+      }, this));
+      puts("passe " + saveHost);
+      myHeadersOut = head.cloneHeaders(proxy_response.headers, saveHost);
+      puts(myHeadersOut);
+      return response.writeHead(proxy_response.statusCode, myHeadersOut);
+    }, this));
+    request.addListener('data', __bind(function(chunk) {
+      return proxy_request.write(chunk, 'binary');
+    }, this));
+    return request.addListener('end', __bind(function() {
+      return proxy_request.end();
+    }, this));
   }, this)).listen(my_conf['global']['port']);
   puts("le serveur lemonodeJS V0.0 ecoute sur le port " + my_conf['global']['port'] + " ");
 }).call(this);

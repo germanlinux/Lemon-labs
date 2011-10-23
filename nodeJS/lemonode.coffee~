@@ -48,8 +48,10 @@ http.createServer(  (request,response) =>
            r = new api_request('http', 'localhost', 8888)
            r.with_content_type('application/json').
            with_payload( { 'cle' :  my_session}).
-             post('/getValue').on('reply', (reply, res) => 
-              			console.log("eg #{reply}"))
+             post('/getValue').on('reply', (reply, res) =>
+                                toto ->(res) 
+                                        console.log('essai') 
+              			toto(a) )
 				
            puts "ok je suis passe"
     else 
