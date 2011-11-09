@@ -1,0 +1,6 @@
+h = { result: 'ok',
+  valeur: 
+   { user: 'jean.valjean',
+     habilit: [ 'opera', 'monintranet' ] } }
+console.log(h)
+
