@@ -3,13 +3,18 @@
   http = require('http');
   puts = console.log;
   http.createServer(function(request, res) {
-    var buffer, k, message;
+    var buffer, entete, k, message;
     message = "<h1>hello lemonode</h1>";
     buffer = request.headers;
     puts(buffer);
     puts(buffer['host']);
     for (k in buffer) {
       message += "<p>" + k + "===>" + buffer[k] + "</p>";
+      if (k === 'authorization') {
+        entete = new Buffer(buffer[k], 'base64');
+        entete = entete.toString('utf8');
+        message += "<p> Decode:" + entete + "</p>";
+      }
     }
     res.writeHead(200, {
       'Content-Type': 'text/html',

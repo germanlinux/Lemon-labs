@@ -40,7 +40,6 @@ http.createServer(function (request, response) {
            // envoi au stockage avec la cle uid
            // si stock OK
  
-           console.log( "1111111111" );
            
            var r = new api_request('http', 'localhost', 8888);
            
@@ -51,12 +50,24 @@ http.createServer(function (request, response) {
                send_response( { result : 'ok', habilit : 'ok', luid : suid  } );
            });
            
-           console.log( "2222222222" );
            
            return;
          }   
          if( deco.user == 'nopass' && deco.pass == 'nopass' ){
-           send_response( { result : 'ok', habilit : 'bad' } );
+                var suid = uuid();
+           // creation profil user
+           // envoi au stockage avec la cle uid
+           // si stock OK
+           var r = new api_request('http', 'localhost', 8888);
+           
+           r.with_content_type('application/json').
+             with_payload( { 'cle' :  suid, 'valeur' : { 'user' : 'inspecteur.javert', 'habilit' : ['opera'] } } ).
+             post('/setValue').on('reply', function(reply, res) {
+               console.log( reply );
+               send_response( { result : 'ok', habilit : 'ok', luid : suid  } );
+           });
+           
+           
            return;
          }
          
@@ -77,14 +88,14 @@ http.createServer(function (request, response) {
       console.log( 'URL DECO -->' + url[0] );
       response.writeHead(200, {'content-type': 'text/html' } );
       
-      var readS1 = fs.createReadStream( 'ident1.html' );
+      var readS1 = fs.createReadStream( './ident1.html' );
       
       readS1.on('data', function(data) {
         response.write( data );
       });
       readS1.on('end', function() {
          response.write( url[0] );
-         var readS2 = fs.createReadStream( 'ident2.html' );
+         var readS2 = fs.createReadStream( './ident2.html' );
          readS2.on('data', function(data) {
            response.write( data );
          });

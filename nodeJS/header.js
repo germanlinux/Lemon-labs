@@ -33,6 +33,12 @@ exports.cloneHeaders = function ( header, myhost ){
   return tmp;      
 };
 
+exports.addHeaders = function ( headers, entete ){
+  var tmp     = headers;  
+  tmp['authorization'] = entete; 
+  return tmp;      
+};
+
 
 
 

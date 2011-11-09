@@ -1,7 +1,4 @@
 {EventEmitter} = require('events')
-querystring = require('querystring')
-
-
 class Signal extends EventEmitter 
  maint: -> 
    @emit 'ici','maintenant' 
