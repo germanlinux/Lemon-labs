@@ -70,9 +70,6 @@
     if (config.isDebugOn()) {
       puts("headers outcoming:");
     }
-    request.addListener('end', function() {
-      return console.log("je passe FIN");
-    });
     if (config.isDebugOn()) {
       puts(my_headers);
     }
@@ -97,9 +94,10 @@
         response.end();
         return null;
       });
-      myvalidator.on('auth', function(accessdeny) {
-        var proxy, proxy_request;
-        console.log("reprise de la boucle auth");
+      myvalidator.on('auth', function(entete) {
+        var add_header, proxy, proxy_request;
+        add_header = head.addHeaders(my_headers, entete);
+        my_headers = add_header;
         proxy = http.createClient(targetPort, targetHost);
         proxy_request = proxy.request(request.method, request.url, my_headers);
         proxy_request.addListener('response', __bind(function(proxy_response) {
@@ -111,21 +109,19 @@
           }, this));
         }, this));
         if (state['end'] === 0) {
-          request.addListener('end', function() {
+          return request.addListener('end', function() {
             return proxy_request.end();
           });
         } else {
-          proxy_request.end();
+          return proxy_request.end();
         }
-        return console.log("SUITE de la boucle auth");
       });
       r = new api_request('http', 'localhost', 8888);
-      r.with_content_type('application/json').with_payload({
+      return r.with_content_type('application/json').with_payload({
         'cle': my_session
       }).post('/getValue').on('reply', function(reply, res) {
         return habilit(reply, res, myvalidator, origine, loginPortal, codeappli, my_cookie);
       });
-      return puts("ok je suis passe");
     } else {
       puts("session failed cookie");
       origine64 = new Buffer(origine2);

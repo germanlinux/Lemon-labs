@@ -53,7 +53,6 @@ http.createServer(  (request,response) =>
     puts "Cible RIP :#{targetHost} sur port #{targetPort}" 
     my_headers = head.cloneHeaders(request.headers,target)   
     puts  "headers outcoming:" if config.isDebugOn()
-    request.addListener('end',  ->  console.log("je passe FIN"))
     puts my_headers if config.isDebugOn() 
     ## check session 
     my_session = head.getCookie(request.headers,my_cookie)
@@ -77,7 +76,9 @@ http.createServer(  (request,response) =>
                    proxy = http.createClient(targetPort,targetHost)
                    #ajout entete user 
                    proxy_request = proxy.request(request.method, request.url, my_headers)
-                   proxy_request.addListener('response',  (proxy_response) => 
+                   proxy_request.addListener('response',  (proxy_response) =>
+                         headers_retour = head.cloneHeaders(proxy_response.headers,saveHost) 
+                         response.writeHead(proxy_response.statusCode,headers_retour)  
                          proxy_response.addListener('data',  (chunk) => response.write(chunk, 'binary') )
                          proxy_response.addListener('end',   =>  response.end() ) )
 #                   proxy_request.end()
