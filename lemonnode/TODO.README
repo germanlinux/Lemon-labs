@@ -1,0 +1,6 @@
+(1) Tester le protocole utilise dans la redirection : j ai mis en dur http://
+(2) completer la reecriture des headers en cas de code 3nn
+(3) faire des vrais scripts de demarrage et d arret
+(4) modifier les cookies à la volée (ajustement du domaine) 
+(5) utiliser oauth
+(6) travailler sur l idee d une favicon lemonnode
