@@ -1,10 +1,10 @@
 (function() {
-  var Validator, api_request, config, habilit, head, http, loginPortal, my_conf, my_cookie, puts;
+  var Validator, api_request, config, habilit, head, http, loginPortal, my_conf, my_cookie, puts, version;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   http = require('http');
   Validator = require('./authorization');
   config = require('./config.js');
-  head = require('./header.js');
+  head = require('./headers.js');
   api_request = require('api_request');
   puts = console.log;
   habilit = function(reply, res, auto, origine, loginPortal, codeappli, cookie) {
@@ -13,7 +13,12 @@
     auto.compute(reply, origine, loginPortal, codeappli, cookie);
     return console.log("en sortant d'habilit");
   };
-  puts("Lancement de lemonode");
+  version = "0.0";
+  if (config.getVersion()) {
+    puts("v" + version);
+    return null;
+  }
+  puts("Lancement de lemon:nodeJS");
   if (config.isDebugOn()) {
     puts("Debut chargement de la configuration");
   }
@@ -31,6 +36,7 @@
   loginPortal = my_conf['global']['portal'];
   http.createServer(__bind(function(request, response) {
     var HP, codeappli, config_location, headerRedirection, locationURL, my_headers, my_session, myvalidator, origine, origine2, origine64, r, saveHost, state, target, targetHost, targetPort;
+    puts("request incoming:" + request.url);
     if (config.isDebugOn()) {
       puts("headers incoming:");
     }
@@ -42,7 +48,7 @@
     }
     state = [];
     origine = "http://" + request.headers['host'] + request.url;
-    origine2 = "http://" + request.headers['host'] + request.url + "_cookie=" + my_cookie;
+    origine2 = origine + "_cookie=" + my_cookie;
     state['end'] = 0;
     if (config.isDebugOn()) {
       puts(request.connection.remoteAddress + ": " + request.method + " (HTTP method) " + request.url + " (url on) " + request.headers['host']);
@@ -55,7 +61,7 @@
     puts("Cible VIP: " + HP['host'] + " sur port " + HP['port']);
     config_location = my_conf[HP['host']];
     codeappli = config_location['authorization'];
-    puts("core: codeappli => " + codeappli);
+    puts("dispatcher: codeappli => " + codeappli);
     try {
       targetPort = config_location['port'];
     } catch (error) {
@@ -89,7 +95,6 @@
         return null;
       });
       myvalidator.on('no-auth', function(accessdeny) {
-        console.log("reprise de la boucle no auth");
         response.writeHead(403);
         response.end();
         return null;
@@ -101,6 +106,9 @@
         proxy = http.createClient(targetPort, targetHost);
         proxy_request = proxy.request(request.method, request.url, my_headers);
         proxy_request.addListener('response', __bind(function(proxy_response) {
+          var headers_retour;
+          headers_retour = head.cloneHeaders(proxy_response.headers, saveHost);
+          response.writeHead(proxy_response.statusCode, headers_retour);
           proxy_response.addListener('data', __bind(function(chunk) {
             return response.write(chunk, 'binary');
           }, this));
@@ -123,7 +131,7 @@
         return habilit(reply, res, myvalidator, origine, loginPortal, codeappli, my_cookie);
       });
     } else {
-      puts("session failed cookie");
+      puts("echec sur la récuperation de la session");
       origine64 = new Buffer(origine2);
       locationURL = loginPortal + "?url=" + origine64.toString('base64');
       puts("Location de redirection: " + locationURL);
@@ -135,5 +143,5 @@
       return null;
     }
   }, this)).listen(my_conf['global']['port']);
-  puts("le serveur lemon:nodeJS V0.0 ecoute sur le port " + my_conf['global']['port'] + " ");
+  puts("le serveur lemon:nodeJS V" + version + " ecoute sur le port " + my_conf['global']['port'] + " ");
 }).call(this);

@@ -1,10 +1,12 @@
-var sys  = require("sys");
+//var sys  = require("sys");
 var path = require("path");
 var fs   = require("fs");
 var util = require('util');
 
 var namef = './conf/lemonode.cfg';
 var _debug = false
+var _version = false
+
 var typeConf = '';
 
 var flagLOADED = false;
@@ -21,6 +23,11 @@ var dataFILE   = null;
         if (process.argv[i].indexOf('-d') > -1) { 
               _debug = true;
 	      console.log("mode debug ON  ");	   
+              continue;
+           }
+        if (process.argv[i].indexOf('-V') > -1) { 
+              _version = true;
+	      console.log("get version");	   
               continue;
            }
 
@@ -100,6 +107,10 @@ exports.getCible = function ( location ){
 exports.isDebugOn = function (){
   return _debug;
 };
+exports.getVersion = function (){
+  return _version;
+};
+
 
 //// C FINI
 /////////////////////////////////////////////////////////////////////////////////////////////

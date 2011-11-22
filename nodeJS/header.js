@@ -1,4 +1,4 @@
-var sys  = require("sys");
+//var sys  = require("sys");
 
 exports.getHostPort = function ( header ){
   var T = String( header.host ).split( ':' );
@@ -16,12 +16,19 @@ exports.getCookie = function ( header, name ){
   if( !header.cookie ){
     return false;
   } 
-  var cook = String( header.cookie ).split('=');
-  if( cook[0] === name ){
-    return cook[ 1 ];
-  } else {
-    return false;
-  }
+  console.log(header.cookie); 
+  var cook = String( header.cookie ).split(';');
+   console.log(cook);
+   var cp= 0;
+  while (cp < cook.length ) {
+    var book = cook[ cp ].split('=');
+     console.log(book);
+     if (book[ 0 ] === name) {
+        return book[ 1 ];
+       } 
+     cp++ ; 
+   } 
+   return false;
 };
 
 exports.cloneHeaders = function ( header, myhost ){
