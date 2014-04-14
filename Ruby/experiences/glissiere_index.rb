@@ -20,6 +20,9 @@ class Glissiere
       @courant_poste = array[2].to_i
       @courant_rang = array[3].to_i
       @erreur = false
+      if array.size == 2  then 
+        return
+       end 
       if @courant_poste != @prec_poste then 
         @premier = true
         @sequence = false   
@@ -28,8 +31,9 @@ class Glissiere
          @premier = true
          @sequence = false   
        end
-        if @premier and @courant_poste   == 0 then 
-          @erreur = "Table #{@courant_table} : id : #{@courant_id} -- Absence du la cle" 
+          
+      if @premier and @courant_poste == 0  
+        @erreur = "Table #{@courant_table} : id : #{@courant_id} -- Absence du la cle" 
         end
       if @premier and @courant_rang != 0 then 
          @erreur = "Table #{@courant_table} : id : #{@courant_id} -- commence a : #{@courant_rang} au lieu de 0" 
