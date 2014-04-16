@@ -1,4 +1,7 @@
+$LOAD_PATH << './'
+require 'utildate.rb'
 require 'json'
+
 def formate_int(chaine)
     if !chaine then 
           chaine = "0"
@@ -16,7 +19,17 @@ core.each_with_index do |ligne,i|
     t = Hash.new 
     t[:projet] = table[0]
     t[:domaine] =  table[5]
+    if t[:domaine]=~ /Domaine/ then 
+         t[:section] = 'DEP'
+         else
+         t[:section] = 'DOM'
+     end    
+          
     t[:date] =  table[12]
+    if @chaine_date == nil then 
+        @chaine_date   = Util_date.new(t[:date])
+    end
+    t[:semaine] =  @chaine_date.semaine
     t[:Vc] =  formate_int table[13]
     t[:Vr] =  formate_int table[14]
     t[:Vp] = formate_int  table[15]
