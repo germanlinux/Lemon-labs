@@ -20,9 +20,9 @@ core.each_with_index do |ligne,i|
     t[:projet] = table[0]
     t[:domaine] =  table[5]
     if t[:domaine]=~ /Domaine/ then 
-         t[:section] = 'DEP'
-         else
          t[:section] = 'DOM'
+         else
+         t[:section] = 'DEP'
      end    
           
     t[:date] =  table[12]
@@ -42,5 +42,10 @@ core.each_with_index do |ligne,i|
     t[:Rr] = formate_int  table[36]
     t[:Rp] =  formate_int table[37]
     t[:RTotal] = formate_int  table[38]
-    puts t.to_json  if t[:date]    
+    t[:prec]  = t[:Rc] * 52 / t[:semaine] 
+    t[:prer]  = t[:Rr] * 52 / t[:semaine] 
+    t[:prep]  = t[:Rp] * 52 / t[:semaine] 
+    t[:prepTotal]  = t[:RTotal] * 52 / t[:semaine] 
+    
+     puts t.to_json  if t[:date]    
 end
