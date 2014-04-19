@@ -27,6 +27,6 @@ content.each_with_index do |ligne,i|
  end
 hash[:jcl] = @jcl
 hash[:pgm] = @tabpgm
-
+hash[:source] = content
 puts hash.to_json
 end      
