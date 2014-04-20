@@ -1,0 +1,15 @@
+<div >
+  <h3>Liste des jcl</h3>
+ </div>
+<div class="container">
+<table class="table"  width="100%">
+<thead><th> JCL</th><Th>Ordre d'appel des programmes</th></thead>    
+<% @jcl.each do |j| %>
+<tr>
+
+<td> <%= j['jcl']%> </td>
+<td> <%= j['pgm'] %> </td>
+</tr>
+
+<% end %>
+</table>
