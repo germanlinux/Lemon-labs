@@ -9,10 +9,11 @@ configure do
 #  enable :sessions
 end
 before do
-  @connect = MongoClient.new("localhost",27017) unless @connect
-  puts settings.base
+  unless @connect    
+  @connect = MongoClient.new("localhost",27017) 
   @db = @connect.db(settings.base)
-  @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a;  
+  @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a   
+  end
 end    
 #helpers do
 #  def username
@@ -34,7 +35,17 @@ get '/jcl' do
   @jcl
   erb :jcl
 end
+get '/textejcl/:id' do
+ @id_jcl =  params[:id]
+ @un_jcl = @jcl.select {|item|  item['_id'].to_s == @id_jcl}
+@mon_jcl = @un_jcl[0]['source']
+@nom_jcl =@un_jcl[0]['jcl'] 
 
+@mon_jcl.map! do |ligne| 
+   ligne.gsub!(/\r\n/, '<br>')
+end
+  erb :visujcl 
+end
 #get '/login/form' do 
 #  erb :login_form
 #end
