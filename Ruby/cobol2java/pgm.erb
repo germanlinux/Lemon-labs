@@ -1,0 +1,14 @@
+<div >
+  <h3>Liste des programmes</h3>
+ </div>
+ <%= @pgm.size %> Programmes
+<div class="container">
+<table class="table"  width="100%">
+<thead><th>Programmes</th></thead>    
+<% @pgm.each do |p| %>
+<tr>
+<td> <%= p['nom']%> </td>
+</tr>
+<% end %>
+</table>
+</div>

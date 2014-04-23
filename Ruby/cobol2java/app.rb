@@ -6,13 +6,15 @@ include Mongo
 #
 configure do
     set :base , 'vfp'
+    set :bind ,'0.0.0.0'
 #  enable :sessions
 end
 before do
   unless @connect    
   @connect = MongoClient.new("localhost",27017) 
   @db = @connect.db(settings.base)
-  @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a   
+  @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a
+  @pgm =  @db['pgm'].find().sort({:nom => 1}).to_a   
   end
 end    
 #helpers do
@@ -28,13 +30,19 @@ end
 #    halt erb(:login_form)
 #  end
 #end
-get '/' do 
+get '/' do
 redirect to ("/jcl")
 end  
 get '/jcl' do
   @jcl
   erb :jcl
 end
+get '/pgm' do
+  @pgm
+  erb :pgm
+end
+
+
 get '/textejcl/:id' do
  @id_jcl =  params[:id]
  @un_jcl = @jcl.select {|item|  item['_id'].to_s == @id_jcl}
@@ -46,6 +54,17 @@ get '/textejcl/:id' do
 end
   erb :visujcl 
 end
+
+get '/pdfjcl/:id' do
+content_type 'application/octet-stream'
+ @id_jcl =  params[:id]
+ @un_jcl = @jcl.select {|item|  item['_id'].to_s == @id_jcl}
+@mon_jcl = @un_jcl[0]['pdf']
+content_type 'application/pdf'
+response.write(@mon_jcl)
+end
+
+
 #get '/login/form' do 
 #  erb :login_form
 #end
