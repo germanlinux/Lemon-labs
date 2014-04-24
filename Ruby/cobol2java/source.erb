@@ -1,0 +1,12 @@
+<div >
+  <h3>Source du programme</h3>
+ </div>
+<div class="container">
+<%= @nom_pgm %>
+<hr>
+<pre>
+<% @source.each do |ligne| %>
+<%= ligne %>
+<% end %>
+</pre>
+</div>

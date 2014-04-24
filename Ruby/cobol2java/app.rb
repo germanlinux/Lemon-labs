@@ -64,6 +64,24 @@ content_type 'application/pdf'
 response.write(@mon_jcl)
 end
 
+get '/sourcepgm/:id' do
+ @id_pgm =  params[:id]
+ @pgm.each do |p|
+   if p['_id'].to_s == @id_pgm  then 
+      @nom_pgm =p['nom']
+      @source  = p['source']        
+      break 
+  end
+ end
+  @source.map! do |ligne| 
+   ligne.gsub!(/\r\n/, '<br>')
+   ligne.gsub!(/\s/, '&nbsp;')
+   
+end 
+  erb :source 
+end
+
+
 
 #get '/login/form' do 
 #  erb :login_form
