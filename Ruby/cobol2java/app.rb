@@ -76,9 +76,31 @@ get '/sourcepgm/:id' do
   @source.map! do |ligne| 
    ligne.gsub!(/\r\n/, '<br>')
    ligne.gsub!(/\s/, '&nbsp;')
-   
-end 
+  end 
   erb :source 
+end
+get '/modelepgm/:id' do
+ @id_pgm =  params[:id]
+ @pgm.each do |p|
+   if p['_id'].to_s == @id_pgm  then 
+      @nom_pgm =p['nom']
+      @step  = p['conf_step']
+      @modele  = p['modele']        
+      break 
+  end
+ end
+content_type 'image/png'
+response.write(@modele)
+end
+
+
+## Restful uri
+##
+delete '/pgm/:id'  do
+@id_pgm =  params[:id]
+@pgm =  @db['pgm'].remove('_id'  => BSON::ObjectId(@id_pgm) )
+response.write ("{ok}") 
+#curl -X DELETE http://localhost:4567/pgm/5352d84751514034cc000048
 end
 
 
