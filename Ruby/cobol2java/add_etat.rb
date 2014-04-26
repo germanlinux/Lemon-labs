@@ -2,15 +2,15 @@
 require 'mongo'
 require 'json'
 include Mongo
+file = ARGV.shift
+content= File.readlines(file)
 
 @connect = MongoClient.new("localhost",27017) 
 @db = @connect.db('vfp')
-@pgm =  @db['jcl'].find()
-@pgm.each do |p|
-   if p['pdf_file'] then 
-      libelle = 'A MODERNISER'
-     else
-      libelle = 'A PORTER' 
-    end
-    res = @db['jcl'].update({'_id' => p['_id'] }, {"$set" => {'etat' => libelle}})
+libelle = "A PORTER"
+content.each do |p|
+    p.chomp!
+@jcl =  @db['jcl'].find('jcl' => p).to_a
+    res = @db['jcl'].update({'_id' => @jcl[0]['_id'] }, {"$set" => {'etat' => libelle}})
 end
+

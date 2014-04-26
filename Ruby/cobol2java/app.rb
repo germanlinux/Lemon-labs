@@ -92,7 +92,12 @@ get '/modelepgm/:id' do
 content_type 'image/png'
 response.write(@modele)
 end
-
+get '/editjcl/:id'  do
+ @id_jcl =  params[:id]
+ @un_jcl = @jcl.select {|item|  item['_id'].to_s == @id_jcl}
+ @e_jcl = @un_jcl[0]
+  erb :editjcl
+end
 
 ## Restful uri
 ##
