@@ -54,7 +54,19 @@ get '/textejcl/:id' do
 end
   erb :visujcl 
 end
+get '/analysepgm/:id' do
+content_type 'application/octet-stream'
+ @id_pgm =  params[:id]
+ @pgm.each do |p|
+   if p['_id'].to_s == @id_pgm  then 
+      @p_pdf   = p['pdf']        
+      break 
+  end
+ end
 
+content_type 'application/pdf'
+response.write(@p_pdf)
+end
 get '/pdfjcl/:id' do
 content_type 'application/octet-stream'
  @id_jcl =  params[:id]
@@ -92,11 +104,31 @@ get '/modelepgm/:id' do
 content_type 'image/png'
 response.write(@modele)
 end
+get '/modelejcl/:id' do
+ @id_jcl =  params[:id]
+ @jcl.each do |p|
+   if p['_id'].to_s == @id_jcl  then 
+      @modele  = p['modele']        
+      break 
+  end
+ end
+content_type 'image/png'
+response.write(@modele)
+end
+
 get '/editjcl/:id'  do
  @id_jcl =  params[:id]
  @un_jcl = @jcl.select {|item|  item['_id'].to_s == @id_jcl}
  @e_jcl = @un_jcl[0]
   erb :editjcl
+end
+
+post '/jcl/:id' do
+@id_jcl = params[:id]
+cle = params[:cle]
+valeur = params[:valeur]
+res = @db['jcl'].update({'_id' =>  BSON::ObjectId(@id_jcl)  }, {"$set" => {cle  => valeur}})
+redirect to ("/jcl") 
 end
 
 ## Restful uri

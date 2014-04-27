@@ -1,4 +1,3 @@
-## ce programme ajoute le source cobol desprogrammes aux entrees mongodb
 require 'mongo'
 require 'json'
 include Mongo
