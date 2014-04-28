@@ -1,0 +1,7 @@
+<p>Programme:<%= @e_pgm['nom'] %> </P>
+<form action='/pgm/<%= @e_pgm['_id'] %>'  method='post' class="form-inline well">
+  <input type="text" name='cle' placeholder="cle a ajouter ou modifier" autofocus>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='valeur' placeholder="valeur" autofocus>
+  
+  <input class="btn primary" type='submit' value='Envoyer'>
+</form>

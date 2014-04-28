@@ -131,6 +131,28 @@ res = @db['jcl'].update({'_id' =>  BSON::ObjectId(@id_jcl)  }, {"$set" => {cle  
 redirect to ("/jcl") 
 end
 
+
+get '/editpgm/:id' do
+ @id_pgm =  params[:id]
+ @pgm.each do |p|
+   if p['_id'].to_s == @id_pgm  then 
+      @e_pgm =p
+      break 
+  end
+ end
+  erb :editpgm
+end
+
+post '/pgm/:id' do
+@id_pgm = params[:id]
+cle = params[:cle]
+valeur = params[:valeur]
+res = @db['pgm'].update({'_id' =>  BSON::ObjectId(@id_pgm)  }, {"$set" => {cle  => valeur}})
+redirect to ("/pgm") 
+end
+
+
+
 ## Restful uri
 ##
 delete '/pgm/:id'  do

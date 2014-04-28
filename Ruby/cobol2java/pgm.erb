@@ -3,11 +3,52 @@
  </div>
  <%= @pgm.size %> Programmes
 <div class="container">
-<table class="table"  width="100%">
-<thead><th>Programmes</th></thead>    
+<table class="table" >
+<thead><th width="5%"><IMG SRC="images/edit.png" </th><th width="5%"><IMG SRC="images/lire.png"ALT="texte" TITLE="Texte"></th><th width ="5%">Analyse</th><th width="10%">Programmes</th><th width="15%">ETAT</th><th width="15%">Date</th>
+<th width ="10%">MODELE</th>
+</thead>    
 <% @pgm.each do |p| %>
 <tr>
+<td><a href=/editpgm/<%= p['_id'] %>>Editer</a></td>
+<td><% if p['source'] then  %>
+<a href=/sourcepgm/<%= p['_id'] %>>Source</a>
+ <% end %>
+</td>
+<td>
+<% if p['pdf_file'] then  %>
+<a href=/analysepgm/<%= p['_id'] %>>Documentation</a>
+ <% end %>
+
+</td>     
+
 <td> <%= p['nom']%> </td>
+<% if p['etat'] == 'A MODERNISER' then %>
+<td> <span class="label label-primary">A MODERNISER</span>
+<% end %>
+<% if p['etat'] == 'A PORTER' then %>
+<td> <span class="label label-warning">A PORTER</span>
+<% end %>
+<% if p['etat'] == 'EN RECETTE' then %>
+<td> <span class="label label-success">EN RECETTE</span>
+<% end %>
+<% if p['etat'] == 'NON REPRIS' then %>
+<td> <span class="label label-default">NON REPRIS</span>
+<% end %>
+</td>
+<td>
+<% if p['date'] then %>
+<%= p['date'] %>
+<% end%>
+</td>
+
+
+<td>
+<% if p['modele'] then %>
+<a  href=/modelepgm/<%= p['_id'] %> ><%= p['conf_step'] %>
+</a>
+<% end%>
+</td>
+
 </tr>
 <% end %>
 </table>
