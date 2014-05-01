@@ -1,20 +1,22 @@
-<p>Programme:<%= @e_pgm['nom'] %> </P>
-<form action='/pgm/<%= @e_pgm['_id'] %>'  method='post' class="form-inline well">
+<p>JCL:<%= @e_jcl['jcl'] %> </P>
+<form action='/jcl/<%= @e_jcl['_id'] %>'  method='post' class="form-inline well">
   <input type="text" name='cle' placeholder="cle a ajouter ou modifier" autofocus>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='valeur' placeholder="valeur" autofocus>
   
   <input class="btn primary" type='submit' value='Envoyer'>
 </form>
+
 <table border='1'>
-<% @e_pgm.keys.each do |k| %>
+<% @e_jcl.keys.each do |k| %>
+
 <tr>
 <td> <%=  k %></td>
-<% if @e_pgm[k].to_s.size  < 200 then %>
-<td><%=  @e_pgm[k] %></td>
-<%else %>
+<% if @e_jcl[k].to_s.size  < 200 then %>
+<td><%=  @e_jcl[k] %></td>
+<% else %>
 <td> file </td>
-<%end%>
-</tr>
 <% end%>
+</tr>
+<% end %>
 
 </table>
