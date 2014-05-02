@@ -10,11 +10,12 @@ configure do
 #  enable :sessions
 end
 before do
-  unless @connect    
-  @connect = MongoClient.new("localhost",27017) 
-  @db = @connect.db(settings.base)
-  @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a
-  @pgm =  @db['pgm'].find().sort({:nom => 1}).to_a   
+  unless @connect then
+    puts "reload"  
+    @connect = MongoClient.new("localhost",27017) 
+    @db = @connect.db(settings.base)
+    @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a
+    @pgm =  @db['pgm'].find().sort({:nom => 1}).to_a   
   end
 end    
 #helpers do
@@ -151,6 +152,23 @@ res = @db['pgm'].update({'_id' =>  BSON::ObjectId(@id_pgm)  }, {"$set" => {cle  
 redirect to ("/pgm") 
 end
 
+post '/jclupload/:id' do 
+tfile = params[:file][:tempfile].read()
+@id_jcl = params[:id]
+@cle = params[:cle]
+content_img  = BSON::Binary.new(tfile)
+res = @db['jcl'].update({'_id' => BSON::ObjectId(@id_jcl) }, {"$set" => {@cle => content_img}})
+redirect  to ("/jcl") 
+end
+
+post '/pgmupload/:id' do 
+tfile = params[:file][:tempfile].read()
+@id_pgm = params[:id]
+@cle = params[:cle]
+content_img  = BSON::Binary.new(tfile)
+res = @db['pgm'].update({'_id' => BSON::ObjectId(@id_pgm) }, {"$set" => {@cle => content_img}})
+redirect  to ("/pgm") 
+end
 
 
 ## Restful uri
@@ -164,22 +182,10 @@ end
 
 
 
-#get '/login/form' do 
-#  erb :login_form
-#end
 
-#post '/login/attempt' do
+
 #  session[:identity] = params['username']
-#  where_user_came_from = session[:previous_url] || '/'
-#  redirect to where_user_came_from 
-#end
 
-#get '/logout' do
 #  session.delete(:identity)
-#  erb "<div class='alert alert-message'>Logged out</div>"
-#end
 
 
-#get '/secure/place' do
-#  erb "This is a secret place that only <%=session[:identity]%> has access to!"
-#end

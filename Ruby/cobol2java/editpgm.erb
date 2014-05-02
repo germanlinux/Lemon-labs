@@ -5,6 +5,15 @@
   
   <input class="btn primary" type='submit' value='Envoyer'>
 </form>
+
+<p> Fichiers binaires associés</p>
+<form action='/pgmupload/<%= @e_pgm['_id'] %>'  method='post' enctype='multipart/form-data' class="form-inline well">
+ <input type="file" name='file' placeholder="choisir une fichier">
+ <input type="text" name='cle' placeholder="indiquer la cle à utiliser">
+  <input class="btn primary" type='submit' value='Upload'>
+</form>
+<p>
+
 <table border='1'>
 <% @e_pgm.keys.each do |k| %>
 <tr>
