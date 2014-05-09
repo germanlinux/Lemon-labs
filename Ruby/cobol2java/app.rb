@@ -16,7 +16,10 @@ before do
     @db = @connect.db(settings.base)
     @jcl =  @db['jcl'].find().sort({:jcl => 1}).to_a
     @pgm =  @db['pgm'].find().sort({:nom => 1}).to_a   
+    @liv =  @db['livraison'].find().sort({:date => 1}).to_a   
+
   end
+
 end    
 #helpers do
 #  def username
@@ -41,6 +44,10 @@ end
 get '/pgm' do
   @pgm
   erb :pgm
+end
+get '/livraison' do
+  @liv
+  erb :livraison
 end
 
 
@@ -123,7 +130,12 @@ get '/editjcl/:id'  do
  @e_jcl = @un_jcl[0]
   erb :editjcl
 end
-
+get '/editliv/:id'  do
+ @id_liv =  params[:id]
+ @un_liv = @liv.select {|item|  item['_id'].to_s == @id_liv}
+ @e_liv = @un_liv[0]
+  erb :editliv
+end
 post '/jcl/:id' do
 @id_jcl = params[:id]
 cle = params[:cle]

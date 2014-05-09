@@ -1,0 +1,29 @@
+<p>Livraison:<%= @e_liv['date'] %> </P>
+<form action='/liv/<%= @e_liv['_id'] %>'  method='post' class="form-inline well">
+  <input type="text" name='cle' placeholder="cle a ajouter ou modifier" autofocus>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name='valeur' placeholder="valeur" autofocus>
+  
+  <input class="btn primary" type='submit' value='Envoyer'>
+</form>
+
+<p> Fichiers binaires associés</p>
+<form action='/livupload/<%= @e_liv['_id'] %>'  method='post' enctype='multipart/form-data' class="form-inline well">
+ <input type="file" name='file' placeholder="choisir une fichier">
+ <input type="text" name='cle' placeholder="indiquer la cle à utiliser">
+  <input class="btn primary" type='submit' value='Upload'>
+</form>
+<p>
+
+<table border='1'>
+<% @e_liv.keys.each do |k| %>
+<tr>
+<td> <%=  k %></td>
+<% if @e_liv[k].to_s.size  < 200 then %>
+<td><%=  @e_liv[k] %></td>
+<%else %>
+<td> file </td>
+<%end%>
+</tr>
+<% end%>
+
+</table>

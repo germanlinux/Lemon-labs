@@ -1,0 +1,38 @@
+<div >
+  <h3>Livraisons</h3>
+ </div>
+  <%= @liv.size %> Livraisons
+
+<div class="container">
+<table class="table"  width="100%" border = "1">
+<thead><th><IMG SRC="images/edit.png" </th><th>Date</th><th width="10%">ETAT</th><Th width="45%">Jobs</th><th >configuration</th></thead>    
+<% @liv.each do |l| %>
+<tr>
+<td><a href=/editliv/<%= l['_id'] %>>Editer</a></td>    
+<td> <%= l['date']%> </td>
+<td>
+<% if !l['etat'] == 'COMPLETE' then %>
+ <span class="label label-warning">A COMPLETER</span>
+<% else %>
+ <span class="label label-primary">COMPLETE</span>
+<% end %>
+</td>
+
+
+<td> 
+<% l['job'].each_with_index do |s,c| %>
+<%= s %> => <%= l['step'][c]%><br>
+<% end %>
+
+
+</td>
+<td>
+ <% l['conf_step'].each do |z| %> 
+<%= z %> <br> 
+<% end %>
+</td>
+</tr>
+
+<% end %>
+</table>
+</div>
