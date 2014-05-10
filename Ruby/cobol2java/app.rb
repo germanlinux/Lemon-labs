@@ -144,6 +144,37 @@ res = @db['jcl'].update({'_id' =>  BSON::ObjectId(@id_jcl)  }, {"$set" => {cle  
 redirect to ("/jcl") 
 end
 
+post '/peclivraison/:id' do
+ 
+ @id_liv =  params[:id]
+ @un_liv = @liv.select {|item|  item['_id'].to_s == @id_liv}
+ @e_liv = @un_liv[0]
+  # recherche jcl 
+ les_step = @e_liv['job']
+ les_step.each_with_index do |jcl,i|
+ @j =  @db['jcl'].find(:jcl => jcl).to_a[0] 
+ my_conf = @e_liv['conf_step'][i]
+ if @j then 
+  @db['jcl'].update({'jcl' => jcl},{"$set" => {'etat' => 'EN RECETTE' , 'date' => @e_liv['date'] , 
+    'conf_step' => my_conf ,'j2e' => @e_liv['step'][i] }
+    })
+  ## maj pgm 
+  pgm =  @e_liv['step'][i]
+  pgm.each do |p|
+    pfind = p.upcase
+    reg =  /^#{p}$/i
+    @db['pgm'].update({'nom' => reg } ,{"$set" => {'etat' => 'EN RECETTE' , 'date' => @e_liv['date'],
+    'nomj2e' => p,  'conf_step' => my_conf  }}) 
+  end
+  else 
+   halt 500  , "ERREUR DE JCL"
+  end 
+
+
+ end 
+ redirect to ("/jcl") 
+ #fin trt jcl 
+end
 
 get '/editpgm/:id' do
  @id_pgm =  params[:id]

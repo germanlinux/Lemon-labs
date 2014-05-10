@@ -22,17 +22,18 @@
 </td>     
 
 <td> <%= p['nom']%> </td>
+<td>
 <% if p['etat'] == 'A MODERNISER' then %>
-<td> <span class="label label-primary">A MODERNISER</span>
+ <span class="label label-primary">A MODERNISER</span>
 <% end %>
 <% if p['etat'] == 'A PORTER' then %>
-<td> <span class="label label-warning">A PORTER</span>
+ <span class="label label-warning">A PORTER</span>
 <% end %>
 <% if p['etat'] == 'EN RECETTE' then %>
-<td> <span class="label label-success">EN RECETTE</span>
+ <span class="label label-success">EN RECETTE</span>
 <% end %>
 <% if p['etat'] == 'NON REPRIS' then %>
-<td> <span class="label label-default">NON REPRIS</span>
+<span class="label label-default">NON REPRIS</span>
 <% end %>
 </td>
 <td>

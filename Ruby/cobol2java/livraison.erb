@@ -5,11 +5,12 @@
 
 <div class="container">
 <table class="table"  width="100%" border = "1">
-<thead><th><IMG SRC="images/edit.png" </th><th>Date</th><th width="10%">ETAT</th><Th width="45%">Jobs</th><th >configuration</th></thead>    
+<thead><th><IMG SRC="images/edit.png" </th><th>Date</th><th> Fichier archive</th> <th width="10%">ETAT</th><Th width="45%">Jobs</th><th >configuration</th></thead>    
 <% @liv.each do |l| %>
 <tr>
 <td><a href=/editliv/<%= l['_id'] %>>Editer</a></td>    
 <td> <%= l['date']%> </td>
+<td> <%= l['fichier']%></td>
 <td>
 <% if !l['etat'] == 'COMPLETE' then %>
  <span class="label label-warning">A COMPLETER</span>

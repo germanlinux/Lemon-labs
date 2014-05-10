@@ -1,15 +1,54 @@
 <div >
   <h3>Liste des jcl</h3>
  </div>
+  <%= @jcl.size %> JCL
+
 <div class="container">
-<table class="table"  width="100%">
-<thead><th> JCL</th><Th>Ordre d'appel des programmes</th></thead>    
+<table class="table"  width="100%" border = "1">
+<thead><th><IMG SRC="images/edit.png" </th><th><IMG SRC="images/pdf.png"ALT="pdf" TITLE="pdf"></th><th><IMG SRC="images/jcl.png"ALT="texte" TITLE="Texte"></th><th> JCL</th><th width="5%">ETAT</th><th width="45%">Ordre d'appel des programmes Legacy</th><th  width="45%"><center>J2E</center></th><th  width="10%">Date</th><th >MODELE</th></thead>    
 <% @jcl.each do |j| %>
 <tr>
-
+<td><a href=/editjcl/<%= j['_id'] %>>Editer</a></td>    
+<td><% if j['pdf_file'] then  %>
+<a href=/pdfjcl/<%= j['_id'] %>> schema</a>
+ <% end %>
+</td>
+<td><% if j['source'] then  %> 
+<a href=/textejcl/<%= j['_id'] %>> Version texte</a>
+<% end %>
+</td>
 <td> <%= j['jcl']%> </td>
+<td>
+<% if j['etat'] == 'A MODERNISER' then %>
+ <span class="label label-primary">A MODERNISER</span>
+<% end %>
+<% if j['etat'] == 'A PORTER' then %>
+ <span class="label label-warning">A PORTER</span>
+<% end %>
+<% if j['etat'] == 'EN RECETTE' then %>
+ <span class="label label-success">EN RECETTE</span>
+<% end %>
+<% if j['etat'] == 'NON REPRIS' then %>
+ <span class="label label-default">NON REPRIS</span>
+<% end %>
+</td>
+
+
 <td> <%= j['pgm'] %> </td>
+<td> <%= j['j2e'] %> </td>
+
+<td><% if j['date'] then  %> 
+  <%=   j['date'] %>
+  <% end%>
+ </td> 
+<td><% if j['modele'] then  %> 
+    Traduction de <br>
+  <a  href=/modelejcl/<%= j['_id'] %> ><%= j['conf_step'] %>
+  <% end%>
+ </td> 
+
 </tr>
 
 <% end %>
 </table>
+</div>

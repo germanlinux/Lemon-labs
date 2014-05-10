@@ -14,6 +14,11 @@
 </form>
 <p>
 
+<form action='/peclivraison/<%= @e_liv['_id'] %>'  method='post' class="form-inline well">
+<input class="btn primary" type='submit' value='PEC'>
+<p> Cette action permet de Prendre En Charge une livraison et de mettre à jour les informations liées</p>
+</form>
+
 <table border='1'>
 <% @e_liv.keys.each do |k| %>
 <tr>
