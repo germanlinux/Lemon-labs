@@ -1,0 +1,17 @@
+<div >
+  <h3>Fichierss</h3>
+ </div>
+  <%= @files.size %> Fichiers
+
+<div class="container">
+<table class="table"  width="100%" border = "1">
+<thead><th><IMG SRC="images/edit.png" </th><th>Fichier</th></thead>    
+<% @files.each do |l| %>
+<tr>
+<td><a href=/editfile/<%= l['_id'] %>>Editer</a></td>    
+<td> <%= l['file']%> </td>
+</tr>
+
+<% end %>
+</table>
+</div>
