@@ -1,7 +1,8 @@
 require 'graphviz'
 require 'mongo'
 include Mongo
-limite = ARGV.shift
+limite_b = ARGV.shift
+limite_h = ARGV.shift
 @connect = MongoClient.new("localhost",27017) 
 @db = @connect.db('vfp')
 @liaisons = @db['jcl'].find({},{:fields => {'jcl' => 1, 'files' => 1}}).to_a
@@ -18,15 +19,15 @@ g[:ranksep] = 2
 g[:sep] = '+4'
 
 @liaisons.each do |link|
-if link['files'] then    
+if link['files'] and link['files'].size > limite_b.to_i then    
   g.add_node(link['jcl'],:color => "red", :style => "filled").label = link['jcl'] 
   @files = link['files']
   @files.each do |f| 
-    next if hf[f] > limite.to_i 
+    next if hf[f] > limite_h.to_i 
     g.add_node(f,:shape => "box" , :color => "orange").label = f
     g.add_edges(link['jcl'],f)
   end
 end
      
 end
-g.output( :png =>  "graph1.png" )    
+g.output( :png =>  "graph2.png" )    
