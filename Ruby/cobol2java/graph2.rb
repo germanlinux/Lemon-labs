@@ -3,9 +3,11 @@ require 'mongo'
 include Mongo
 limite_b = ARGV.shift
 limite_h = ARGV.shift
+
+mon_png = "graph_" + limite_b +"_" + limite_h+ ".png" 
 @connect = MongoClient.new("localhost",27017) 
 @db = @connect.db('vfp')
-@liaisons = @db['jcl'].find({},{:fields => {'jcl' => 1, 'files' => 1}}).to_a
+@liaisons = @db['jcl'].find({},{:fields => {'jcl' => 1, 'files' => 1, 'etat' => 1}}).to_a
 @fic =@db['file'].find({},{:fields => {'file' => 1, 'nb_jcl' => 1}}).to_a
 hf ={}
 hf  =  Hash[@fic.map {|r| [r['file'],r['nb_jcl']] }] 
@@ -19,8 +21,13 @@ g[:ranksep] = 2
 g[:sep] = '+4'
 
 @liaisons.each do |link|
-if link['files'] and link['files'].size > limite_b.to_i then    
-  g.add_node(link['jcl'],:color => "red", :style => "filled").label = link['jcl'] 
+if link['files'] and link['files'].size > limite_b.to_i then
+  if link['etat'] =~ /RECETTE/ then 
+    color = "green" 
+    else
+    color = "red"
+  end       
+  g.add_node(link['jcl'],:color => color, :style => "filled").label = link['jcl'] 
   @files = link['files']
   @files.each do |f| 
     next if hf[f] > limite_h.to_i 
@@ -30,4 +37,4 @@ if link['files'] and link['files'].size > limite_b.to_i then
 end
      
 end
-g.output( :png =>  "graph2.png" )    
+g.output( :png =>  mon_png )    
