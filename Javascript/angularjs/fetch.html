@@ -1,0 +1,54 @@
+<div ng-controller='PaginationCtrl'>
+<div class='row'>
+    <section class = "col-lg-6" >
+
+    <p>{{my_size}}  Fetch</p>
+</section>
+<section  class = "col-lg-6" >   
+    Filtre: <input ng-model="searchText">
+</section>
+    <aside class="col-lg-12">
+        <p>&nbsp;</p>
+</aside>
+</div>
+    <p></p>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>jcl_id</th>
+        <th>Ordre</th>
+        <th>Nom</th>
+        <th>Fonction</th>
+        <th>Information</th>
+      </tr>
+    </thead>
+    <tbody>
+        <loading></loading>
+      <tr ng-repeat="item in items | filter:searchText|
+        offset: currentPage*itemsPerPage |
+        limitTo: itemsPerPage">
+        <td>{{item.id}}</td>
+        <td>{{item.jcl_id}}</td>
+        <td>{{item.ordre}}</td>
+        <td>{{item.nom}}</td>
+        <td>{{item.fonction}}</td>
+        <td>{{item.information}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+          <ul class="pagination">
+            <li ng-class="prevPageDisabled()">
+              <a href ng-click="prevPage()">« Prec</a>
+            </li>
+            <li ng-repeat="n in range()"
+              ng-class="{active: n == currentPage}" >
+              <a href ng-click="setPage(n)">{{n+1}}</a>
+            </li>
+            <li ng-class="nextPageDisabled()">
+              <a href ng-click="nextPage()">Suiv »</a>
+            </li>
+          </ul>
+        
+</div>
