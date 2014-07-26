@@ -1,0 +1,71 @@
+PROPFIND /calendar.ics/ HTTP/1.1
+Host: 10.153.90.156:5000
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.28) Gecko/20120306 Lightning/1.0b2 Thunderbird/3.1.20
+Accept: text/xml
+Accept-Language: fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Encoding: gzip,deflate
+Accept-Charset: utf-8,*;q=0.1
+Keep-Alive: 115
+Connection: keep-alive
+Content-Length: 272
+Content-Type: text/xml; charset=utf-8
+Depth: 0
+Pragma: no-cache
+Cache-Control: no-cache
+
+<D:propfind xmlns:D="DAV:" xmlns:CS="http://calendarserver.org/ns/" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <D:prop>
+    <D:resourcetype/>
+    <D:owner/>
+    <D:supported-report-set/>
+    <C:supported-calendar-component-set/>
+    <CS:getctag/>
+  </D:prop>
+</D:propfind>HTTP/1.0 207 Unknown
+Date: Thu, 24 Jul 2014 10:36:12 GMT
+Server: WSGIServer/0.1 Python/2.6.6
+DAV: 1, 2, 3, calendar-access, addressbook, extended-mkcol
+Content-Type: text/xml
+Content-Length: 1398
+
+<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:">
+  <D:response>
+    <D:href>/calendar.ics/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:resourcetype>
+          <C:calendar xmlns:C="urn:ietf:params:xml:ns:caldav" />
+          <D:collection />
+        </D:resourcetype>
+        <D:supported-report-set>
+          <D:supported-report>
+            <D:report>principal-property-search</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>sync-collection</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>expand-property</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>principal-search-property-set</D:report>
+          </D:supported-report>
+        </D:supported-report-set>
+        <C:supported-calendar-component-set xmlns:C="urn:ietf:params:xml:ns:caldav">
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag xmlns:CS="http://calendarserver.org/ns/">"-5051282785391100649"</CS:getctag>
+      </D:prop>
+      <D:status>HTTP/1.1 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <D:owner />
+      </D:prop>
+      <D:status>HTTP/1.1 404 Not Found</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<D:multistatus xmlns:D="DAV:">
+  <D:response>
+    <D:href>/calendar.ics/</D:href>
+    <D:propstat>
+      <D:prop>
+        <D:resourcetype>
+          <C:calendar xmlns:C="urn:ietf:params:xml:ns:caldav" />
+          <D:collection />
+        </D:resourcetype>
+        <D:supported-report-set>
+          <D:supported-report>
+            <D:report>principal-property-search</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>sync-collection</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>expand-property</D:report>
+          </D:supported-report>
+          <D:supported-report>
+            <D:report>principal-search-property-set</D:report>
+          </D:supported-report>
+        </D:supported-report-set>
+        <C:supported-calendar-component-set xmlns:C="urn:ietf:params:xml:ns:caldav">
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag xmlns:CS="http://calendarserver.org/ns/">"-5051282785391100649"</CS:getctag>
+      </D:prop>
+      <D:status>HTTP/1.1 200 OK</D:status>
+    </D:propstat>
+    <D:propstat>
+      <D:prop>
+        <D:owner />
+      </D:prop>
+      <D:status>HTTP/1.1 404 Not Found</D:status>
+    </D:propstat>
+  </D:response>
+</D:multistatus>

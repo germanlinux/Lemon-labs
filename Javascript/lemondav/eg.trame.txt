@@ -1,0 +1,2920 @@
+Logging configuration file '/etc/radicale/logging' not found, using stdout.
+Starting Radicale
+Authentication type is None
+Rights type is None
+Base URL prefix: /
+Listening to german-U36SG port 5232
+Radicale server ready
+PROPFIND request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '306',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:" xmlns:CS="http://calendarserver.org/ns/" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:resourcetype/><D:owner/><D:current-user-principal/><D:supported-report-set/><C:supported-calendar-component-set/><CS:getctag/></D:prop></D:propfind>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/calendar.ics/</href>
+    <propstat>
+      <prop>
+        <resourcetype>
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag>"-860373737"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <owner />
+        <current-user-principal />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+OPTIONS request at / received
+Request headers:
+{'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'OPTIONS',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Answer status: 200 OK
+PROPFIND request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '144',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:"><D:prop><D:getcontenttype/><D:resourcetype/><D:getetag/></D:prop></D:propfind>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-160527970"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-1596270088"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar</getcontenttype>
+        <resourcetype>
+          <principal />
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <getetag>"-860373737"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '321',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</D:href><D:href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-1596270088"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140723T161627Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T161619Z
+UID:003a0c7e-0aa5-4a81-9193-b234679f598d
+LAST-MODIFIED:20140723T161619Z
+SUMMARY:today
+DTSTART;VALUE=DATE:20140723
+DTEND;VALUE=DATE:20140724
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-160527970"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140723T171628Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T171628Z
+UID:003a0c7e-0aa5-9193-b234679f598d
+LAST-MODIFIED:20140723T171628Z
+SUMMARY:encore
+DTSTART;VALUE=DATE:20140726
+DTEND;VALUE=DATE:20140727
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics received
+Request headers:
+{'CONTENT_LENGTH': '752',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112326Z
+LAST-MODIFIED:20140725T112424Z
+DTSTAMP:20140725T112424Z
+UID:f45a8b8b-076c-4ff1-a08d-7668086a7955
+SUMMARY:reunion de bureau
+DTSTART;TZID=Europe/Paris:20140730T100000
+DTEND;TZID=Europe/Paris:20140730T130000
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"275713790"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112326Z
+LAST-MODIFIED:20140725T112424Z
+DTSTAMP:20140725T112424Z
+UID:f45a8b8b-076c-4ff1-a08d-7668086a7955
+SUMMARY:reunion de bureau
+DTSTART;TZID=Europe/Paris:20140730T100000
+DTEND;TZID=Europe/Paris:20140730T130000
+TRANSP:OPAQUE
+X-RADICALE-NAME:f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics received
+Request headers:
+{'CONTENT_LENGTH': '406',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140725T112433Z
+LAST-MODIFIED:20140725T112534Z
+DTSTAMP:20140725T112534Z
+UID:2076b5c3-aec9-44f6-a7f0-2e878b36afdf
+SUMMARY:remontée indicateur anomalie de developpement
+RRULE:FREQ=MONTHLY
+DTSTART;VALUE=DATE:20140731
+DTEND;VALUE=DATE:20140801
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"371103222"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112433Z
+LAST-MODIFIED:20140725T112534Z
+DTSTAMP:20140725T112534Z
+UID:2076b5c3-aec9-44f6-a7f0-2e878b36afdf
+SUMMARY:remontée indicateur anomalie de developpement
+RRULE:FREQ=MONTHLY
+DTSTART;VALUE=DATE:20140731
+DTEND;VALUE=DATE:20140801
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics received
+Request headers:
+{'CONTENT_LENGTH': '761',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112549Z
+LAST-MODIFIED:20140725T112622Z
+DTSTAMP:20140725T112622Z
+UID:0ec96239-e135-430c-a304-f02f98de4eb2
+SUMMARY:Réunion de sous-direction
+DTSTART;TZID=Europe/Paris:20140728T100000
+DTEND;TZID=Europe/Paris:20140728T130000
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-3723299"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112549Z
+LAST-MODIFIED:20140725T112622Z
+DTSTAMP:20140725T112622Z
+UID:0ec96239-e135-430c-a304-f02f98de4eb2
+SUMMARY:Réunion de sous-direction
+DTSTART;TZID=Europe/Paris:20140728T100000
+DTEND;TZID=Europe/Paris:20140728T130000
+TRANSP:OPAQUE
+X-RADICALE-NAME:0ec96239-e135-430c-a304-f02f98de4eb2.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics received
+Request headers:
+{'CONTENT_LENGTH': '786',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112756Z
+LAST-MODIFIED:20140725T112825Z
+DTSTAMP:20140725T112825Z
+UID:b881f85e-8e6c-4493-8d30-40234e3580df
+SUMMARY:Saisie dans CORE des chantiers PAA techniques 2015 
+DTSTART;TZID=Europe/Paris:20140814T140000
+DTEND;TZID=Europe/Paris:20140814T150000
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"264057299"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112756Z
+LAST-MODIFIED:20140725T112825Z
+DTSTAMP:20140725T112825Z
+UID:b881f85e-8e6c-4493-8d30-40234e3580df
+SUMMARY:Saisie dans CORE des chantiers PAA techniques 2015 
+DTSTART;TZID=Europe/Paris:20140814T140000
+DTEND;TZID=Europe/Paris:20140814T150000
+TRANSP:OPAQUE
+X-RADICALE-NAME:b881f85e-8e6c-4493-8d30-40234e3580df.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics received
+Request headers:
+{'CONTENT_LENGTH': '480',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_MATCH': '"264057299"',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140725T112756Z
+LAST-MODIFIED:20140725T112900Z
+DTSTAMP:20140725T112900Z
+UID:b881f85e-8e6c-4493-8d30-40234e3580df
+SUMMARY:Saisie dans CORE des chantiers PAA techniques 2015
+DTSTART;VALUE=DATE:20140814
+DTEND;VALUE=DATE:20140815
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:b881f85e-8e6c-4493-8d30-40234e3580df.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"945296107"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112756Z
+LAST-MODIFIED:20140725T112900Z
+DTSTAMP:20140725T112900Z
+UID:b881f85e-8e6c-4493-8d30-40234e3580df
+SUMMARY:Saisie dans CORE des chantiers PAA techniques 2015
+DTSTART;VALUE=DATE:20140814
+DTEND;VALUE=DATE:20140815
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:b881f85e-8e6c-4493-8d30-40234e3580df.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics received
+Request headers:
+{'CONTENT_LENGTH': '365',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140725T112903Z
+LAST-MODIFIED:20140725T112950Z
+DTSTAMP:20140725T112950Z
+UID:9988aee8-1d2b-47d3-8f7d-119f83d7af56
+SUMMARY:Congés du chef de bureau
+DTSTART;VALUE=DATE:20140814
+DTEND;VALUE=DATE:20140909
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics
+Anonymous has write access to item 9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"200732010"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112903Z
+LAST-MODIFIED:20140725T112950Z
+DTSTAMP:20140725T112950Z
+UID:9988aee8-1d2b-47d3-8f7d-119f83d7af56
+SUMMARY:Congés du chef de bureau
+DTSTART;VALUE=DATE:20140814
+DTEND;VALUE=DATE:20140909
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+DELETE request at /calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics received
+Request headers:
+{'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_MATCH': '"200732010"',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'DELETE',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/calendar.ics/9988aee8-1d2b-47d3-8f7d-119f83d7af56.ics</href>
+    <status>HTTP/1.1 200 OK</status>
+  </response>
+</multistatus>
+
+Answer status: 200 OK
+PUT request at /calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics received
+Request headers:
+{'CONTENT_LENGTH': '769',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113022Z
+LAST-MODIFIED:20140725T113059Z
+DTSTAMP:20140725T113059Z
+UID:ff8a6266-82de-4955-b3ef-78f824feefd4
+SUMMARY:Derniere réunion de bureau d'aout
+DTSTART;TZID=Europe/Paris:20140813T100000
+DTEND;TZID=Europe/Paris:20140813T130000
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has write access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-2074403942"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113022Z
+LAST-MODIFIED:20140725T113059Z
+DTSTAMP:20140725T113059Z
+UID:ff8a6266-82de-4955-b3ef-78f824feefd4
+SUMMARY:Derniere réunion de bureau d'aout
+DTSTART;TZID=Europe/Paris:20140813T100000
+DTEND;TZID=Europe/Paris:20140813T130000
+TRANSP:OPAQUE
+X-RADICALE-NAME:ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics received
+Request headers:
+{'CONTENT_LENGTH': '463',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_MATCH': '"-3723299"',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140725T112549Z
+LAST-MODIFIED:20140725T113154Z
+DTSTAMP:20140725T113154Z
+UID:0ec96239-e135-430c-a304-f02f98de4eb2
+SUMMARY:Pas de réunion de sous-direction
+DTSTART;VALUE=DATE:20140728
+DTEND;VALUE=DATE:20140729
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:0ec96239-e135-430c-a304-f02f98de4eb2.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has write access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-1174686044"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112549Z
+LAST-MODIFIED:20140725T113154Z
+DTSTAMP:20140725T113154Z
+UID:0ec96239-e135-430c-a304-f02f98de4eb2
+SUMMARY:Pas de réunion de sous-direction
+DTSTART;VALUE=DATE:20140728
+DTEND;VALUE=DATE:20140729
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:0ec96239-e135-430c-a304-f02f98de4eb2.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PUT request at /calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics received
+Request headers:
+{'CONTENT_LENGTH': '807',
+ 'CONTENT_TYPE': 'text/calendar; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_IF_NONE_MATCH': '*',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PUT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Request content:
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113213Z
+LAST-MODIFIED:20140725T113250Z
+DTSTAMP:20140725T113250Z
+UID:845e8d1e-3118-485d-a9e9-8728881096bf
+SUMMARY:Réunion de sous-direction
+CATEGORIES:Réunion
+DTSTART;TZID=Europe/Paris:20140804T100000
+DTEND;TZID=Europe/Paris:20140804T130000
+LOCATION:Noisy le Grand
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Answer status: 201 Created
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '255',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has write access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has write access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-90323081"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113213Z
+LAST-MODIFIED:20140725T113250Z
+DTSTAMP:20140725T113250Z
+UID:845e8d1e-3118-485d-a9e9-8728881096bf
+SUMMARY:Réunion de sous-direction
+CATEGORIES:Réunion
+DTSTART;TZID=Europe/Paris:20140804T100000
+DTEND;TZID=Europe/Paris:20140804T130000
+LOCATION:Noisy le Grand
+TRANSP:OPAQUE
+X-RADICALE-NAME:845e8d1e-3118-485d-a9e9-8728881096bf.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at /Calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '272',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip,deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '10.75.204.15:5232',
+ 'HTTP_KEEP_ALIVE': '115',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.28) Gecko/20120306 Lightning/1.0b2 Thunderbird/3.1.20',
+ 'PATH_INFO': '/Calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '10.75.204.75',
+ 'REMOTE_HOST': '',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /Calendar.ics/
+Request content:
+<D:propfind xmlns:D="DAV:" xmlns:CS="http://calendarserver.org/ns/" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <D:prop>
+    <D:resourcetype/>
+    <D:owner/>
+    <D:supported-report-set/>
+    <C:supported-calendar-component-set/>
+    <CS:getctag/>
+  </D:prop>
+</D:propfind>
+Anonymous has read access to collection Calendar.ics/
+Anonymous has write access to collection Calendar.ics/
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/Calendar.ics/</href>
+    <propstat>
+      <prop>
+        <resourcetype>
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag>"-860373737"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <owner />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+OPTIONS request at / received
+Request headers:
+{'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip,deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': '10.75.204.15:5232',
+ 'HTTP_KEEP_ALIVE': '115',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.28) Gecko/20120306 Lightning/1.0b2 Thunderbird/3.1.20',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '10.75.204.75',
+ 'REMOTE_HOST': '',
+ 'REQUEST_METHOD': 'OPTIONS',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Answer status: 200 OK
+PROPFIND request at /Calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '166',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip,deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '10.75.204.15:5232',
+ 'HTTP_KEEP_ALIVE': '115',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.28) Gecko/20120306 Lightning/1.0b2 Thunderbird/3.1.20',
+ 'PATH_INFO': '/Calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '10.75.204.75',
+ 'REMOTE_HOST': '',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /Calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:">
+  <D:prop>
+    <D:getcontenttype/>
+    <D:resourcetype/>
+    <D:getetag/>
+  </D:prop>
+</D:propfind>
+Anonymous has read access to collection Calendar.ics/
+Anonymous has write access to collection Calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/Calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-1596270088"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/Calendar.ics/</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar</getcontenttype>
+        <resourcetype>
+          <principal />
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <getetag>"-860373737"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/Calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-160527970"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at /Calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '336',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip,deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '10.75.204.15:5232',
+ 'HTTP_KEEP_ALIVE': '115',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.28) Gecko/20120306 Lightning/1.0b2 Thunderbird/3.1.20',
+ 'PATH_INFO': '/Calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '10.75.204.75',
+ 'REMOTE_HOST': '',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /Calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<calendar-multiget xmlns:D="DAV:" xmlns="urn:ietf:params:xml:ns:caldav">
+  <D:prop>
+    <D:getetag/>
+    <calendar-data/>
+  </D:prop>
+  <D:href>/Calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</D:href>
+  <D:href>/Calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</D:href>
+</calendar-multiget>
+Anonymous has read access to collection Calendar.ics/
+Anonymous has write access to collection Calendar.ics/
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/Calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-1596270088"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140723T161627Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T161619Z
+UID:003a0c7e-0aa5-4a81-9193-b234679f598d
+LAST-MODIFIED:20140723T161619Z
+SUMMARY:today
+DTSTART;VALUE=DATE:20140723
+DTEND;VALUE=DATE:20140724
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/Calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-160527970"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VEVENT
+CREATED:20140723T171628Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T171628Z
+UID:003a0c7e-0aa5-9193-b234679f598d
+LAST-MODIFIED:20140723T171628Z
+SUMMARY:encore
+DTSTART;VALUE=DATE:20140726
+DTEND;VALUE=DATE:20140727
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '306',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:" xmlns:CS="http://calendarserver.org/ns/" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:resourcetype/><D:owner/><D:current-user-principal/><D:supported-report-set/><C:supported-calendar-component-set/><CS:getctag/></D:prop></D:propfind>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/calendar.ics/</href>
+    <propstat>
+      <prop>
+        <resourcetype>
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag>"218830458"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <owner />
+        <current-user-principal />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+OPTIONS request at / received
+Request headers:
+{'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'OPTIONS',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Answer status: 200 OK
+PROPFIND request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '144',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:"><D:prop><D:getcontenttype/><D:resourcetype/><D:getetag/></D:prop></D:propfind>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has write access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has write access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-1174686044"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar</getcontenttype>
+        <resourcetype>
+          <principal />
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <getetag>"218830458"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"275713790"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-160527970"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"945296107"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-90323081"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"371103222"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-2074403942"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"-1596270088"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at /calendar.ics/ received
+Request headers:
+{'CONTENT_LENGTH': '747',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.6.0 Lightning/2.6.6',
+ 'PATH_INFO': '/calendar.ics/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': 'localhost',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'german-U36SG',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.3',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0xb72980d0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0xb6f82f5c>,
+ 'wsgi.input': <socket._fileobject object at 0x86a816c>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /calendar.ics/
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</D:href><D:href>/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics</D:href><D:href>/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics</D:href><D:href>/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics</D:href><D:href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</D:href><D:href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</D:href><D:href>/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics</D:href><D:href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</D:href></C:calendar-multiget>
+Anonymous has read access to collection calendar.ics/
+Anonymous has write access to collection calendar.ics/
+Anonymous has read access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has write access to item 845e8d1e-3118-485d-a9e9-8728881096bf.ics
+Anonymous has read access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has write access to item 2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+Anonymous has read access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has write access to item 0ec96239-e135-430c-a304-f02f98de4eb2.ics
+Anonymous has read access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has write access to item ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+Anonymous has read access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has write access to item b881f85e-8e6c-4493-8d30-40234e3580df.ics
+Anonymous has read access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-9193-b234679f598d.ics
+Anonymous has read access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has write access to item f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+Anonymous has read access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Anonymous has write access to item 003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/calendar.ics/2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"371103222"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112433Z
+LAST-MODIFIED:20140725T112534Z
+DTSTAMP:20140725T112534Z
+UID:2076b5c3-aec9-44f6-a7f0-2e878b36afdf
+SUMMARY:remontée indicateur anomalie de developpement
+RRULE:FREQ=MONTHLY
+DTSTART;VALUE=DATE:20140731
+DTEND;VALUE=DATE:20140801
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:2076b5c3-aec9-44f6-a7f0-2e878b36afdf.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/0ec96239-e135-430c-a304-f02f98de4eb2.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-1174686044"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112549Z
+LAST-MODIFIED:20140725T113154Z
+DTSTAMP:20140725T113154Z
+UID:0ec96239-e135-430c-a304-f02f98de4eb2
+SUMMARY:Pas de réunion de sous-direction
+DTSTART;VALUE=DATE:20140728
+DTEND;VALUE=DATE:20140729
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:0ec96239-e135-430c-a304-f02f98de4eb2.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/ff8a6266-82de-4955-b3ef-78f824feefd4.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-2074403942"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113022Z
+LAST-MODIFIED:20140725T113059Z
+DTSTAMP:20140725T113059Z
+UID:ff8a6266-82de-4955-b3ef-78f824feefd4
+SUMMARY:Derniere réunion de bureau d'aout
+DTSTART;TZID=Europe/Paris:20140813T100000
+DTEND;TZID=Europe/Paris:20140813T130000
+TRANSP:OPAQUE
+X-RADICALE-NAME:ff8a6266-82de-4955-b3ef-78f824feefd4.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/f45a8b8b-076c-4ff1-a08d-7668086a7955.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"275713790"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112326Z
+LAST-MODIFIED:20140725T112424Z
+DTSTAMP:20140725T112424Z
+UID:f45a8b8b-076c-4ff1-a08d-7668086a7955
+SUMMARY:reunion de bureau
+DTSTART;TZID=Europe/Paris:20140730T100000
+DTEND;TZID=Europe/Paris:20140730T130000
+TRANSP:OPAQUE
+X-RADICALE-NAME:f45a8b8b-076c-4ff1-a08d-7668086a7955.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-160527970"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140723T171628Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T171628Z
+UID:003a0c7e-0aa5-9193-b234679f598d
+LAST-MODIFIED:20140723T171628Z
+SUMMARY:encore
+DTSTART;VALUE=DATE:20140726
+DTEND;VALUE=DATE:20140727
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/003a0c7e-0aa5-4a81-9193-b234679f598d.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-1596270088"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140723T161627Z
+ORGANIZER;CN="pas d'identité (valable) trouvé":MAILTO:non-valable@adresse.courriel
+DTSTAMP:20140723T161619Z
+UID:003a0c7e-0aa5-4a81-9193-b234679f598d
+LAST-MODIFIED:20140723T161619Z
+SUMMARY:today
+DTSTART;VALUE=DATE:20140723
+DTEND;VALUE=DATE:20140724
+TRANSP:OPAQUE
+X-RADICALE-NAME:003a0c7e-0aa5-4a81-9193-b234679f598d.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/845e8d1e-3118-485d-a9e9-8728881096bf.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"-90323081"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T113213Z
+LAST-MODIFIED:20140725T113250Z
+DTSTAMP:20140725T113250Z
+UID:845e8d1e-3118-485d-a9e9-8728881096bf
+SUMMARY:Réunion de sous-direction
+CATEGORIES:Réunion
+DTSTART;TZID=Europe/Paris:20140804T100000
+DTEND;TZID=Europe/Paris:20140804T130000
+LOCATION:Noisy le Grand
+TRANSP:OPAQUE
+X-RADICALE-NAME:845e8d1e-3118-485d-a9e9-8728881096bf.ics
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/calendar.ics/b881f85e-8e6c-4493-8d30-40234e3580df.ics</href>
+    <propstat>
+      <prop>
+        <getetag>"945296107"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+X-RADICALE-NAME:Europe/Paris
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+X-RADICALE-NAME:Europe/Paris
+END:STANDARD
+X-RADICALE-NAME:Europe/Paris
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20140725T112756Z
+LAST-MODIFIED:20140725T112900Z
+DTSTAMP:20140725T112900Z
+UID:b881f85e-8e6c-4493-8d30-40234e3580df
+SUMMARY:Saisie dans CORE des chantiers PAA techniques 2015
+DTSTART;VALUE=DATE:20140814
+DTEND;VALUE=DATE:20140815
+TRANSP:TRANSPARENT
+X-RADICALE-NAME:b881f85e-8e6c-4493-8d30-40234e3580df.ics
+SEQUENCE:1
+X-MOZ-GENERATION:1
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown

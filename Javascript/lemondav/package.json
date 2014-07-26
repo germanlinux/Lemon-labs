@@ -1,0 +1,24 @@
+{
+  "name": "LemonDAV",
+  "description": "jsDAV allows you to easily add WebDAV support to a NodeJS application. jsDAV is meant to cover the entire standard, and attempts to allow integration using an easy to understand API.",
+  "version": "0.0.0",
+  "homepage": "http://github.com/mikedeboer/jsDAV",
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "author": {
+    "name": "Eric German",
+    "email": "germanlinux@yahoo.fr"
+  },
+  
+  "dependencies": {
+    "xmldom": "~0.1.13",
+    "xpath": "~0.0.5"
+  },
+  "licenses": [
+    {
+      "type": "The MIT License",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+ }
