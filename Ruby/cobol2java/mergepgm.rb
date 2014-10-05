@@ -14,9 +14,9 @@ t_onlyname = filename_t.to_s.match r_ext
 if t_onlyname
 onlyname = t_onlyname[1] 
 ## recherche jcl 
-jcl  = @db['JCL'].find(:programme => onlyname).to_a ;
+pgm  = @db['programmes'].find(:programme => onlyname).to_a ;
 
-if jcl.size == 0 
+if pgm.size == 0 
      puts "#{onlyname} : non trouve"
 else
     puts "#{onlyname} : trouve"
@@ -30,7 +30,7 @@ else
           l2.chomp!
           tablig << l2
       end        
-    @db['JCL'].update({'programme' =>  onlyname  }, {"$set" => {'source'  =>  tablig}})
+    @db['programmes'].update({'programme' =>  onlyname  }, {"$set" => {'source'  =>  tablig}})
  #chargement du jcl 
  
 end    
