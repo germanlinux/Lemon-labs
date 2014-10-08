@@ -2,6 +2,7 @@ require 'mongo'
 require 'json'
 require 'date'
 include Mongo
+filtre = [1, 2, 3, 4]
 file = ARGV.shift
 stype = ARGV.shift
 # pgm_batch
@@ -18,19 +19,13 @@ content.each_with_index do |p,cp|
    next if cp < nb_header_i 
    p.encode!('UTF-16', 'UTF-8', :invalid => :replace, :replace => '')
    p.encode!('UTF-8', 'UTF-16', :invalid => :replace)
-
     @tab = p.split(/\t/)
-    if @tab.size < 3 
-       @tab[2] = @tab[3]= @tab[1] 
-     end  
-       @tab[0].gsub!(/"/,'' )
-
-    @tab[3].gsub!(/"/,'' )
-        mydate = Date.strptime(@tab[3],"%Y/%m/%d")
-        _utc =  Time.utc(mydate.year, mydate.month, mydate.day)
-         epoc = _utc.to_i 
-        data = {:programme => @tab[0], :type => stype ,:date => _utc, :epoc => epoc, :date_int => epoc_int   }
+    filtre.each do |i|  
+      @tab[i].gsub!(/"/,'' )
+    end
+    data = {:appli => @tab[2],:type => stype ,:rang =>@tab[1], :libelle => @tab[3] ,:label => @tab[4]  , :date_int => epoc_int   }
         puts data.inspect 
-        res = @db['JCL'].insert(data)
- end
+      res = @db['OPC'].insert(data)
+
+end
 

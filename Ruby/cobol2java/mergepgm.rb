@@ -5,7 +5,8 @@ include Mongo
 path = ARGV.shift
 path+="*"
 r_ext = /(.*)\.(\w+)/
-@connect = MongoClient.new("localhost",27017) 
+#@connect = MongoClient.new("localhost",27017) 
+@connect = MongoClient.new("10.153.91.159",27017) 
 @db = @connect.db('khq')
 Dir.glob(path).each do |filename| 
  t = Pathname.new(filename)

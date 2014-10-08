@@ -1,44 +1,38 @@
-require 'graphviz'
+require 'json'
 require 'mongo'
 include Mongo
-mon_png  = ARGV.shift
-hf = {}
-g = GraphViz::new( "PAYE2", "type" => :digraph , "use" => "twopi" ) 
-g[:rankdir] = "LR"
-g[:overlap] = true
-g[:ranksep] = 10
-g[:sep] = '+4'
+r_ext = /(.*)\.(\w+)/
+#@connect = MongoClient.new("localhost",27017) 
+@connect = MongoClient.new("10.153.91.159", 27017) 
+@db = @connect.db('khq')
+## recherche appl 
+appli   = @db['OPC'].group(:key => 'appli',:cond => {type: 'STEP'},
+                      :initial => {ordre:[], step:[]},
+                      :reduce => "function(cur,result) {result.ordre.push(cur.rang);result.step.push(cur.label)}" 
+    ).to_a
+ puts "eric" 
+ appli.each do |une_chaine|
+  @lessuites = []
+  hash_nom_rang ={}
+  tmp_tab_rang = une_chaine['ordre'] 
+  tmp_tab_rang.each_with_index do |data, i|
+      hash_nom_rang[data] = i
+  end      
+  tmp_tab_rang.sort!
+  tmp_tab_rang.each do |ordre|
+      next if ordre=~ /ENC|TOP/
+      index= hash_nom_rang[ordre]
+      jcl_h = une_chaine['step'][index] 
 
-@connect = MongoClient.new("localhost",27017) 
-@db = @connect.db('paye2')
-@link = @db['liaisons'].group(
-  :key => ['appl1', 'appl2'], 
-  :initial => {:count  => 0},
-  :reduce => "function(obj,res){ res.count+=1; } " ,
-  ).to_a
+## recherche jcl =
+      rjcl =@db['JCL'].find({:programme => jcl_h}).to_a
+       jcl_h += '*' if rjcl.size != 1 
+      @lessuites << jcl_h
+# puts ordre
 
-#puts @fetch.size
-#db.liaisons.group({key: {appl1 :1,appl2 :1} , reduce : function(cur,result) {result.count +=1}, initial:{count : 0}} )
-
-@link.each do |l|
-   if hf.has_key?(l['appl1']) 
-     g.add_node(l['appl1'], :color => "grey", :style => "filled").label = l['appl1'] 
-     hf[l['appl1']] = 1
-   end
-   if hf.has_key?(l['appl2']) 
-     g.add_node(l['appl2'], :color => "grey", :style => "filled").label = l['appl2'] 
-     hf[l['appl2']] = 1
-   end
-  next if l['count'] < 3  
-
-    g.add_edges(l['appl1'],l['appl2'],:penwidth=>l['count'],:arrowhead =>'none')
-
+ end   
+ puts @lessuites.inspect
+  puts 'eric'
+@db['OPC'].update({'programme' =>  une_chaine['appli']  }, {"$set" => {'enchainement' => @lessuites}})    
 end
 
-
-
-#tab = f['appli']
-#tab.each do |
-#puts " #{f['nom']};#{f['appli'].size}"
-g.output( :png =>  mon_png )    
-     

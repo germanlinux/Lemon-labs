@@ -3,7 +3,8 @@ require 'pathname'
 require 'mongo'
 include Mongo
 
-@connect = MongoClient.new("localhost",27017) 
+#@connect = MongoClient.new("localhost",27017) 
+@connect = MongoClient.new("10.153.91.159",27017) 
 @db = @connect.db('khq')
 jcl  = @db['JCL'].find().to_a ;
 jcl.each do |j|
