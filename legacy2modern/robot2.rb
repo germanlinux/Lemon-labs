@@ -4,11 +4,11 @@ liste_ref  = ARGV.shift
 my_cr = monarchive + "/README_copy.TXT"
 
 
-`rm  #{monarchive}/COPY/*CPY`
-`rmdir  #{monarchive}/COPY`
+#`rm  #{monarchive}/COPY/*CPY`
+#`rmdir  #{monarchive}/COPY`
 
 
-`mkdir #{monarchive}/COPY`
+#`mkdir #{monarchive}/COPY`
 
 File.open(my_cr,'w') do |file| 
   DATA.each do |line|
