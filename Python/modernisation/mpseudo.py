@@ -19,6 +19,8 @@ class PseudoEcriture:
             if type(valeur) is not date and not None:
                 raise RuntimeError("{}  n est pas un format date".format(valeur))
             self.DHECCOMP = valeur
+    def set_CPSECCLI(self,valeur):
+             self.CPSECCLI = valeur
     def set_NCROOPER(self,valeur):
              self.NCROOPER =valeur
     def set_ccrolop(self,valeur):
@@ -45,6 +47,16 @@ class PseudoEcriture:
              self.poste_ = valeur
     def set_cleycte(self,valeur):
              self.ycte = valeur
+    def set_CPSECOMA(self,valeur):
+             self.CPSECOMA = valeur
+    def set_CPSEIMPE(self,valeur):
+             self.CPSEIMPE=valeur
+    def set_DCROVAL(self,valeur):
+             self.DCROVAL=valeur
+    def set_CHECSNS(self,valeur):
+             self.CHECSNS = valeur
+    def set_MCROOPE(self,valeur):
+             self.MCROOPE = valeur
     def efface_pseudo(self):
         """ emule le M462323"""
         self.set_LCTATARU('')
@@ -59,9 +71,55 @@ class PseudoEcriture:
     def get_dcroope_str(self):
         tdate=self.DCROOPE.strftime("%Y%m%d")
         return tdate
+    def get_dheccomp_str(self):
+        tdate=self.DHECCOMP.strftime("%Y%m%d")
+        return tdate
+    def get_dcroval_str(self):
+        tdate=self.DCROVAL.strftime("%Y%m%d")
+        return tdate
+    def set_lhecpart(self,valeur):
+        self.lhecpart = valeur
+    def set_lhecsep(self,valeur):
+         self.lhecsep= valeur
+    def set_scro1np1(self,valeur):
+         self.scro1np1 = valeur
+    def set_LHECSPE1(self,valeur):
+         if valeur == 'tout_espace':
+              valeur= ' '*12
+         self.LHECSPE1 = valeur
+    def set_LHECSPE2(self,valeur):
+         if valeur == 'tout_espace':
+              valeur= ' '*12
+         self.LHECSPE2 = valeur
+    def set_DCROREF(self,valeur):
+          self.DCROREF = valeur
+    def set_lheclibe(self,valeur):
+          if valeur == 'tout_espace':
+              valeur= ' '*30
+          self.lheclibe =valeur
+    def set_lheclib2(self,valeur):
+          if valeur == 'tout_espace':
+              valeur= ' '*30
+          self.lheclib2 =valeur
+    def set_checnot(self,valeur):
+         self.checnot= valeur
+    def set_checexo(self,valeur):
+         self.checexo= valeur
+    def set_ccrosche(self,valeur):
+         self.ccrosche= valeur
     def _repr_(self):
         print("{};{}".format(self.NUMDEP,self.SPSENCPT ))
     def __str__(self):
-        return ("{};{};{};{};{};{};{};{}".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
-        self.ycte    ))
+        return ("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{}{}{};{};{};{};{};{};".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
+        self.ycte,self.get_dheccomp_str(),self.CPSECCLI,self.CPSECOMA,self.CPSEIMPE,self.get_dcroval_str(),self.MCROOPE,self.CHECSNS,self.lhecpart, \
+        self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot))
+class StockageEcriture:
+    def __init__(self):
+        self.stockage=[]
+    def add(self,item):
+        self.stockage.append(item)
+    def reset(self):
+        self.stockage=[]
+
+
 

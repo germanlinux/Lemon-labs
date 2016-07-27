@@ -117,6 +117,30 @@ class LignePCTA:
          return self.CCTAMAFI.strip()
   def get_lctataru(self):
          return self.LCTATARU.strip()
+  def isLibelleStandardBool(self):
+        if  self.csqlclop  == '000':
+           return True
+        else:
+           return False
+  def get_clePsql(self):
+        return self.csqlclop + self.csqltyp  + self.csqlano  + self.nsqlnuti + self.nsqllgns
+  def analyseCCTAREFN(self):
+      _not = ' '
+      _vsnot = 'N'
+      _vstnot =' '
+
+      if self.cctarefn == 'NU':
+         _not = 'N'
+         _vsnot = 'O'
+         _vstnot ='U'
+      if self.cctarefn =='NI':
+         _not = 'N'
+         _vsnot = 'O'
+         _vstnot ='I'
+      if self.cctarefn.find('D') != -1:
+         _not ='D'
+         _vsnot = 'O'
+      return(_not, _vsnot, _vstnot)
 class SchemaComptable:
        def __init__(self,pcta):
           self.matrice = {}
