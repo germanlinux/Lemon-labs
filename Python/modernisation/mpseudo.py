@@ -1,22 +1,29 @@
 from datetime import date
+import re
 class PseudoEcriture:
     _NHECLGSC = 0
     def __init__(self):
        self.SPSENCPT = "0"
+       self.ccroden='0000'
+       self.DCRODEN='0'*8
+       self.ncroden = '00000'
     def set_NUMDEP(self,valeur):
         self.NUMDEP = valeur
     def set_SPSENCPT(self,valeur):
         self.SPSENCPT = valeur
     def set_DCRODEN(self,valeur):
-            if type(valeur) is not date and not None:
-                raise RuntimeError("{}  n est pas un format date".format(valeur))
-            self.DCRODEN = valeur
+            if valeur =='00000000':
+               self.DCRODEN = valeur
+            elif type(valeur) == str:
+               self.DCRODEN = valeur
+            else:
+             self.DCRODEN = valeur.strftime("%Y%m%d")
     def set_DCROOPE(self,valeur):
-            if type(valeur) is not date and not None:
+            if type(valeur) is not date and valeur is not None:
                 raise RuntimeError("{}  n est pas un format date".format(valeur))
             self.DCROOPE = valeur
     def set_DHECCOMP(self,valeur):
-            if type(valeur) is not date and not None:
+            if type(valeur) is not date and valeur is not None:
                 raise RuntimeError("{}  n est pas un format date".format(valeur))
             self.DHECCOMP = valeur
     def set_CPSECCLI(self,valeur):
@@ -35,12 +42,6 @@ class PseudoEcriture:
              self.NHECLGSC= valeur
     def set_CZVSERLG(self,valeur):
              self.CZVSERLG = valeur
-    def set_NCRODEN(self,valeur):
-             self.NCRODEN = valeur
-    def set_DCRODEN(self,valeur):
-             self.DCRODEN = valeur
-    def set_CCRODEN(self,valeur):
-             self.CCRODEN = valeur
     def set_LCTATARU(self,valeur):
              self.LCTATARU =valeur
     def set_poste(self,valeur):
@@ -57,6 +58,8 @@ class PseudoEcriture:
              self.CHECSNS = valeur
     def set_MCROOPE(self,valeur):
              self.MCROOPE = valeur
+    def set_checerel(self,valeur):
+             self.checerel = valeur
     def efface_pseudo(self):
         """ emule le M462323"""
         self.set_LCTATARU('')
@@ -107,12 +110,31 @@ class PseudoEcriture:
          self.checexo= valeur
     def set_ccrosche(self,valeur):
          self.ccrosche= valeur
+    def set_ccroden(self,valeur):
+        self.ccroden = valeur.rjust(4,'0')
+    def set_ncroden(self,valeur):
+        self.ncroden = valeur.rjust(5,'0')
+    def set_lhecspe1(self, valeur):
+         valeur = valeur.ljust(12,' ')
+         self.lhecspe1 = valeur
+    def set_lhecspe2(self, valeur):
+         valeur = valeur.ljust(6,' ')
+         self.lhecspe2 = valeur
+    def isEcrClient(self):
+        if re.match("^[0-9]+$", self.SPSENCPT):
+           return True
+        else:
+           return False
     def _repr_(self):
         print("{};{}".format(self.NUMDEP,self.SPSENCPT ))
     def __str__(self):
-        return ("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{}{}{};{};{};{};{};{};".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
+        self.lhecpart =''
+        self.lhecsep = self.scro1np1 =''
+        self.lheclibe =''
+        self.lheclib2 =''
+        return ("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{}{}{};{};{};{};{};{};{};{};{};{};{};".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
         self.ycte,self.get_dheccomp_str(),self.CPSECCLI,self.CPSECOMA,self.CPSEIMPE,self.get_dcroval_str(),self.MCROOPE,self.CHECSNS,self.lhecpart, \
-        self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot))
+        self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot,self.ccroden, self.DCRODEN, self.ncroden,self.lhecspe1,self.lhecspe2 ))
 class StockageEcriture:
     def __init__(self):
         self.stockage=[]

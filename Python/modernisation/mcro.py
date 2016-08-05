@@ -44,7 +44,17 @@ class Cro:
      self.dbrmrecp  = crobase[39]
      self.nbrmordr  = crobase[40]
      self.ccrosche  =crobase[41]
+     self.hfacrdab = crobase[42]
+     self.dcrodene = crobase[43]
+     self.ncroposd = crobase[44]
+     self.cboprgpt = crobase[45]
+
      self.ecritures=[]
+    def isCB(self):
+        if self.typlibcr=='CB':
+           return True
+        else:
+           return False
     def isdanslaJC(self):
          #TODO
          return False

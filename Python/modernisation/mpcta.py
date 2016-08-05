@@ -122,6 +122,11 @@ class LignePCTA:
            return True
         else:
            return False
+  def isgestionparPSQL(self):
+        if  self.csqlclop  == '000':
+           return False
+        else:
+           return True
   def get_clePsql(self):
         return self.csqlclop + self.csqltyp  + self.csqlano  + self.nsqlnuti + self.nsqllgns
   def analyseCCTAREFN(self):

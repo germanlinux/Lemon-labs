@@ -56,8 +56,34 @@ for ligne in fo:
        ncroref = ligne [518:523]
        numdep    = ligne[636:639]
        cbopcont  = ligne[650:653]
+       mcroope = ligne[272:287]
+       lcroecrf = ligne[523:553]
+       lcrobana = ligne[553:583]
+       lcroban2 = ligne[583:613]
+       lfacnomd = ligne[417:441]
+       dfactran = ligne[441:447]
+       nporcart = ligne[454:470]
+       ncrocpte = ligne[403:414]
+       lcrolib1 = ligne[441:471]
+       sfac1001 = ligne[403:417]
+       lcrodorm = ligne[417:441]
+       ncropie1 = ligne[403:410]
+       lheclibe = ligne[417:447]
+       mfaccomp =  ligne[470:482]
+       dfacrdab = ligne[447:451]
+       hfacrdab = ligne[451:454]
+       typlibcr =  ligne[398:400]
+       dbrmrecp =  ligne[403:411]
+       nbrmordr =  ligne[411:417]
+       ccrosche = ligne[635:636]
+       dcrodene = ligne[198:206]
+       ncroposd = ligne[642:648]
+       cboprgpt = ligne [648:650]
+
        print(compte_)
-       cur.execute("INSERT INTO CRO_C23121A ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont  )  VALUES (%s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",(cp,crolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont  ))
+       cur.execute("INSERT INTO CRO_C23121A ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont ,mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab, typlibcr,dbrmrecp,nbrmordr,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt ) \
+       VALUES (%s,%s, %s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,  %s, %s, %s,%s, %s,  %s, %s, %s, %s, %s, %s, %s, %s,%s,%s, %s, %s, %s, %s,%s,  %s, %s, %s, %s, %s,%s,%s)", \
+       (cp,crolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont, mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab,typlibcr,dbrmrecp,nbrmordr ,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt ))
 conn.commit()
 cur.close()
 conn.close()

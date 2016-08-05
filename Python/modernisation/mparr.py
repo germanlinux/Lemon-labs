@@ -21,6 +21,9 @@ class Parr:
            for record in cur:
              self.add_ligne(record)
            conn.close
+        def get_lhecspe(self,code,champ):
+            lg = self.lignes[code]
+            return (lg.nparspe1, lg.nparspe2)
         def recherche(self,code,champ):
             lg = self.lignes[code]
             if champ =='SPARCPAR':
