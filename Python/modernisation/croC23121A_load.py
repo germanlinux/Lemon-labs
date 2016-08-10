@@ -55,6 +55,7 @@ for ligne in fo:
        ncrooper =    ligne [624:629]
        ncroref = ligne [518:523]
        numdep    = ligne[636:639]
+       ncroarr   = ligne[639:640]
        cbopcont  = ligne[650:653]
        mcroope = ligne[272:287]
        lcroecrf = ligne[523:553]
@@ -76,14 +77,17 @@ for ligne in fo:
        dbrmrecp =  ligne[403:411]
        nbrmordr =  ligne[411:417]
        ccrosche = ligne[635:636]
+
        dcrodene = ligne[198:206]
        ncroposd = ligne[642:648]
        cboprgpt = ligne [648:650]
-
+       ncroorgt = ligne[629:634]
+       nhecrged = ligne[659:664]
+       ccroeuro = ligne[664:665]
        print(compte_)
-       cur.execute("INSERT INTO CRO_C23121A ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont ,mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab, typlibcr,dbrmrecp,nbrmordr,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt ) \
-       VALUES (%s,%s, %s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,  %s, %s, %s,%s, %s,  %s, %s, %s, %s, %s, %s, %s, %s,%s,%s, %s, %s, %s, %s,%s,  %s, %s, %s, %s, %s,%s,%s)", \
-       (cp,crolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont, mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab,typlibcr,dbrmrecp,nbrmordr ,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt ))
+       cur.execute("INSERT INTO CRO_C23121A ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont ,mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab, typlibcr,dbrmrecp,nbrmordr,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt, ncroorgt,nhecrged, ccroeuro ,ncroarr ) \
+       VALUES (%s,%s, %s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,  %s, %s, %s,%s, %s,  %s, %s, %s, %s, %s, %s, %s, %s,%s,%s, %s, %s, %s, %s,%s,  %s, %s, %s, %s, %s,%s,%s, %s, %s,%s, %s)", \
+       (cp,crolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont, mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab,typlibcr,dbrmrecp,nbrmordr ,ccrosche,hfacrdab, dcrodene, ncroposd,cboprgpt,ncroorgt,nhecrged, ccroeuro,ncroarr ))
 conn.commit()
 cur.close()
 conn.close()

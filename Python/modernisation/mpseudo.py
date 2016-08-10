@@ -125,16 +125,33 @@ class PseudoEcriture:
            return True
         else:
            return False
+    def set_cpsergp(self,valeur):
+        self.cpsergp = valeur
+    def set_ncroref(self,valeur):
+        self.ncroref = valeur
+    def set_checelch(self,valeur):
+        self.checelch= valeur
+    def set_nhecrged (self,valeur):
+        self.nhecrged= valeur
+    def set_ccroeuro(self,valeur):
+        self.ccroeuro = valeur
+    def set_ncroarr(self,valeur):
+        self.ncroarr = valeur
     def _repr_(self):
         print("{};{}".format(self.NUMDEP,self.SPSENCPT ))
     def __str__(self):
-        self.lhecpart =''
-        self.lhecsep = self.scro1np1 =''
-        self.lheclibe =''
-        self.lheclib2 =''
-        return ("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{}{}{};{};{};{};{};{};{};{};{};{};{};".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
+        #self.lhecpart =''
+        #self.lhecsep = self.scro1np1 =''
+        #self.lheclibe =''
+        #self.lheclib2 =''
+        return ("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.ncroarr,self.poste_ ,\
         self.ycte,self.get_dheccomp_str(),self.CPSECCLI,self.CPSECOMA,self.CPSEIMPE,self.get_dcroval_str(),self.MCROOPE,self.CHECSNS,self.lhecpart, \
-        self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot,self.ccroden, self.DCRODEN, self.ncroden,self.lhecspe1,self.lhecspe2 ))
+        self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot,self.ccroden, self.DCRODEN, self.ncroden,self.lhecspe1,self.lhecspe2,self.cpsergp, \
+        self.DCROREF, self.ncroref, self.checerel , self.checelch, self.nhecrged, self.ccroeuro))
+        #return ("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{}{}{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};".format(self.NUMDEP,self.SPSENCPT,self.get_dcroope_str(),self.NCROOPER,self.CCROLOP,self.NHECLGSC,self.poste_ ,\
+        #self.ycte,self.get_dheccomp_str(),self.CPSECCLI,self.CPSECOMA,self.CPSEIMPE,self.get_dcroval_str(),self.MCROOPE,self.CHECSNS,self.lhecpart, \
+        #self.lhecsep, self.scro1np1, self.lheclibe, self.lheclib2,self.ccrosche, self.checexo,self.checnot,self.ccroden, self.DCRODEN, self.ncroden,self.lhecspe1,self.lhecspe2,self.cpsergp, \
+        #self.DCROREF, self.ncroref, self.checerel , self.checelch, self.nhecrged, self.ccroeuro))
 class StockageEcriture:
     def __init__(self):
         self.stockage=[]

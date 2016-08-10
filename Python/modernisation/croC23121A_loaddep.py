@@ -52,9 +52,14 @@ def append_base(cp, record):
      dcrodene = record[43]
      ncroposd = record[44]
      cboprgpt = record[45]
-     ins.execute("INSERT INTO CRO_C23121Adep ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont ,mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab, typlibcr,dbrmrecp,nbrmordr,ccrosche,hfacrdab, dcrodene,ncroposd,cboprgpt ) \
-       VALUES (%s,%s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,  %s, %s, %s,%s, %s,  %s, %s, %s, %s, %s, %s, %s, %s,%s,%s, %s, %s, %s, %s,%s,  %s, %s, %s, %s, %s,%s, %s,%s)", \
-       (cp,ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont, mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab,typlibcr,dbrmrecp,nbrmordr ,ccrosche,hfacrdab, dcrodene,ncroposd,cboprgpt ))
+     ncroorgt = record[46]
+     nhecrged = record[47]
+     ccroeuro = record[48]
+     ncroarr = record[49]
+
+     ins.execute("INSERT INTO CRO_C23121Adep ( ID, ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper, numdep,ncroref, ccronoti_1, cbopcont ,mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab, typlibcr,dbrmrecp,nbrmordr,ccrosche,hfacrdab, dcrodene,ncroposd,cboprgpt, ncroorgt,nhecrged,ccroeuro, ncroarr ) \
+       VALUES (%s,%s,%s, %s,%s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s,  %s, %s, %s,%s, %s,  %s, %s, %s, %s, %s, %s, %s, %s,%s,%s, %s, %s, %s, %s,%s,  %s, %s, %s, %s, %s,%s, %s,%s, %s, %s, %s, %s)", \
+       (cp,ccrolop,ctcli , ccroanoc, poste_, ccptind, compte_,scpttyp, ccrodeno, dcrodeno, ncrodeno, cbopnota, ccrodeni_1, dcrodeni_1,ncrodeni_1, dcroope, dcroval , dcroref ,ncrooper,numdep,ncroref,ccronoti_1,cbopcont, mcroope, lcroecrf,lcrobana,lcroban2,lfacnomd,dfactran,nporcart,ncrocpte,lcrolib1,sfac1001,lcrodorm,ncropie1,lheclibe,mfaccomp,dfacrdab,typlibcr,dbrmrecp,nbrmordr ,ccrosche,hfacrdab, dcrodene,ncroposd,cboprgpt, ncroorgt,nhecrged,ccroeuro,ncroarr  ))
 
 
 cp =1

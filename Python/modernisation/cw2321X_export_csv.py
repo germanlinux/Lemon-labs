@@ -36,10 +36,17 @@ for ligne in fo:
        ncroden = ligne [181:186]
        lhecspe1 = ligne[186:198]
        lhecspe2 = ligne[198:204]
+       cpsergp = ligne[204:205]
+       dcroref = ligne[205:213]
+       ncroref = ligne[213:218]
+       checerel = ligne[218:219]
+       checelch  = ligne[219:220]
+       nhecrged = ligne[220:225]
+       ccroeuro = ligne[225:226]
        if ccrolop == '917':
          print('eg')
-       print("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};".format(numdep  ,spsencpt,dcroope ,ncrooper,ccrolop ,nheclgsc,poste   ,cleycte ,dheccomp,cpseccli,cpsecoma,cpseimpe, dcroval , MHECMNT, CHECSNS, SHEC1LIB, lheclibe,lheclib2, \
-       ccrosche, checexo, checnot, ccroden , dcroden, ncroden , lhecspe1 ,  lhecspe2     ),file=fs)
+       print("{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};{};".format(numdep  ,spsencpt,dcroope ,ncrooper,ccrolop ,nheclgsc,poste   ,cleycte ,dheccomp,cpseccli,cpsecoma,cpseimpe, dcroval , MHECMNT, CHECSNS, SHEC1LIB, lheclibe,lheclib2, \
+       ccrosche, checexo, checnot, ccroden , dcroden, ncroden , lhecspe1 ,  lhecspe2, cpsergp, dcroref,ncroref, checerel, checelch ,nhecrged , ccroeuro   ),file=fs)
 fo.close()
 fs.close()
 print(cp)

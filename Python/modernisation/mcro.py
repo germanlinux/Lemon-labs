@@ -48,8 +48,21 @@ class Cro:
      self.dcrodene = crobase[43]
      self.ncroposd = crobase[44]
      self.cboprgpt = crobase[45]
+     self.ncroorgt = crobase[46]
+     self.nhecrged = crobase[47]
+     self.ccroeuro = crobase[48]
+     self.ncroarr = crobase[49]
 
      self.ecritures=[]
+     self.nbligne=[]
+    def get_dcroref(self):
+       if self.DCROREF == None:
+         self.DCROREF='0' * 8
+         return self.DCROREF
+       elif type(self.DCROREF) == date:
+         return self.DCROREF.strftime("%Y%m%d")
+       else:
+         return self.DCROREF
     def isCB(self):
         if self.typlibcr=='CB':
            return True
@@ -111,8 +124,10 @@ class Cro:
     def infocpte(self):
      print("Cro à traiter: operation:{} sur compte {} du departement:{}".format(self.cle_pcta(),self.get_compte(),self.numdep))
      print("nb d ecriture comptable à generer:{}   reference PCTA: {} type de compte:{}".format(self.nbl,self.clefinale,self.cle_ycte()))
-    def add_ecr(self,pseudo):
+     print("lignes numero:{}".format(" - ".join([str(i) for i in self.nbligne])))
+    def add_ecr(self,pseudo,cp):
      self.ecritures.append(pseudo)
+     self.nbligne.append(cp)
     def add_infos(self,lg,clefinale):
       self.nbl = lg
       self.clefinale  = clefinale
@@ -157,5 +172,12 @@ class StockageCro:
         self.stockage.append(item)
     def reset(self):
         self.stockage=[]
-
+    def vidage(self,fichier):
+         print("------- traitement de {}".format(len(self.stockage)))
+         for item in self.stockage:
+            item.infocpte()
+            for ps in item.ecritures:
+                print(ps)
+                print(ps,file=fichier)
+         print('-----------------------------------------------------------------')
 

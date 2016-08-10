@@ -12,6 +12,7 @@ from mpsql import *
 
 _dateDeComptabilisation =''
 def main():
+    cpl = 1
     fs  = open("./pseudoEGlinux.csv","w")
     conn = psycopg2.connect("dbname='cep' user='postgres'   password ='pass' host ='192.168.99.100' ")
     cur = conn.cursor()
@@ -71,14 +72,9 @@ def main():
             #recalcul date JC
         if  rupture_numope.testeBool(croatraiter.NCROOPER):
             #controle ecriture et vidage
-            print("------- traitemen de {}".format(len(lesCros.stockage)))
-            for item in lesCros.stockage:
-                item.infocpte()
-                for ps in item.ecritures:
-                    print(ps)
-                    print(ps,file=fs)
+            lesCros.vidage(fs) # edition cro precedent
             lesCros.reset()
-            print("--------------------------------------------------------------------------------")
+        # debut traitement d un cro
         croatraiter.ajusteCro_ano()
         compta = schema.recherche_operation(croatraiter.cle_pcta())
         clefinale= compta[0].CCROLOP+compta[0].CTCLI+compta[0].CCROANOC
@@ -97,9 +93,10 @@ def main():
             cpligne+=1
             if cpligne != ligne.get_nctalgns():
                 raise RuntimeError("Numero de ligne schema incoherent")
-
+            # point d arret pour debug
             if croatraiter.MCROOPE=='00000003665764{' and croatraiter.CCROLOP == '927':
                  print('eg')
+            # fin point d arret pour debug
             ecr = PseudoEcriture()
             #ajuste le flag cro journee complementaire
             ecr.set_DHECCOMP(_dateDeComptabilisation)
@@ -107,7 +104,11 @@ def main():
             ecr.set_NCROOPER(croatraiter.NCROOPER)
             ecr.set_ccrolop(croatraiter.CCROLOP)
             ecr.set_NHECLGSC(str(cpligne).zfill(2))
+            ecr.set_ncroarr(croatraiter.ncroarr)
             ecr.set_poste(croatraiter.POSTE_)
+            ecr.set_cpsergp(ligne.crgptype)
+            ecr.set_DCROREF(croatraiter.get_dcroref())
+            ecr.set_ncroref(croatraiter.NCROREF)
             # correction bug crolop
             # correction poste 1753
             if ecr.NUMDEP =='175' and ecr.poste_ =='300':
@@ -115,8 +116,6 @@ def main():
             #correction ACSIA
             if ecr.NUMDEP =='375' and ecr.poste_ =='600':
                  ecr.set_poste('660')
-            #if ecr.NUMDEP =='051' and croatraiter.CCROLOP =='912':
-            #     bug_sauveccrolop ='0000'
             if ecr.NUMDEP =='051' and croatraiter.CCROLOP =='938':
                  bug_sauveccrolop ='0000'
             #fin ajustment poste
@@ -167,14 +166,18 @@ def main():
             else:
                 raise RuntimeError("TODO:{}".format(_spsencpt1))
             #pseudo.add(ecr)
-             # pour mise au point
+            # pour mise au point
             if croatraiter.CCROLOP=='706':
                  print('eg')
-            if croatraiter.MCROOPE=='00000003665764{':
+            if croatraiter.MCROOPE=='00000000111110{':
                  print('eg')
+            # pour mise au point
             ecr.set_checerel('N')
             if  croatraiter.CCROLOP == '362'  or   croatraiter.CCROLOP == '370':
                 ecr.set_checerel('O')
+            ecr.set_checelch('N')
+            ecr.set_nhecrged(croatraiter.ncroorgt)
+            ecr.set_ccroeuro(croatraiter.ccroeuro)
             ecr.set_ccrosche(croatraiter.ccrosche)
             (_checnot, _czvsnot,_czvstnot)= ligne.analyseCCTAREFN()
             ecr.set_checnot(_checnot)
@@ -277,20 +280,13 @@ def main():
                 ecr.set_LHECSPE1('tout_espace')
                 ecr.set_LHECSPE2('tout_espace')
                 if croatraiter.isPrelVirBool():
-                    ecr.set_DCROREF(croatraiter.dbrmrecp)
-                    ecr.set_LHECSPE1(croatraiter.nbrmordr)
-            croatraiter.add_ecr(ecr)
-            #print("ecriture num:{}".format(cpligne))
-            #print(ecr)
+                    if croatraiter.CCROANOC == '0':
+                     ecr.set_DCROREF(croatraiter.dbrmrecp)
+                     ecr.set_LHECSPE1(croatraiter.nbrmordr)
+            croatraiter.add_ecr(ecr, cpl)
+            cpl +=1
         lesCros.add(croatraiter)
-    print("------- traitemen de {}".format(len(lesCros.stockage)))
-    for item in lesCros.stockage:
-        item.infocpte()
-        for ps in item.ecritures:
-                    print(ps)
-                    print(ps,file=fs)
-    lesCros.reset()
-    print("--------------------------------------------------------------------------------")
+    lesCros.vidage(fs) #derniers cros dans les tuyaux
     fs.close()
     cur.close()
     conn.close()
