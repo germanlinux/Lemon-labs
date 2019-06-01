@@ -52,28 +52,30 @@ class Grille:
     def __init__(self, grille):
         self.grille = list(grille) 
         self.etat = 0
+
     def get_ligne(self, nb):
         return self.grille[nb]
+
     def get_colonne(self, nb):
         col =[]    
         for i in range(9):    
             col.append(self.grille[i][nb])    
-        return col    
+        return col 
+
     def  get_carre(self, nb):
         col =[]   
         
         if nb in [0,1,2] :
             for i in range(3): 
               col +=  self.get_ligne(i)[0+(3*nb) :3 + (3*nb) ]
-       
         if nb in [3,4,5] :
             for i in range(3,6): 
               col +=  self.get_ligne(i)[0+(3*(nb-3)) :3 + (3*(nb-3))] 
         if nb in [6,7,8] :
             for i in range(6,9): 
               col +=  self.get_ligne(i)[0+(3*(nb-6)) :3 + (3*(nb-6))]      
-
         return col
+
     def get_set_ligne(self, nb):
         return(set(self.get_ligne(nb)) - {0}) 
 
@@ -81,7 +83,8 @@ class Grille:
         return(set(self.get_colonne(nb))- {0} ) 
 
     def get_set_carre(self, nb):
-        return(set(self.get_carre(nb)) - {0} ) 
+        return(set(self.get_carre(nb)) - {0} )
+
     def affiche(self):
         for i in range(9):
            if i % 3 == 0:
@@ -125,6 +128,7 @@ class Resolve:
 #        self.list_etat = [copy.deepcopy(grille)]
         self.grille_depart = copy.deepcopy(histo[etat])
         self.univers_possible ={}
+
     def coup_simple(self):
         cpcoup = 0
         #
@@ -140,10 +144,7 @@ class Resolve:
                     cube= a.pop()
                     #print('cube', cube)
                     possible = possible -  set(self.grille_depart.get_set_carre(cube))
-                    #determiner univers des possibles
-                    #print(possible)
-                    #a = i
-                    #b = j 
+                   
                     self.univers_possible[(cube,i,j)] = possible    
                     if len(possible) == 1:
                         nb = possible.pop()
@@ -154,6 +155,7 @@ class Resolve:
 #          print(a.valeur)
         print('coup simple:', cpcoup)  
         return(cpcoup)
+        
     def _helper_search(self, cube, nb):
         for item, valeur in self.univers_possible.items():
             if item[0] == cube :
