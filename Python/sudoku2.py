@@ -29,28 +29,35 @@ entree_expert =  ([7, 1, 0, 0, 0, 0, 0, 3, 0],
                  [3, 2, 0, 0, 0, 0, 0, 5, 0])
 
 import copy
-
+import argparse
+import pickle
 from collections import Counter
+list_totale =[]
+with  open('mypicklefile', 'rb') as pers:
+    list_totale = pickle.load(pers)
+#print(list_totale)
+
+
 class Carre():
     @staticmethod
     def Localise(i,j):
         adresse = {}
         if i < 3:
-           adresse = {0, 1 ,2 }
+            adresse = {0, 1 ,2 }
         elif i < 6:
-           adresse = {3, 4 ,5 } 
+            adresse = {3, 4 ,5 } 
         else:
-           adresse = {6, 7 ,8 }   
+            adresse = {6, 7 ,8 }   
         if j < 3 :
-           return adresse.intersection({0, 3, 6})
+            return adresse.intersection({0, 3, 6})
         if j < 6 :
-           return adresse.intersection({1, 4, 7})
+            return adresse.intersection({1, 4, 7})
         return  adresse.intersection({2, 5, 8})  
 
 
 class Grille:
-    def __init__(self, grille):
-        self.grille = list(grille) 
+    def __init__(self, pgrille):
+        self.grille = list(pgrille) 
         self.etat = 0
 
     def get_ligne(self, nb):
@@ -67,13 +74,13 @@ class Grille:
         
         if nb in [0,1,2] :
             for i in range(3): 
-              col +=  self.get_ligne(i)[0+(3*nb) :3 + (3*nb) ]
+                col +=  self.get_ligne(i)[0+(3*nb) :3 + (3*nb) ]
         if nb in [3,4,5] :
             for i in range(3,6): 
-              col +=  self.get_ligne(i)[0+(3*(nb-3)) :3 + (3*(nb-3))] 
+                col +=  self.get_ligne(i)[0+(3*(nb-3)) :3 + (3*(nb-3))] 
         if nb in [6,7,8] :
             for i in range(6,9): 
-              col +=  self.get_ligne(i)[0+(3*(nb-6)) :3 + (3*(nb-6))]      
+                col +=  self.get_ligne(i)[0+(3*(nb-6)) :3 + (3*(nb-6))]      
         return col
 
     def get_set_ligne(self, nb):
@@ -87,20 +94,20 @@ class Grille:
 
     def affiche(self):
         for i in range(9):
-           if i % 3 == 0:
-              print(' ') 
-           for j in range(9) :
+            if i % 3 == 0:
+                print(' ') 
+            for j in range(9) :
                 if j %3 == 0:
-                   print(' ',end ='') 
+                    print(' ',end ='') 
                 print(self.grille[i][j],end='')
-           print(' ') 
+            print(' ') 
 
         
 from collections.abc import MutableSequence
 
 class Grilles(MutableSequence):
-    def __init__(self, grille):
-        self.grille =  [grille] 
+    def __init__(self, pgrille):
+        self.grille =  [pgrille] 
         super().__init__()
 
     def __getitem__(self, i):
@@ -113,10 +120,10 @@ class Grilles(MutableSequence):
         self.grille[i] = valeur
 
     def __delitem__(self, index):
-                del self.grille[index]
+        del self.grille[index]
 
     def insert(self, index, value):
-                self.grille.insert(index, value)
+        self.grille.insert(index, value)
 
 
 Grilles.register(list)
@@ -124,8 +131,6 @@ Grilles.register(list)
 
 class Resolve:
     def __init__(self, histo, etat):
-        #self.grille_depart = copy.deepcopy(histo[etat].grille)
-#        self.list_etat = [copy.deepcopy(grille)]
         self.grille_depart = copy.deepcopy(histo[etat])
         self.univers_possible ={}
 
@@ -137,12 +142,9 @@ class Resolve:
                 if self.grille_depart.grille[i][j] == 0: 
                     possible = set(range(1,10))
                     possible = possible - self.grille_depart.get_set_ligne(i)
- #                   print(possible)
                     possible = possible - set(self.grille_depart.get_set_colonne(j))
- #                   print(possible)
-                    a = Carre.Localise(i,j)
-                    cube= a.pop()
-                    #print('cube', cube)
+                    ab = Carre.Localise(i,j)
+                    cube= ab.pop()
                     possible = possible -  set(self.grille_depart.get_set_carre(cube))
                    
                     self.univers_possible[(cube,i,j)] = possible    
@@ -151,23 +153,21 @@ class Resolve:
                         print(f"Ligne : {i+1} Colonne : {j+1}: mettre : {nb}")
                         cpcoup +=1
                         self.majlignecolonne(i, j,nb, cube )
-#        for a in self.list_etat[0].lignes:
-#          print(a.valeur)
         print('coup simple:', cpcoup)  
         return(cpcoup)
-        
+
     def _helper_search(self, cube, nb):
         for item, valeur in self.univers_possible.items():
             if item[0] == cube :
                 if nb in valeur:
                     return (item[1], item[2]) 
+        return None            
                     
     def _helper_reduction(self, cube,compteur):
         cube = cube
         lst_ajouer = []
         for nb, quant in compteur.items():
             if quant == 1 :
-                ## recherhcer coordonnée
                 l,c =self. _helper_search(cube, nb) 
                 lst_ajouer.append((cube, l, c, nb) )
         return lst_ajouer       
@@ -194,7 +194,7 @@ class Resolve:
             if len(reduc[i]) > 0 :
                 compt = Counter()
                 for lst in reduc[i]:
-                   compt.update(lst)
+                    compt.update(lst)
                 a = self._helper_reduction(i,compt)
                 if len(a) > 0:
                     listajouer.extend([*a])
@@ -206,24 +206,32 @@ class Resolve:
         print('-------------------------------------------------')
         return(len(listajouer)) 
 
-    def majlignecolonne(self, i, j , nb , cube):
+    def majlignecolonne(self, i, j , nb, cube ):
         self.grille_depart.grille[i][j] = nb
          
     def etat_suivant(self):
         return self.grille_depart
 
                      
+parser = argparse.ArgumentParser(description='Resolveur de sudoku en mode algorithmique')
+parser.add_argument('--grille','-g',  metavar='facile|moyen|expert',choices=('facile', 'moyen', 'expert'),
+                    default= 'facile',
+                    help='le type de grille à résoudre: facile - moyen - expert')
 
+args = parser.parse_args()
+#print(args) 
+magrille = vars()['entree_' + args.grille]          
 
-grille = Grille(entree_facile)
+magrille = list_totale[-1][1]
+grille = Grille(magrille)
 histogrille = Grilles(grille)
 histogrille[0].affiche()
-a = True
+encours = True
 cp = 0
-while a ==True:
+while encours ==True:
     cp +=1
     moteur = Resolve(histogrille,-1)
-    a = moteur.combo()    
+    encours = moteur.combo()    
     histogrille.append(moteur.etat_suivant())
     histogrille[-1].affiche()
-print(f"resolu en {cp} coups")
+print(f"resolu en {cp} cycles")
