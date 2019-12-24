@@ -64,7 +64,7 @@ class Colonne():
   def send_sql(self):
     if self.longueur >= 250:
        self.type_colonne = 'TEXT'
-    chaine =f"\"{self.nom}\"  "
+    chaine =f"{self.nom}  "
     if self.type_colonne =="CHAR":
        chaine += "CHAR"
     elif self.type_colonne=='VARCHAR2':
@@ -119,7 +119,7 @@ class Table:
     chaine ="CONSTRAINT  " + self.nom_cle + "  PRIMARY KEY ("
     sschaine = ""
     for item in self.pk:
-      sschaine+=f"\"{item}\","
+      sschaine+=f"{item},"
     sschaine= sschaine[:-1]
     chaine += sschaine 
     chaine += ")"
@@ -149,6 +149,8 @@ class Table:
 
     else:
        ligne = Colonne(rang, nom, type_colonne, nature, longueur)
+       if contrainte == 'Y':
+        ligne.add_contrainte() 
        self.colonnes.append(nom)
        self.obj_colonnes.append(ligne)
 

@@ -13,9 +13,10 @@ with open(file, 'r') as f:
     lignes = f.readlines()
 for ligne in lignes:
     if 'FOREIGN KEY' in ligne:
-        ligne= ligne.replace('TABLE "','TABLE ')
-        ligne= ligne.replace('CONSTRAINT "','CONSTRAINT ')
-        ligne= ligne.replace('REFERENCES "','REFERENCES ')
-        ligne= ligne.replace('" ',' ')
+        #ligne= ligne.replace('TABLE "','TABLE ')
+        #ligne= ligne.replace('CONSTRAINT "','CONSTRAINT ')
+        #ligne= ligne.replace('REFERENCES "','REFERENCES ')
+        ligne= ligne.replace('"','')
+        ligne= ligne[:-1]
         print(ligne)
 

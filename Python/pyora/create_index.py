@@ -13,9 +13,10 @@ with open(file, 'r') as f:
     lignes = f.readlines()
 for ligne in lignes:
     if 'CREATE INDEX' in ligne:
-        ligne= ligne.replace('INDEX "','INDEX ')
-        ligne= ligne.replace('" ON "',' ON ')
-        ligne= ligne.replace('" (',' (')
+        #ligne= ligne.replace('INDEX "','INDEX ')
+        #ligne= ligne.replace('" ON "',' ON ')
+        #ligne= ligne.replace('" (',' (')
+        ligne= ligne.replace('"','')
         ligne= ligne[:-1]
         print(ligne)
 
