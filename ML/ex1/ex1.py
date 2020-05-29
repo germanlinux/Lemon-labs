@@ -36,23 +36,22 @@ def  gradientDescent(X, y, theta, alpha, num_iters):
 
 a = np.eye(5) 
 print(a)
-'''plt.ion()
+plt.ion()
 plt.figure()
-'''
+
 data = pd.read_csv('ex1data1.txt', header=None,sep =',', names= ['x','y'])
 
 # afficher les points
-'''
+
 plt.scatter(data['x'], data['y'], c='red', marker ='x')
 plt.xlabel("Population of city in 10,000s")
 plt.ylabel("Profit in $10,000s")
-'''
 
-#plt.pause(5)
+
+plt.pause(5)
 #plt.draw()
 #plt.pause(0.001)
-'''plt.show(block=False)
-'''
+plt.show(block=False)
 data.insert(0,'x0', 1)
 data.rename(columns={ 'x':'x1' }, inplace =True)
 matrixX = data[['x0','x1']]
@@ -79,8 +78,8 @@ print('estimation 70000: ',([1, 7] @ theta) * 10000)
 
 # affiche la droite 
 plt.plot(data['x1'], X @ theta)
-#plt.show(block=False)
-#plt.pause(10)
+plt.show(block=False)
+plt.pause(5)
 thetha_g0 = np.linspace(-10, 10, num = 100)
 thetha_g1 = np.linspace(-1, 4, num = 100)
 j_val = np.zeros((len(thetha_g0), len(thetha_g1)))
@@ -104,3 +103,4 @@ ax2 = fig3.add_subplot(111)
 ax2.contour(t1, t0, j_valok, tre,   colors='black')
 plt.plot(theta[1],theta[0], c='red', marker ='x' )
 plt.show()
+plt.pause(100)
