@@ -16,20 +16,6 @@ def computeCost(X, y, theta ):
     j = 1/(2 * m) * tempj
     return(j)
 
-def  gradientDescent(X, y, theta, alpha, num_iters):
-     m = len(y)
-     j_history = np.zeros((num_iters, 1))
-     Xtrans = np.transpose(X)
-     for i in range(num_iters):
-        wmat = X @ theta
-        wmat = wmat[0].sub(y['y'])
-        gradients = 1/m * (Xtrans @ wmat)   
-        gradientsb = np.reshape(gradients.to_numpy(),(2,1))
-        theta = theta - alpha * gradientsb
-        z = computeCost(X,y,theta) 
-        j_history[i] = z['y']   
-     return(theta)   
-# 
 
 def normalise(dataf):
     nbcol = dataf.shape[1]
@@ -45,6 +31,7 @@ def normalise(dataf):
         dftnorm[nmx] =(dftnorm[nm]- mu[i]) / sigma[i]
 
     return dftnorm , mu , sigma
+
 def  gradientDescent(X, y, theta, alpha, num_iters):
      m = len(y)
      j_history = np.zeros((num_iters, 1))
@@ -57,7 +44,6 @@ def  gradientDescent(X, y, theta, alpha, num_iters):
         wmat = (_X @ theta)
         _tmp = np.subtract(wmat,_y)
         gradients = 1/m * (_Xtrp @ _tmp)   
-        #gradientsb = np.reshape(gradients.to_numpy(),(2,1))
         theta = theta - alpha * gradients
         z = computeCost(X,y,theta) 
         j_history[i] = z  
