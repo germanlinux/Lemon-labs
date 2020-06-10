@@ -5,7 +5,8 @@
 import numpy as  np
 import pandas as pd
 import matplotlib.pyplot as plt
-from math import exp
+#from math import exp
+from scipy.optimize import fmin_tnc
 
 
 def sigmoid(z):
@@ -29,17 +30,51 @@ def costFunction(theta, X , y):
 	 grad = (1/m)  * (_Xprime @ error)
 	 return(J, grad)
 
-def gradient (theta, X , y):
+def costFunction2(theta, X , y):
+	 m  = len(y)
+	 y = np.reshape(y,(m,1))
+	 _Xprime = X.transpose() 
+	 theta = np.reshape(theta,(3,1))
+	 grad = np.array(theta.shape)
+	 # calcul sigmoid
+	 part1 = sigmoid(X @ theta) 
+	 _t1 =  y * np.log(part1)
+	 _t2 =  (1 - y) * np.log(1 - part1)
+	 J = (-1 / m ) * np.sum(_t1 + _t2)   
+	 temp = sigmoid(X @ theta)
+	 error = temp - y
+	 grad = (1/m)  * (_Xprime @ error)
+	 #print(J)
+	 return(J, grad)
+
+def costFunction3(theta, X , y):
+	 m  = len(y)
+	 _Xprime = X.transpose() 
+	 # calcul sigmoid
+	 part1 = sigmoid(X @ theta) 
+	 _t1 =  y * np.log(part1)
+	 _t2 =  (1 - y) * np.log(1 - part1)
+	 J = (-1 / m ) * np.sum(_t1 + _t2)   
+	 return J
+
+
+def search_gradient (theta, X , y, num_iters, alpha):
  	m  = len(y)
+ 	j_history = np.zeros((num_iters, 1))
  	_X      = X.to_numpy()
  	_y      = y.to_numpy()
  	_y      = _y.reshape(-1,1)
  	_Xprime = _X.transpose() 
- 	grad    = np.array(theta.shape)
- 	temp = sigmoid(_X @ theta)
- 	error = temp - _y
- 	grad = (1/m)  * (_Xprime @ error)
- 	return grad
+ 	for i in range(num_iters):
+ 		grad    = np.array(theta.shape)
+ 		temp = sigmoid(_X @ theta)
+ 		error = temp - _y
+ 		grad = (1/m)  * (_Xprime @ error)
+ 		theta = theta - alpha * grad
+        z = computeCost(X,y,theta) 
+        j_history[i] = z  
+    
+ 	return (theta, j_history)
 	
 #  programme principal
 
@@ -81,5 +116,13 @@ test_theta = np.reshape(test_theta,(X.shape[1],1))
 cost,grad = costFunction(test_theta, X, data['y'])
 print(f"cost :{cost}")
 print(f"gradient :{grad}")
-
+XX = X.to_numpy()
+yy = data['y'].to_numpy()
+yy = yy.reshape(-1,1)
+essai = fmin_tnc(func = costFunction2, x0 = initial_theta.flatten(), fprime = None , args = (XX , yy.flatten() )          )
+print(essai[0])
+th = np.reshape(essai[0],(3,1))
+cost,grad = costFunction(th, X, data['y'])
+print(f"cost au minimum:{cost}")
+print("utilisation de la methode non optimisee")
 
