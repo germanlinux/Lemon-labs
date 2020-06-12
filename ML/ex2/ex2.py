@@ -60,19 +60,22 @@ def costFunction3(theta, X , y):
 
 def search_gradient (theta, X , y, num_iters, alpha):
  	m  = len(y)
- 	j_history = np.zeros((num_iters, 1))
+ 	j_history = []
+# 	j_history = np.zeros((num_iters, 1))
  	_X      = X.to_numpy()
  	_y      = y.to_numpy()
  	_y      = _y.reshape(-1,1)
  	_Xprime = _X.transpose() 
+ 	zz = costFunction3(theta,_X,_y)
+
  	for i in range(num_iters):
  		grad    = np.array(theta.shape)
  		temp = sigmoid(_X @ theta)
  		error = temp - _y
  		grad = (1/m)  * (_Xprime @ error)
  		theta = theta - alpha * grad
-        z = computeCost(X,y,theta) 
-        j_history[i] = z  
+ 		z = costFunction3(theta,_X,_y)
+ 		j_history.append(z)  
     
  	return (theta, j_history)
 	
@@ -95,7 +98,11 @@ plt.scatter(recales['x1'] , recales['x2'], c='y', marker ='o')
 plt.xlabel("Exam 1 score")
 plt.ylabel("Exam 2 score")
 plt.legend(["recus","recales"])
-plt.show()
+plt.pause(5)
+plt.show(block=False)
+
+
+#plt.pause(0.001)
 
 # test sigmoid
 print(sigmoid(4))
@@ -109,7 +116,7 @@ X =matrixX.copy()
 X.insert(0,'x0',1)
 initial_theta = np.zeros((X.shape[1],1))
 cost,grad = costFunction(initial_theta, X, data['y'])
-print(f"cost :{cost}")
+print(f"cost :{cost} theta a zero")
 print(f"gradient :{grad}")
 test_theta= np.array([-24, 0.2, 0.2])
 test_theta = np.reshape(test_theta,(X.shape[1],1))
@@ -120,9 +127,29 @@ XX = X.to_numpy()
 yy = data['y'].to_numpy()
 yy = yy.reshape(-1,1)
 essai = fmin_tnc(func = costFunction2, x0 = initial_theta.flatten(), fprime = None , args = (XX , yy.flatten() )          )
-print(essai[0])
+print('theta fmin', essai[0])
 th = np.reshape(essai[0],(3,1))
+thc = essai[0]
 cost,grad = costFunction(th, X, data['y'])
 print(f"cost au minimum:{cost}")
+# dessin de la ligne
+x_val = [np.min(XX[:, 1] - 5), np.max(XX[:,1 ]) + 5]
+y_val = - (thc[0] + np.dot(thc[1],x_val))/ thc[2]
+
+plt.plot(x_val, y_val)
+x1_test =45
+x2_test = 85
+plt.scatter(x1_test, x2_test,marker = 'x', c = 'red' )
+plt.pause(40)
+plt.show(block=False)
+propa = thc[0] + thc[1] * 45 + thc[2] * 85
+print(propa)
+print(sigmoid(propa))
+x1_test =45
+x2_test = 85
+
 print("utilisation de la methode non optimisee")
 
+stx =search_gradient(initial_theta, X, data['y'],50000,0.001)
+print('rt')
+print(stx[0])
