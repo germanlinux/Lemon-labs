@@ -79,6 +79,16 @@ def search_gradient (theta, X , y, num_iters, alpha):
     
  	return (theta, j_history)
 	
+def predict(theta , X):
+	prev = []
+	for lig in X:
+		res = sigmoid(np.transpose(theta) @ np.transpose(lig))
+		if res >= 0.5 :
+			prev.append(1)
+		else:
+			prev.append(0)
+	return prev
+				
 #  programme principal
 
 #load data
@@ -139,7 +149,7 @@ y_val = - (thc[0] + np.dot(thc[1],x_val))/ thc[2]
 plt.plot(x_val, y_val)
 x1_test =45
 x2_test = 85
-plt.scatter(x1_test, x2_test,marker = 'x', c = 'red' )
+plt.scatter(x1_test, x2_test, c = 'lightblue', s = 400 )
 plt.pause(40)
 plt.show(block=False)
 propa = thc[0] + thc[1] * 45 + thc[2] * 85
@@ -150,6 +160,16 @@ x2_test = 85
 
 print("utilisation de la methode non optimisee")
 
-stx =search_gradient(initial_theta, X, data['y'],50000,0.001)
+stx =search_gradient(initial_theta, X, data['y'],5000,0.001)
 print('rt')
 print(stx[0])
+pr = predict(th,XX)
+cible =  data['y'].tolist()
+cp = 0
+for i,j in enumerate(pr):
+	if j == cible[i]:
+		cp += 1
+
+print(cp/len(pr)*100)
+
+
