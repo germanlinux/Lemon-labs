@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 #from math import exp
 from scipy.optimize import fmin_tnc
-
+from sklearn.metrics import confusion_matrix
 
 def sigmoid(z):
 		g = 1/(1 + np.exp(-1 * z))
@@ -153,8 +153,8 @@ plt.scatter(x1_test, x2_test, c = 'lightblue', s = 400 )
 plt.pause(40)
 plt.show(block=False)
 propa = thc[0] + thc[1] * 45 + thc[2] * 85
-print(propa)
-print(sigmoid(propa))
+#print(propa)
+print('estimation probabilite recu 45 ep1 et 85 ep2:',sigmoid(propa))
 x1_test =45
 x2_test = 85
 
@@ -169,7 +169,14 @@ cp = 0
 for i,j in enumerate(pr):
 	if j == cible[i]:
 		cp += 1
-
+print('precision')
 print(cp/len(pr)*100)
+confusion = confusion_matrix(pr,cible,[0,1])
+print('matrice de confusion',confusion)
 
+total  = np.sum(confusion)
 
+prec = (confusion[0][0] + confusion[1][1]) / total
+effic = confusion[1][1]/np.sum(confusion, axis = 0)[1]  
+print('precision',prec)
+print('pertinence', effic)
