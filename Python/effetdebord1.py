@@ -16,3 +16,20 @@ res = fonct(5, [1, 2, 3, 4])
 print(res)                   # [1, 2, 3, 4, 5]
 res = fonct(4)
 print(res)                   # [4, 4]  Erreur !
+
+
+### solutinon
+
+def fonct(valeur, a= None):
+    if a is not None:
+        a.append(valeur)
+    else:
+        a = [valeur]
+    return(a)
+
+res = fonct(4)
+print(res)                   # [4]
+res = fonct(5, [1, 2, 3, 4]) 
+print(res)                   # [1, 2, 3, 4, 5]
+res = fonct(4)
+print(res)                   # [4]  OK !
