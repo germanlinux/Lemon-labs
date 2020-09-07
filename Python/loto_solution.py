@@ -1,7 +1,7 @@
 import random
 class Dispositif_tirage:
     def __init__(self, nb_de_boule):
-        self.boule = set(range(1, nb_de_boule+ 1))
+        self.boule = set(range(1, nb_de_boule+1))
         self.nb_tirage = 0
         self.boule_enleve = set()
         self.historique = []
@@ -46,12 +46,28 @@ class Partie:
 #
 # programme principal 
 #
-urne = Dispositif_tirage(20)
-grille1 = Grille('A', 5,20)
-grille1.genere()
-grille2 = Grille('B' ,  5,20)
-grille2.genere()
-partie = Partie(urne, grille1, grille2)
+import argparse
+
+parser = argparse.ArgumentParser(description='simulateur de loto')
+parser.add_argument('--nombre','-n', help = "nombre total de boule" , type=int , default= 20,)
+parser.add_argument('--joueur','-j', help = "nombre de joueur" , type=int , default= 2,)
+parser.add_argument('--grille','-g', help = "dimension de la grille" , type=int , default= 5,)
+
+
+args = parser.parse_args()
+#print(args) 
+
+
+urne = Dispositif_tirage(args.nombre)
+nb_joueur = args.joueur
+grille = args.grille
+liste_joueur = []
+for i in range(1 ,nb_joueur+1):
+   tmp_grille= Grille(str(i), grille,args.nombre)
+   tmp_grille.genere()  
+   liste_joueur.append(tmp_grille)
+
+partie = Partie(urne, *liste_joueur)
 stop = True
 while stop:
    stop = partie.un_tour()
@@ -62,4 +78,22 @@ while stop:
 on souhaite:
 - enrichir les options de la ligne de commande
 - refactoriser l'instanciation des grilles des joueurs
+
+
+
+
+python  loto_solution.py --help
+usage: loto_solution.py [-h] [--nombre NOMBRE] [--joueur JOUEUR]
+                        [--grille GRILLE]
+
+simulateur de loto
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --nombre NOMBRE, -n NOMBRE
+                        nombre total de boule
+  --joueur JOUEUR, -j JOUEUR
+                        nombre de joueur
+  --grille GRILLE, -g GRILLE
+                        dimension de la grille
 '''

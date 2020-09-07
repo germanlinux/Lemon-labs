@@ -33,10 +33,13 @@ import argparse
 import pickle
 from collections import Counter
 list_totale =[]
-with  open('mypicklefile', 'rb') as pers:
-    list_totale = pickle.load(pers)
+try:
+    with  open('mypicklefile', 'rb') as pers:
+        list_totale = pickle.load(pers)
 #print(list_totale)
-
+except:
+    pass
+    
 
 class Carre():
     @staticmethod
