@@ -1,7 +1,10 @@
 def facade(func):
     def wrapper( *args, **kwargs):
-        print('je passe ')
-        return(func(*args, **kwargs))
+        print('je passe:')
+        if len(args) <2 :
+            return ("operation non supportee")
+        else:
+            return(func(*args, **kwargs))
     return wrapper
 @facade
 def fonct(valeur, a= None):
@@ -25,3 +28,4 @@ print(fonct(4, {1, 2, 3}))  # (1, 2, 3, 4)
 
 
 print(fonct(4, 'eg'))
+print(fonct(4))
