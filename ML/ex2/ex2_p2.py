@@ -1,35 +1,46 @@
 # ### stanford ng andrew ex2
 
 
-
+import sys
 import numpy as  np
 import pandas as pd
 import matplotlib.pyplot as plt
 #from math import exp
 from scipy.optimize import fmin_tnc
 from sklearn.metrics import confusion_matrix
-from sklearn.preprocessing import normalize
+from sklearn.preprocessing import PolynomialFeatures
+
+
+def mapfeature(x1, x2):
+    sortie = np.ones((len(x1),1))
+    cp = 0
+    degree = 6
+    for i in range(1, degree + 1):
+        for j in range(i + 1):
+            qu = (x1**(i - j) * (x2**j))
+            qub = np.array(qu)
+            qub = qub.reshape(-1,1)
+            sortie = np.concatenate((sortie,qub), axis = 1)
+            cp +=1
+    print(cp)
+    return sortie
 
 def sigmoid(z):
         g = 1/(1 + np.exp(-1 * z))
         return g
-def featureNormalization(X):
-    xnorm = normalize(X)    
-    print('eg')
-    return xnorm
-            
-def featureNormalization2(X):
-    """
-    Take in numpy array of X values and return normalize X values,
-    the mean and standard deviation of each feature
-    """
-    mean=np.mean(X,axis=0)
-    std=np.std(X,axis=0)
-    
-    X_norm = (X - mean)/std
-    
-    return X_norm , mean , std
-
+def costFunctionReg(theta, X, y, lambd):
+    m  = len(y)
+    _X = X.to_numpy()
+    _y = y.to_numpy()
+    _y = _y.reshape(-1,1)
+    _Xprime = _X.transpose() 
+    grad = np.array(theta.shape)
+    part1 = sigmoid(_X @ theta) 
+    _t1 =  _y * np.log(part1)
+    _t2 =  (1 - _y) * np.log(1 - part1)
+    J = (-1 / m ) * np.sum(_t1 + _t2)   
+     
+     
 def costFunction(theta, X , y):
      m  = len(y)
      _X = X.to_numpy()
@@ -79,10 +90,7 @@ def search_gradient (theta, X , y, num_iters, alpha):
     m  = len(y)
     j_history = []
 #   j_history = np.zeros((num_iters, 1))
-    try :
-       _X      = X.to_numpy()
-    except :
-       _X      = X
+    _X      = X.to_numpy()
     _y      = y.to_numpy()
     _y      = _y.reshape(-1,1)
     _Xprime = _X.transpose() 
@@ -92,7 +100,7 @@ def search_gradient (theta, X , y, num_iters, alpha):
         grad    = np.array(theta.shape)
         temp = sigmoid(_X @ theta)
         error = temp - _y
-        grad = (-1/m)  * (_Xprime @ error)
+        grad = (1/m)  * (_Xprime @ error)
         theta = theta - alpha * grad
         z = costFunction3(theta,_X,_y)
         j_history.append(z)  
@@ -113,24 +121,30 @@ def predict(theta , X):
 
 #load data
 
-data = pd.read_csv('ex2data1.txt', header=None,sep =',', names= ['x1','x2','y'])
+data = pd.read_csv('ex2data2.txt', header=None,sep =',', names= ['x1','x2','y'])
 for i in range(10):
     print(data['x1'].loc[i], data['x2'].loc[i], data['y'].loc[i])
 print('graphisme des points avec une differentiation sur la valeur de y')
 # extraction delective des points
-recus   = data.loc[data['y']==  1]
-recales = data.loc[data['y']==  0]
+ok   = data.loc[data['y']==  1]
+ko = data.loc[data['y']==  0]
 plt.rcParams['toolbar'] = 'None'
 
 plt.figure()
-plt.scatter(recus['x1'] , recus['x2'], c='black', marker ='+')
-plt.scatter(recales['x1'] , recales['x2'], c='y', marker ='o')
-plt.xlabel("Exam 1 score")
-plt.ylabel("Exam 2 score")
-plt.legend(["recus","recales"])
+plt.scatter(ok['x1'] , ok['x2'], c='black', marker ='+')
+plt.scatter(ko['x1'] , ko['x2'], c='y', marker ='o')
+plt.xlabel("Test 1")
+plt.ylabel("Test 2")
+plt.legend(["ok","ko"])
 plt.pause(5)
 plt.show(block=False)
+reg = mapfeature(data['x1'], data['x2'])
+poly = PolynomialFeatures(6)
+matrixX = data[['x1','x2']]
+X =matrixX.copy()
+reg2 = poly.fit_transform(X)
 
+sys.exit()
 
 #plt.pause(0.001)
 
@@ -179,8 +193,8 @@ x1_test =45
 x2_test = 85
 
 print("utilisation de la methode non optimisee")
-Xn=featureNormalization(X)
-stx =search_gradient(initial_theta, Xn, data['y'],400,0.1)
+
+stx =search_gradient(initial_theta, X, data['y'],5000,0.001)
 print('rt')
 print(stx[0])
 pr = predict(th,XX)
@@ -200,5 +214,3 @@ prec = (confusion[0][0] + confusion[1][1]) / total
 effic = confusion[1][1]/np.sum(confusion, axis = 0)[1]  
 print('precision',prec)
 print('pertinence', effic)
-Xn=featureNormalization(X)
-
