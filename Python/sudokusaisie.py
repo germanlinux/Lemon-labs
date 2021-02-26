@@ -2,10 +2,13 @@ import pickle
 
 matrice =[]
 list_totale =[]
-with  open('mypicklefile', 'rb') as pers:
-    list_totale = pickle.load(pers)
-print(list_totale)
-
+try:
+  with  open('mypicklefile', 'rb') as pers:
+      list_totale = pickle.load(pers)
+  print(list_totale)
+except:
+    pass
+    
 classe = input('niveau: ')
 
 for i in range(9):
