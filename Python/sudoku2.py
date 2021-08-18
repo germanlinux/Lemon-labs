@@ -225,7 +225,7 @@ args = parser.parse_args()
 #print(args) 
 magrille = vars()['entree_' + args.grille]          
 
-magrille = list_totale[-1][1]
+#magrille = list_totale[-1][1]
 grille = Grille(magrille)
 histogrille = Grilles(grille)
 histogrille[0].affiche()
