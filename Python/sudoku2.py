@@ -138,6 +138,7 @@ class Resolve:
         self.univers_possible ={}
 
     def coup_simple(self):
+        '''on balaye la ligne et la colonne puis le cube'''
         cpcoup = 0
         #
         for i in range(9):
@@ -185,6 +186,7 @@ class Resolve:
         return True
               
     def reduction_carre(self):
+        ''' on travaille sur le cube'''
         reduc = {}
         listajouer =[]
         for i, messet in self.univers_possible.items():
