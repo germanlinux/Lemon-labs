@@ -32,6 +32,22 @@ import copy
 import argparse
 import pickle
 from collections import Counter
+import itertools
+######
+
+import numpy as np
+quizzes = np.zeros((1000000, 81), np.int32)
+solutions = np.zeros((1000000, 81), np.int32)
+for i, line in enumerate(open('../../../sudoku.csv', 'r').read().splitlines()[1:]):
+    quiz, solution = line.split(",")
+    for j, q_s in enumerate(zip(quiz, solution)):
+        q, s = q_s
+        quizzes[i, j] = q
+        solutions[i, j] = s
+quizzes = quizzes.reshape((-1, 9, 9))
+solutions = solutions.reshape((-1, 9, 9))
+
+
 list_totale =[]
 try:
     with  open('mypicklefile', 'rb') as pers:
@@ -57,7 +73,7 @@ class Carre():
             return adresse.intersection({1, 4, 7})
         return  adresse.intersection({2, 5, 8})  
     @staticmethod
-    def Bandelette(cube,i,j):
+    def Bandelette(i,j):
         poids = 0
         if  2 <j < 6:
             poids = 3
@@ -79,7 +95,7 @@ class Grille:
         self.etat = 0
 
     def get_ligne(self, nb):
-        return self.grille[nb]
+        return self.grille[nb].tolist()
 
     def get_colonne(self, nb):
         col =[]    
@@ -169,7 +185,7 @@ class Resolve:
                     self.univers_possible[(cube,i,j)] = possible    
                     if len(possible) == 1:
                         nb = possible.pop()
-                        print(f"Ligne : {i+1} Colonne : {j+1}: mettre : {nb}")
+                        #print(f"Ligne : {i+1} Colonne : {j+1}: mettre : {nb}")
                         cpcoup +=1
                         self.majlignecolonne(i, j,nb, cube )
         print('coup simple:', cpcoup)  
@@ -220,7 +236,7 @@ class Resolve:
                     listajouer.extend([*a])
       
         for  item in listajouer:
-            print(f"Ligne : {item[1]+1} Colonne : {item[2]+1}: mettre : {item[3]}")
+            #print(f"Ligne : {item[1]+1} Colonne : {item[2]+1}: mettre : {item[3]}")
             self.majlignecolonne(item[1],item[2], item[3], item[0])
         print('coup par reduction:',len(listajouer))  
         print('-------------------------------------------------')
@@ -232,19 +248,20 @@ class Resolve:
     def etat_suivant(self):
         return self.grille_depart
 
+  
     def triplet_vertical_carre(self):
         ''' on travaille sur chaque bandelette'''
-        reduc = {}
-        listajouer =[]
-        for i, messet in self.univers_possible.items():
-           # pour chaque possible 
-           # determiner le cube et la bandelette (cube de 0 à 8) , (bandelette de 0 à 2)
-           cube = messet[0]
-           #numbandelette = 
-           #  effectuer la reduction
-           # determiner les cubes colonnes 
-           # determiner les bandelettes a retrancher
-
+#        reduc = {}
+#        listajouer =[]
+#        for i, messet in self.univers_possible.items():
+#           # pour chaque possible 
+#           # determiner le cube et la bandelette (cube de 0 à 8) , (bandelette de 0 à 2)
+#           cube = messet[0]
+#           numbandelette = 
+#           #  effectuer la reduction
+#           # determiner les cubes colonnes 
+#          # determiner les bandelettes a retrancher
+#           
 parser = argparse.ArgumentParser(description='Resolveur de sudoku en mode algorithmique')
 parser.add_argument('--grille','-g',  metavar='facile|moyen|expert',choices=('facile', 'moyen', 'expert'),
                     default= 'facile',
@@ -252,24 +269,29 @@ parser.add_argument('--grille','-g',  metavar='facile|moyen|expert',choices=('fa
 
 args = parser.parse_args()
 #print(args) 
+print("debut de resolution")
 magrille = vars()['entree_' + args.grille]          
-
-magrille = list_totale[-1][1]
-
-magrille = ([[8, 6, 0, 9, 5, 7, 3, 2, 1], [1, 9, 5, 4, 2, 3, 7, 6, 8], [7, 3, 4, 6, 1, 0, 5, 9, 0],
- [4, 7, 1, 2, 3, 8, 0, 5, 6], [9, 8, 6, 1, 4, 5, 2, 3, 7], [3, 5, 2, 7, 6, 9, 1, 8, 4],
- [5, 1, 8, 3, 9, 4, 6, 7, 2], [0, 2, 7, 5, 0, 1, 8, 4, 3], [6, 4, 3, 8, 7, 2, 9, 1, 5]
-])
-grille = Grille(magrille)
-histogrille = Grilles(grille)
-histogrille[0].affiche()
-encours = True
-cp = 0
-while encours ==True:
-    cp +=1
-    moteur = Resolve(histogrille,-1)
-    encours = moteur.combo()    
-    histogrille.append(moteur.etat_suivant())
-    histogrille[-1].affiche()
-    print(histogrille[-1].grille)
-print(f"resolu en {cp} cycles")
+##
+#magrille = list_totale[-1][1]
+##
+file = open('inter.csv','w' )
+cpg = 1
+for gr in quizzes:
+    print("grile: ", cpg)
+    cpg+=1
+    magrille = gr
+    grille = Grille(magrille)
+    histogrille = Grilles(grille)
+    encours = True
+    cp = 0   
+    while encours ==True:
+        cp +=1
+        moteur = Resolve(histogrille,-1)
+        encours = moteur.combo()    
+        histogrille.append(moteur.etat_suivant())
+        encours = False
+    
+    b =list(itertools.chain(*gr))
+    after = list(itertools.chain(*histogrille[-1].grille))
+    file.write(f"{b},{after}\n")
+file.close()

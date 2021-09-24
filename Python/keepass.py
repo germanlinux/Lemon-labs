@@ -8,7 +8,8 @@ lignes = lignes[1:]
 dic_pro = {}
 for ligne in lignes:
     t_ligne = ligne.split(',')
-    if len(t_ligne) > 1:
+    if len(t_ligne) > 2:
+        print(t_ligne)
         dic_pro[t_ligne[0]] = t_ligne[1]+ ' # ' + t_ligne[2]
 with open(fileper, 'r') as fper:
     lignes = fper.readlines()
