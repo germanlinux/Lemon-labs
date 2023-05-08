@@ -51,3 +51,24 @@ class DataGenerator(Sequence):
                 y[i,] = np.array(list(map(int,list(f)))).reshape((81,1)) - 1
         if self.subset == 'train': return X, y
         else: return X
+
+
+train_idx = int(len(data)*0.95)
+data = data.sample(frac=1).reset_index(drop=True)
+training_generator = DataGenerator(data.iloc[:train_idx], subset = "train", batch_size=640)
+validation_generator = DataGenerator(data.iloc[train_idx:], subset = "train",  batch_size=640)        
+model = Sequential()
+
+model.add(Conv2D(64, kernel_size=(3,3), activation='relu', padding='same', input_shape=(9,9,1)))
+model.add(BatchNormalization())
+model.add(Conv2D(64, kernel_size=(3,3), activation='relu', padding='same'))
+model.add(BatchNormalization())
+model.add(Conv2D(128, kernel_size=(1,1), activation='relu', padding='same'))
+
+model.add(Flatten())
+model.add(Dense(81*9))
+model.add(Reshape((-1, 9)))
+model.add(Activation('softmax'))
+
+adam = keras.optimizers.adam(lr=.001)
+model.compile(loss='sparse_categorical_crossentropy', optimizer=adam, metrics=['accuracy'])

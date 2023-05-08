@@ -56,21 +56,6 @@ class Carre():
         if j < 6 :
             return adresse.intersection({1, 4, 7})
         return  adresse.intersection({2, 5, 8})  
-    @staticmethod
-    def Bandelette(cube,i,j):
-        poids = 0
-        if  2 <j < 6:
-            poids = 3
-        if  5 <j :
-            poids = 6
-        j = j - poids       
-        if j == 0 :
-            return (1+ poids,2 + poids)
-        if j == 1:
-            return (0+ poids,2+ poids)
-        else:
-            return (0+ poids, 1+ poids)
-
 
 
 class Grille:
@@ -232,19 +217,7 @@ class Resolve:
     def etat_suivant(self):
         return self.grille_depart
 
-    def triplet_vertical_carre(self):
-        ''' on travaille sur chaque bandelette'''
-        reduc = {}
-        listajouer =[]
-        for i, messet in self.univers_possible.items():
-           # pour chaque possible 
-           # determiner le cube et la bandelette (cube de 0 à 8) , (bandelette de 0 à 2)
-           cube = messet[0]
-           #numbandelette = 
-           #  effectuer la reduction
-           # determiner les cubes colonnes 
-           # determiner les bandelettes a retrancher
-
+                     
 parser = argparse.ArgumentParser(description='Resolveur de sudoku en mode algorithmique')
 parser.add_argument('--grille','-g',  metavar='facile|moyen|expert',choices=('facile', 'moyen', 'expert'),
                     default= 'facile',
@@ -256,8 +229,12 @@ magrille = vars()['entree_' + args.grille]
 
 magrille = list_totale[-1][1]
 
-magrille = ([[8, 6, 0, 9, 5, 7, 3, 2, 1], [1, 9, 5, 4, 2, 3, 7, 6, 8], [7, 3, 4, 6, 1, 0, 5, 9, 0],
- [4, 7, 1, 2, 3, 8, 0, 5, 6], [9, 8, 6, 1, 4, 5, 2, 3, 7], [3, 5, 2, 7, 6, 9, 1, 8, 4],
+magrille = ([[8, 6, 0, 9, 5, 7, 3, 2, 1], 
+            [1, 9, 5, 4, 2, 3, 7, 6, 8],
+            [7, 3, 4, 6, 1, 0, 5, 9, 0],
+            [4, 7, 1, 2, 3, 8, 0, 5, 6],
+            [9, 8, 6, 1, 4, 5, 2, 3, 7],
+            [3, 5, 2, 7, 6, 9, 1, 8, 4],
  [5, 1, 8, 3, 9, 4, 6, 7, 2], [0, 2, 7, 5, 0, 1, 8, 4, 3], [6, 4, 3, 8, 7, 2, 9, 1, 5]
 ])
 grille = Grille(magrille)
